@@ -2395,10 +2395,38 @@ body {
 .icon_grayProf {
     color: #9CA3AF;
     font-size: 24px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #9CA3AF;
+    border-radius: 50%;
+    position: relative;
+}
+
+.icon_grayProf::before {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    top: 4px;
+    left: 6px;
+}
+
+.icon_grayProf::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 8px;
+    background-color: #FFFFFF;
+    border-radius: 0 0 8px 8px;
+    bottom: 2px;
+    left: 4px;
 }
 
 .list_header_semiBold {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     color: #1A1A1A;
 }
@@ -2415,7 +2443,7 @@ body {
 }
 
 .caption_strong_small {
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     color: #1A1A1A;
 }
@@ -2428,23 +2456,34 @@ body {
     background-color: #FFFFFF;
     border: 1px solid #E0E0E0;
     border-radius: 6px;
-    padding: 16px;
+    padding: 16px 48px 16px 16px;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .title_l_semiBold {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 600;
     color: #1A1A1A;
     line-height: 1.2;
+    margin: 0 0 8px 0;
+    padding: 0;
+    display: block;
+}
+
+.abox__cardWrap .title_l_semiBold {
+    margin-bottom: 8px;
 }
 
 .caption_strong_medium_semi {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     color: #666666;
-    margin-top: 4px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    display: block;
+    line-height: 1.4;
 }
 
 .abox__arrow3Line {
@@ -2456,11 +2495,55 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .abox__orangeArr {
     color: #FF6600;
+    position: relative;
 }
+
+.abox__orangeArr::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 6px solid #FF6600;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(-2px);
+}
+
+.abox__orangeArr::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid #FF6600;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(2px);
+}
+
+.abox__cardWrap .pageComponent[data-label="TUPLE"] {
+    position: relative;
+    z-index: 0;
+    padding-right: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.abox__cardWrap .title_l_semiBold,
+.abox__cardWrap .caption_strong_medium_semi {
+    width: calc(100% - 40px);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
 
 .buttons__primaryRegular {
     width: 100%;
@@ -2469,7 +2552,7 @@ body {
     color: #FFFFFF;
     border: none;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -2485,7 +2568,7 @@ body {
 .textC {
     text-align: center;
     color: #666666;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     line-height: 1.4;
 }
@@ -2497,7 +2580,7 @@ body {
     border-radius: 8px;
     padding: 20px;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     cursor: pointer;
     transition: all 0.3s ease;
 }
@@ -2564,10 +2647,12 @@ body {
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 140px;
-    height: 140px;
-    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    overflow: visible;
     z-index: 1;
+    min-height: 100px;
+    display: block;
 }
 
 .Personalized-hp__brandAmbassadorImageCustomClass {
@@ -2581,6 +2666,11 @@ body {
     height: 100%;
     object-fit: contain;
     object-position: bottom right;
+    display: block !important;
+    min-height: 100px;
+    background-color: transparent;
+    visibility: visible;
+    opacity: 1;
 }
 
 /* Responsive Design */

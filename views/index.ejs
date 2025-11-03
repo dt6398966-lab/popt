@@ -419,7 +419,7 @@
         <!-- Right Sidebar -->
         <div class="home-right-sidebar Personalized-hp__rightSec">
             <!-- Guest User Activity Box -->
-            <div class="pageComponent abox__activityBox" data-label="ACTIVITY_SECTION">
+            <div class="pageComponent abox__activityBox" data-label="ACTIVITY_SECTION" topmost="true" data-custominfo="{&quot;custom_object&quot;:{&quot;buttonLabel&quot;:&quot;Login/Register to Save Activity&quot;,&quot;name&quot;:&quot;Guest User&quot;,&quot;userClass&quot;:&quot;&quot;}}">
                 <div class="abox__userInfo">
                     <i class="icon_grayProf iconS_Common_24 fas fa-user-circle" style="color: #9CA3AF; font-size: 24px;"></i>
                     <div>
@@ -430,8 +430,8 @@
                 <div class="abox__recentActivityCard">
                     <div class="caption_strong_small bold spacer16">Your Recent Activity</div>
                     <div class="abox__cardWrap">
-                        <div class="pageComponent" data-label="TUPLE">
-                            <div class="title_l_semiBold spacer8">5</div>
+                        <div class="pageComponent" data-label="TUPLE" data-custominfo="{&quot;custom_object&quot;:{&quot;rank&quot;:2,&quot;cardType&quot;:&quot;Viewed&quot;}}">
+                            <div class="title_l_semiBold">5</div>
                             <div class="caption_strong_medium_semi">Viewed</div>
                             <div class="abox__arrow3Line abox__orangeArr">
                                 <i class="fas fa-arrow-up" style="color: #FF6600; font-size: 12px;"></i>
@@ -440,8 +440,8 @@
                     </div>
                 </div>
                 <div class="spacer16"></div>
-                <button class="pageComponent buttons__primaryRegular" data-sstheme="_BUTTON_TOP_LEVEL" onclick="window.location.href='/auth/login'">
-                    <span class="" data-sstheme="_BUTTON_SPAN">Login/Register to Save Activity</span>
+                <button variant="primaryRegular" class="pageComponent buttons__primaryRegular     undefined " data-sstheme="_BUTTON_TOP_LEVEL" onclick="window.location.href='/auth/login'">
+                    <span class=" " data-sstheme="_BUTTON_SPAN">Login/Register to Save Activity</span>
                 </button>
                 <div class="spacer8"></div>
                 <div class="caption_strong_small textC">& see your activities across browsers & devices...</div>
@@ -450,13 +450,13 @@
             <div class="spacer12"></div>
 
             <!-- Post Property Banner -->
-            <div class="ppfLaunchBanner__wrapper" style="height:160px;width:335px" data-label="POST_PROPERTY_HP_STICKY_BANNER" role="button" tabindex="0">
+            <div class="ppfLaunchBanner__wrapper undefined" style="height:160px;width:335px" data-label="POST_PROPERTY_HP_STICKY_BANNER" role="button" tabindex="0" topmost="true">
                 <div class="ppfLaunchBanner__contentWrapper">
                     <div class="ppfLaunchBanner__heading Personalized-hp__headingCustomClass">Sell or rent faster at the right price!</div>
                     <div class="ppfLaunchBanner__subHeading Personalized-hp__subHeadingCustomClass">List your property now</div>
-                    <div class="ppfLaunchBanner__btnPost" onclick="window.location.href='/properties/create'">Post Property, It's FREE</div>
+                    <div class="ppfLaunchBanner__btnPost false undefined" onclick="window.location.href='/properties/create'">Post Property<!-- -->, It's FREE</div>
                     <div class="ppfLaunchBanner__heroImageWrapper Personalized-hp__brandAmbassadorImageCustomClass">
-                        <img class="ppfLaunchBanner__heroImage" src="/images/hp_ppf_banner.png" alt="Post Property" onerror="this.style.display='none'">
+                        <img class="ppfLaunchBanner__heroImage" src="https://static.99acres.com/universalapp/img/hp_ppf_banner.png" alt="Post Property" onerror="this.onerror=null; this.src='/universalapp/img/hp_ppf_banner.png';">
                     </div>
                 </div>
             </div>

@@ -19,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/uploads', express.static(path.join(__dirname, 'public/uploads')));
+app.use('/universalapp', express.static(path.join(__dirname, 'public/universalapp')));
 
 // Session configuration
 app.use(session({
