@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= typeof title !== 'undefined' ? title : '99acres - India\'s Largest Real Estate Portal' %></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Hero Section with Banner and Header Overlay -->
+    <div class="hero-section-with-header">
+        <!-- Top Banner Background -->
+        <div class="personalized-banner">
+            <div class="desk-home-banner">
+                <a href="#" class="img-hover">
+                    <img src="https://static.ieplads.com/bmsjs/banners/99acres-hp/1366/1366-jacob&co.webp" alt="Noida Real Estate" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </a>
+            </div>
+        </div>
+
+        <!-- Transparent Header Overlay -->
+        <div class="theader-home-header-wrap">
+            <div class="theader-transparent-header">
+            <div class="theader-content-wrapper">
+                <!-- Logo -->
+                <div class="theader-logo-wrap">
+                    <a href="/" class="theader-logo-link">
+                        <img class="theader-img-container" src="https://static.99acres.com/universalhp/img/nnacres_white_v2.png" alt="99acres" width="80">
+                    </a>
+                </div>
+
+                <!-- Location Dropdown -->
+                <div class="theader-location-dropdown theader-open-explore-wrap">
+                    <span class="theader-location-text ellipsis">Buy in Noida</span>
+                    <i class="theader-arrow-icon fas fa-chevron-down"></i>
+                    <!-- Location Popup (hidden by default, shown on click) -->
+                    <div class="theader-popup-city" style="display: none;">
+                        <!-- Explore real estate popup content -->
+                    </div>
+                </div>
+
+                <!-- Primary Navigation -->
+                <div class="theader-primary-nav">
+                    <nav class="theader-nav-menu">
+                        <ul class="theader-nav-list">
+                            <li class="theader-nav-item theader-active">
+                                <a href="#" class="theader-nav-link">For Buyers</a>
+                                <div class="theader-top-menu-content">
+                                    <!-- Dropdown content -->
+                                </div>
+                            </li>
+                            <li class="theader-nav-item">
+                                <a href="#" class="theader-nav-link">For Tenants</a>
+                                <div class="theader-top-menu-content">
+                                    <!-- Dropdown content -->
+                                </div>
+                            </li>
+                            <li class="theader-nav-item">
+                                <a href="#" class="theader-nav-link">For Owners</a>
+                                <div class="theader-top-menu-content">
+                                    <!-- Dropdown content -->
+                                </div>
+                            </li>
+                            <li class="theader-nav-item">
+                                <a href="#" class="theader-nav-link">For Dealers / Builders</a>
+                                <div class="theader-top-menu-content">
+                                    <!-- Dropdown content -->
+                                </div>
+                            </li>
+                            <li class="theader-nav-item">
+                                <a href="#" class="theader-nav-link">Insights <span class="new-badge">NEW</span></a>
+                                <div class="theader-top-menu-content">
+                                    <!-- Dropdown content -->
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Right Side Actions -->
+                <div class="theader-right-actions">
+                    <!-- Post Property Button -->
+                    <div class="theader-post-property">
+                        <a href="/properties/create" class="theader-post-btn">
+                            Post property
+                            <img src="/images/free-badge.png" alt="Free" class="free-badge-img" onerror="this.style.display='none';">
+                        </a>
+                    </div>
+
+                    <!-- Contact Us Icon -->
+                    <div class="theader-contact-icon">
+                        <i class="icon_headphoneWhite iconS_Common_28 theader-toggle-cursor fas fa-headphones"></i>
+                        <div class="theader-popup-contact-list theader-dropdown-hidden">
+                            <div class="theader-contact-us-label">CONTACT US</div>
+                            <ul class="theader-contact-no-list">
+                                <li>
+                                    <i class="fas fa-phone"></i>
+                                    <div>
+                                        <div class="theader-heading">Toll Free | 9:30 AM to 6:30 PM (Mon-Sun)</div>
+                                        <div class="theader-phone-number">1800-41-99099</div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- User Profile Icon -->
+                    <div class="theader-user-icon">
+                        <i class="icon_userWhite theader__dot iconS_Common_24 theader__explicitSpriteSize fas fa-user"></i>
+                        <div class="theader-popup-city theader-login theader-dropdown-hidden">
+                            <% if (typeof user !== 'undefined' && user) { %>
+                                <div class="theader-user-welcome">Welcome, <%= user.name %></div>
+                                <ul class="theader-login-list">
+                                    <li><a href="/dashboard">My Activity</a></li>
+                                    <li><a href="/dashboard">Recently Searched</a></li>
+                                    <li><a href="/dashboard">Recently Viewed</a></li>
+                                    <li><a href="/dashboard">Shortlisted</a></li>
+                                    <li><a href="/auth/logout">Logout</a></li>
+                                </ul>
+                            <% } else { %>
+                                <div class="theader-login-text">LOGIN / REGISTER</div>
+                                <ul class="theader-login-list">
+                                    <li><a href="/auth/login">My Activity</a></li>
+                                    <li><a href="/auth/login">Recently Searched</a></li>
+                                    <li><a href="/auth/login">Recently Viewed</a></li>
+                                    <li><a href="/auth/login">Shortlisted</a></li>
+                                    <li><a href="/auth/login">Contacted</a></li>
+                                    <li><a href="/properties/create">Post Property <img src="/images/free-badge.png" alt="Free" style="height:16px;width:32px;vertical-align:middle;margin-left:6px;" onerror="this.style.display='none';"></a></li>
+                                </ul>
+                            <% } %>
+                        </div>
+                    </div>
+
+                    <!-- Hamburger Menu -->
+                    <div class="theader-hamburger">
+                        <i class="iconS_Common_24 icon_menuIcon hmenu__explicitSpriteSize fas fa-bars"></i>
+                    </div>
+                </div>
+            </div>
+            </div> <!-- Close theader-transparent-header -->
+
+        <!-- In-Page Search Box -->
+        <div class="inpage-search-box">
+            <div class="in-page-tabs">
+                <div id="inPageSearchForm_0" class="tab-child active" data-tab="buy">Buy</div>
+                <div id="inPageSearchForm_1" class="tab-child" data-tab="rent">Rent / Lease</div>
+                <div id="inPageSearchForm_2" class="tab-child tab-relative-pos" data-tab="new-launch">
+                    New Launch
+                    <div class="tab-red-dot"></div>
+                </div>
+                <div id="inPageSearchForm_3" class="tab-child" data-tab="commercial">Commercial</div>
+                <div id="inPageSearchForm_4" class="tab-child" data-tab="plots">Plots/Land</div>
+                <div id="inPageSearchForm_5" class="tab-child" data-tab="projects">Projects</div>
+                <div id="inPageSearchForm_6" class="tab-child tab-post-property" data-tab="post-property">
+                    Post Property
+                    <img src="/images/free-badge.png" alt="Free" style="height:20px;width:36px;vertical-align:middle;margin-left:6px;top:-2px;position:relative;" onerror="this.style.display='none';">
+                </div>
+                <div class="tab-bar" style="width: 54px; left: 20px;"></div>
+            </div>
+            
+            <div class="tab-tabs-content">
+                <form class="inpage-search-form" action="/search" method="GET">
+                    <div class="inpage-search-tab-wrap">
+                        <div class="inpage-input-filter-options">
+                            <div class="inpage-basic-filter">
+                                <div class="inpage-search-dropdown">
+                                    <div class="">All Residential</div>
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                                <div class="inpage-search-field">
+                                    <i class="fas fa-search"></i>
+                                    <input type="text" name="keyword" class="inpage-search-input" placeholder='Search "PG in sector 74 noida"' autocomplete="off">
+                                    <i class="fas fa-map-marker-alt inpage-location-icon"></i>
+                                    <i class="fas fa-microphone inpage-voice-icon"></i>
+                                </div>
+                            </div>
+                            <div class="inpage-search-btn">
+                                <button type="submit" class="btn-primary-regular">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Recent Searches Section -->
+        <div class="recent-searches-section">
+            <div class="spacer-16 caption-strong-large">Recent searches:</div>
+            <div class="recent-searches-list">
+                <div class="tags-and-chips tags-active">
+                    <i class="fas fa-sync-alt" style="margin-right: 6px;"></i>
+                    <span>Buy in Noida</span>
+                </div>
+                <div class="tags-and-chips">
+                    <i class="fas fa-sync-alt" style="margin-right: 6px;"></i>
+                    <span>View all searches</span>
+                </div>
+            </div>
+        </div>
+        </div> <!-- Close theader-home-header-wrap -->
+    </div> <!-- Close hero-section-with-header -->
+
+    <!-- Flash Messages -->
+    <% if (typeof success_msg !== 'undefined' && success_msg.length > 0) { %>
+        <div class="flash-message success">
+            <div class="container">
+                <% success_msg.forEach(function(msg) { %>
+                    <p><i class="fas fa-check-circle"></i> <%= msg %></p>
+                <% }); %>
+            </div>
+        </div>
+    <% } %>
+
+    <% if (typeof error_msg !== 'undefined' && error_msg.length > 0) { %>
+        <div class="flash-message error">
+            <div class="container">
+                <% error_msg.forEach(function(msg) { %>
+                    <p><i class="fas fa-exclamation-circle"></i> <%= msg %></p>
+                <% }); %>
+            </div>
+        </div>
+    <% } %>

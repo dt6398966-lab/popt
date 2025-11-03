@@ -1,0 +1,183 @@
+<%- include('partials/header') %>
+
+<section class="create-property-page">
+    <div class="container">
+        <div class="page-header">
+            <h1>Post Your Property Free</h1>
+            <p>List your property and reach lakhs of genuine buyers and renters</p>
+        </div>
+
+        <form action="/properties/create" method="POST" class="property-form" enctype="multipart/form-data">
+            <div class="form-section">
+                <h3>Basic Information</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Property Type *</label>
+                        <select name="property_type" required>
+                            <option value="">Select Property Type</option>
+                            <option value="Apartment">Apartment</option>
+                            <option value="Villa">Villa</option>
+                            <option value="House">House</option>
+                            <option value="Plot">Plot</option>
+                            <option value="Commercial">Commercial</option>
+                            <option value="Farm House">Farm House</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Transaction Type *</label>
+                        <select name="transaction_type" required>
+                            <option value="">Select</option>
+                            <option value="Sale">Sale</option>
+                            <option value="Rent">Rent</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Property Title *</label>
+                    <input type="text" name="title" placeholder="e.g., 2 BHK Apartment in Prime Location" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea name="description" rows="5" placeholder="Describe your property in detail..."></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Price & Area</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Price (₹) *</label>
+                        <input type="number" name="price" placeholder="Enter price" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Area (sq.ft) *</label>
+                        <input type="number" name="area" placeholder="Enter area" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Property Specifications</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Bedrooms</label>
+                        <select name="bedrooms">
+                            <option value="0">None</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Bathrooms</label>
+                        <select name="bathrooms">
+                            <option value="0">None</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4+</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Balconies</label>
+                        <select name="balconies">
+                            <option value="0">None</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3+</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Furnishing Status</label>
+                        <select name="furnishing_status">
+                            <option value="">Select</option>
+                            <option value="Furnished">Furnished</option>
+                            <option value="Semi-Furnished">Semi-Furnished</option>
+                            <option value="Unfurnished">Unfurnished</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Floor Number</label>
+                        <input type="number" name="floor_number" placeholder="Floor number">
+                    </div>
+                    <div class="form-group">
+                        <label>Total Floors</label>
+                        <input type="number" name="total_floors" placeholder="Total floors">
+                    </div>
+                </div>
+
+                <div class="form-row checkbox-row">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="parking"> Parking Available
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="lift"> Lift Available
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Location</h3>
+                <div class="form-group">
+                    <label>Address *</label>
+                    <input type="text" name="address" placeholder="Street address" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>City *</label>
+                        <input type="text" name="city" placeholder="City" required>
+                    </div>
+                    <div class="form-group">
+                        <label>State *</label>
+                        <input type="text" name="state" placeholder="State" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Pincode *</label>
+                        <input type="text" name="pincode" placeholder="Pincode" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Latitude (Optional)</label>
+                        <input type="text" name="latitude" placeholder="Latitude">
+                    </div>
+                    <div class="form-group">
+                        <label>Longitude (Optional)</label>
+                        <input type="text" name="longitude" placeholder="Longitude">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Property Images</h3>
+                <div class="form-group">
+                    <label>Upload Images (Max 10, 5MB each) *</label>
+                    <input type="file" name="images" multiple accept="image/*" required>
+                    <small style="color: #6B7280; display: block; margin-top: 5px;">You can select multiple images</small>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Amenities (Separate by comma)</h3>
+                <div class="form-group">
+                    <input type="text" name="amenities" placeholder="e.g., Gym, Swimming Pool, Garden, Security, etc.">
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Post Property</button>
+                <a href="/properties" class="btn-secondary">Cancel</a>
+            </div>
+        </form>
+    </div>
+</section>
+
+<%- include('partials/footer') %>
+

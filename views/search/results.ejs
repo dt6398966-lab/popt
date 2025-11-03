@@ -1,0 +1,75 @@
+<%- include('partials/header') %>
+
+<section class="search-results-page">
+    <div class="container">
+        <div class="page-header">
+            <h1>Search Results</h1>
+            <p>Found <%= typeof totalProperties !== 'undefined' ? totalProperties : '0' %> properties matching your search</p>
+        </div>
+
+        <% if (typeof properties !== 'undefined' && properties.length > 0) { %>
+            <div class="properties-grid">
+                <% properties.forEach(function(property) { %>
+                    <div class="property-card">
+                        <div class="property-image">
+                            <% if (property.images && property.images.length > 0) { %>
+                                <img src="<%= property.images[0] %>" alt="<%= property.title %>">
+                            <% } else { %>
+                                <img src="https://via.placeholder.com/400x300/F97316/FFFFFF?text=No+Image" alt="<%= property.title %>" style="width: 100%; height: 100%; object-fit: cover;">
+                            <% } %>
+                            <span class="property-badge <%= property.transaction_type === 'Sale' ? 'sale' : 'rent' %>"><%= property.transaction_type %></span>
+                        </div>
+                        <div class="property-content">
+                            <h3><a href="/properties/<%= property.id %>"><%= property.title %></a></h3>
+                            <p class="property-location"><i class="fas fa-map-marker-alt"></i> <%= property.city %>, <%= property.state %></p>
+                            <div class="property-specs">
+                                <% if (property.bedrooms > 0) { %>
+                                    <span><i class="fas fa-bed"></i> <%= property.bedrooms %> BHK</span>
+                                <% } %>
+                                <% if (property.bathrooms > 0) { %>
+                                    <span><i class="fas fa-bath"></i> <%= property.bathrooms %></span>
+                                <% } %>
+                                <span><i class="fas fa-vector-square"></i> <%= property.area %> sq.ft</span>
+                            </div>
+                            <div class="property-price">
+                                <span class="price">₹<%= parseFloat(property.price).toLocaleString('en-IN') %></span>
+                                <span class="price-type"><%= property.transaction_type %></span>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+
+            <!-- Pagination -->
+            <% if (typeof totalPages !== 'undefined' && totalPages > 1) { %>
+                <div class="pagination">
+                    <% if (typeof currentPage !== 'undefined' && currentPage > 1) { %>
+                        <a href="/search?page=<%= currentPage - 1 %>" class="page-link">Previous</a>
+                    <% } %>
+                    
+                    <% for (let i = 1; i <= totalPages; i++) { %>
+                        <% if (i === 1 || i === totalPages || (i >= currentPage - 2 && i <= currentPage + 2)) { %>
+                            <a href="/search?page=<%= i %>" class="page-link <%= typeof currentPage !== 'undefined' && currentPage === i ? 'active' : '' %>"><%= i %></a>
+                        <% } else if (i === currentPage - 3 || i === currentPage + 3) { %>
+                            <span class="page-link">...</span>
+                        <% } %>
+                    <% } %>
+                    
+                    <% if (typeof currentPage !== 'undefined' && currentPage < totalPages) { %>
+                        <a href="/search?page=<%= currentPage + 1 %>" class="page-link">Next</a>
+                    <% } %>
+                </div>
+            <% } %>
+        <% } else { %>
+            <div class="no-results">
+                <i class="fas fa-search"></i>
+                <h3>No properties found</h3>
+                <p>We couldn't find any properties matching your search. Try adjusting your filters or search criteria.</p>
+                <a href="/properties" class="btn-primary" style="margin-top: 15px;">Browse All Properties</a>
+            </div>
+        <% } %>
+    </div>
+</section>
+
+<%- include('partials/footer') %>
+

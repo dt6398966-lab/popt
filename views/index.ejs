@@ -1,0 +1,108 @@
+<%- include('partials/header') %>
+
+<!-- Featured Properties -->
+<% if (featuredProperties && featuredProperties.length > 0) { %>
+<section class="featured-section">
+    <div class="container">
+        <h2 class="section-title">Featured Properties</h2>
+        <div class="properties-grid">
+            <% featuredProperties.forEach(function(property) { %>
+                <div class="property-card">
+                    <div class="property-image">
+                        <% if (property.images && property.images.length > 0) { %>
+                            <img src="<%= property.images[0] %>" alt="<%= property.title %>">
+                        <% } else { %>
+                            <img src="https://via.placeholder.com/400x300/F97316/FFFFFF?text=No+Image" alt="<%= property.title %>" style="width: 100%; height: 100%; object-fit: cover;">
+                        <% } %>
+                        <span class="property-badge featured">Featured</span>
+                    </div>
+                    <div class="property-content">
+                        <h3><a href="/properties/<%= property.id %>"><%= property.title %></a></h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> <%= property.city %>, <%= property.state %></p>
+                        <div class="property-specs">
+                            <span><i class="fas fa-bed"></i> <%= property.bedrooms %> BHK</span>
+                            <span><i class="fas fa-bath"></i> <%= property.bathrooms %></span>
+                            <span><i class="fas fa-vector-square"></i> <%= property.area %> sq.ft</span>
+                        </div>
+                        <div class="property-price">
+                            <span class="price">₹<%= property.price.toLocaleString('en-IN') %></span>
+                            <span class="price-type"><%= property.transaction_type %></span>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</section>
+<% } %>
+
+<!-- Latest Properties -->
+<% if (latestProperties && latestProperties.length > 0) { %>
+<section class="latest-section">
+    <div class="container">
+        <h2 class="section-title">Latest Properties</h2>
+        <div class="properties-grid">
+            <% latestProperties.forEach(function(property) { %>
+                <div class="property-card">
+                    <div class="property-image">
+                        <% if (property.images && property.images.length > 0) { %>
+                            <img src="<%= property.images[0] %>" alt="<%= property.title %>">
+                        <% } else { %>
+                            <img src="https://via.placeholder.com/400x300/F97316/FFFFFF?text=No+Image" alt="<%= property.title %>" style="width: 100%; height: 100%; object-fit: cover;">
+                        <% } %>
+                        <span class="property-badge <%= property.transaction_type === 'Sale' ? 'sale' : 'rent' %>"><%= property.transaction_type %></span>
+                    </div>
+                    <div class="property-content">
+                        <h3><a href="/properties/<%= property.id %>"><%= property.title %></a></h3>
+                        <p class="property-location"><i class="fas fa-map-marker-alt"></i> <%= property.city %>, <%= property.state %></p>
+                        <div class="property-specs">
+                            <span><i class="fas fa-bed"></i> <%= property.bedrooms %> BHK</span>
+                            <span><i class="fas fa-bath"></i> <%= property.bathrooms %></span>
+                            <span><i class="fas fa-vector-square"></i> <%= property.area %> sq.ft</span>
+                        </div>
+                        <div class="property-price">
+                            <span class="price">₹<%= property.price.toLocaleString('en-IN') %></span>
+                            <span class="price-type"><%= property.transaction_type %></span>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+        <div class="view-all">
+            <a href="/properties" class="btn-primary">View All Properties</a>
+        </div>
+    </div>
+</section>
+<% } %>
+
+<!-- Property Types Section -->
+<section class="property-types-section">
+    <div class="container">
+        <h2 class="section-title">Browse by Property Type</h2>
+        <div class="property-types-grid">
+            <a href="/properties?property_type=Apartment" class="property-type-card">
+                <i class="fas fa-building"></i>
+                <h3>Buy Apartments</h3>
+                <p>Flats & Apartments for Sale</p>
+            </a>
+            <a href="/properties?property_type=Villa" class="property-type-card">
+                <i class="fas fa-home"></i>
+                <h3>Buy Villas</h3>
+                <p>Independent Houses & Villas</p>
+            </a>
+            <a href="/properties?property_type=Plot" class="property-type-card">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3>Buy Plots</h3>
+                <p>Land & Plots for Sale</p>
+            </a>
+            <a href="/properties?property_type=Commercial" class="property-type-card">
+                <i class="fas fa-store"></i>
+                <h3>Commercial</h3>
+                <p>Office, Shop & Showroom</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>
+

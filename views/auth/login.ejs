@@ -1,0 +1,32 @@
+<%- include('partials/header') %>
+
+<section class="auth-page">
+    <div class="container">
+        <div class="auth-container">
+            <div class="auth-box">
+                <h2>Login to Your Account</h2>
+                <p>Access your dashboard to manage properties, enquiries and more</p>
+                
+                <form action="/auth/login" method="POST" class="auth-form">
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Password</label>
+                        <input type="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn-primary btn-block">Login</button>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Don't have an account? <a href="/auth/signup">Sign Up</a></p>
+                    <p><a href="/forgot-password">Forgot Password?</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>
+

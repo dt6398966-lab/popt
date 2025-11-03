@@ -1,0 +1,58 @@
+<%- include('partials/header') %>
+
+<section class="agents-page">
+    <div class="container">
+        <div class="page-header">
+            <h1>Find Real Estate Agents in India</h1>
+            <p>Connect with verified property agents to buy, sell or rent properties</p>
+        </div>
+
+        <% if (typeof agents !== 'undefined' && agents.length > 0) { %>
+            <div class="agents-grid">
+                <% agents.forEach(function(agent) { %>
+                    <div class="agent-card">
+                        <div class="agent-image">
+                            <% if (agent.profile_image) { %>
+                                <img src="<%= agent.profile_image %>" alt="<%= agent.user.name %>">
+                            <% } else { %>
+                                <img src="https://via.placeholder.com/200x200?text=Agent" alt="<%= agent.user.name %>">
+                            <% } %>
+                            <% if (agent.is_verified) { %>
+                                <span class="verified-badge"><i class="fas fa-check-circle"></i> Verified</span>
+                            <% } %>
+                        </div>
+                        <div class="agent-content">
+                            <h3><a href="/agents/<%= agent.id %>"><%= agent.user.name %></a></h3>
+                            <% if (agent.company_name) { %>
+                                <p class="company-name"><%= agent.company_name %></p>
+                            <% } %>
+                            <% if (agent.rating > 0) { %>
+                                <div class="agent-rating">
+                                    <span class="stars"><% for (let i = 0; i < 5; i++) { %>
+                                        <i class="fas fa-star <%= i < Math.round(agent.rating) ? 'active' : '' %>"></i>
+                                    <% } %></span>
+                                    <span class="rating-value"><%= parseFloat(agent.rating).toFixed(1) %></span>
+                                </div>
+                            <% } %>
+                            <% if (agent.experience_years > 0) { %>
+                                <p><i class="fas fa-briefcase"></i> <%= agent.experience_years %> years experience</p>
+                            <% } %>
+                            <% if (agent.total_properties > 0) { %>
+                                <p><i class="fas fa-home"></i> <%= agent.total_properties %> properties</p>
+                            <% } %>
+                            <a href="/agents/<%= agent.id %>" class="btn-primary">View Profile</a>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        <% } else { %>
+            <div class="no-results">
+                <i class="fas fa-user-tie"></i>
+                <h3>No agents found</h3>
+            </div>
+        <% } %>
+    </div>
+</section>
+
+<%- include('partials/footer') %>
+

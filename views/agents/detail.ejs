@@ -1,0 +1,109 @@
+<%- include('partials/header') %>
+
+<section class="agent-detail-page">
+    <div class="container">
+        <div class="agent-detail-layout">
+            <div class="agent-profile">
+                <div class="agent-image-large">
+                    <% if (agent.profile_image) { %>
+                        <img src="<%= agent.profile_image %>" alt="<%= agent.user.name %>">
+                    <% } else { %>
+                        <img src="https://via.placeholder.com/150x150?text=Agent" alt="<%= agent.user.name %>">
+                    <% } %>
+                </div>
+                <div class="agent-info">
+                    <h1><%= agent.user.name %></h1>
+                    <% if (agent.company_name) { %>
+                        <p class="company-name"><%= agent.company_name %></p>
+                    <% } %>
+                    <% if (agent.is_verified) { %>
+                        <span class="verified-badge-large"><i class="fas fa-check-circle"></i> Verified Agent</span>
+                    <% } %>
+                    
+                    <% if (agent.rating > 0) { %>
+                        <div class="agent-rating-large">
+                            <span class="stars">
+                                <% for (let i = 0; i < 5; i++) { %>
+                                    <i class="fas fa-star <%= i < Math.round(agent.rating) ? 'active' : '' %>"></i>
+                                <% } %>
+                            </span>
+                            <span class="rating-value"><%= parseFloat(agent.rating).toFixed(1) %> / 5.0</span>
+                        </div>
+                    <% } %>
+
+                    <div class="agent-stats">
+                        <% if (agent.experience_years > 0) { %>
+                            <div class="stat-item">
+                                <i class="fas fa-briefcase"></i>
+                                <div>
+                                    <strong><%= agent.experience_years %></strong>
+                                    <p>Years Experience</p>
+                                </div>
+                            </div>
+                        <% } %>
+                        <% if (agent.total_properties > 0) { %>
+                            <div class="stat-item">
+                                <i class="fas fa-home"></i>
+                                <div>
+                                    <strong><%= agent.total_properties %></strong>
+                                    <p>Properties</p>
+                                </div>
+                            </div>
+                        <% } %>
+                    </div>
+
+                    <% if (agent.bio) { %>
+                        <div class="agent-bio">
+                            <h3>About</h3>
+                            <p><%= agent.bio %></p>
+                        </div>
+                    <% } %>
+
+                    <% if (agent.specialization) { %>
+                        <div class="agent-specialization">
+                            <h3>Specialization</h3>
+                            <p><%= agent.specialization %></p>
+                        </div>
+                    <% } %>
+
+                    <div class="agent-contact">
+                        <h3>Contact Information</h3>
+                        <p><i class="fas fa-envelope"></i> <%= agent.user.email %></p>
+                        <% if (agent.user.phone) { %>
+                            <p><i class="fas fa-phone"></i> <%= agent.user.phone %></p>
+                        <% } %>
+                    </div>
+                </div>
+            </div>
+
+            <% if (agentProperties && agentProperties.length > 0) { %>
+                <div class="agent-properties">
+                    <h2>Properties by <%= agent.user.name %></h2>
+                    <div class="properties-grid">
+                        <% agentProperties.forEach(function(property) { %>
+                            <div class="property-card">
+                                <div class="property-image">
+                                    <% if (property.images && property.images.length > 0) { %>
+                                        <img src="<%= property.images[0] %>" alt="<%= property.title %>">
+                                    <% } else { %>
+                                        <img src="https://via.placeholder.com/400x300?text=Property+Image" alt="<%= property.title %>">
+                                    <% } %>
+                                </div>
+                                <div class="property-content">
+                                    <h3><a href="/properties/<%= property.id %>"><%= property.title %></a></h3>
+                                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> <%= property.city %></p>
+                                    <div class="property-price">
+                                        <span class="price">₹<%= parseFloat(property.price).toLocaleString('en-IN') %></span>
+                                    </div>
+                                </div>
+                            </div>
+                        <% }); %>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>
+
