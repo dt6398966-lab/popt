@@ -1,9 +1,473 @@
 <%- include('partials/header') %>
 
-<!-- Featured Properties -->
-<% if (featuredProperties && featuredProperties.length > 0) { %>
-<section class="featured-section">
-    <div class="container">
+<!-- Main Content with Sidebar -->
+<section class="home-main-content">
+    <div class="container-home-layout">
+        <!-- Left Content Area -->
+        <div class="home-left-content">
+            <!-- Recommended Properties Section -->
+            <section class="recommended-properties-section">
+                <div class="recommended-properties-wrapper">
+                    <div class="npSrpWidget__npWidgtHeadingHP" style="background: transparent; padding-top: 0px;">
+            <h2 class="title_l_bold">Recommended Projects</h2>
+            <div class="spacer4"></div>
+            <div class="caption_subdued_large null">The most searched projects in Noida</div>
+        </div>
+        <div class="npSrpWidget__npWidgtCardsWrp" style="max-width: 100%;">
+            <div class="npSrpWidget__recomListWrap">
+                <!-- Property 1: Eldeco Live By The Greens -->
+                <div class="npSrpWidget__npSrpCard" style="width: 295px; border-radius: 20px; box-shadow: none; margin-bottom: 0px;">
+                    <div style="height: 155px; border-top-left-radius: 20px; border-top-right-radius: 20px; border: 1px solid rgba(0, 0, 0, 0.1); position: relative; overflow: hidden;">
+                        <div class="npSrpWidget__badgesWrapper">
+                            <div class="m_newReraProject__reraTag" style="display: flex; flex-direction: row; gap: 4px; padding: 4px 8px; margin-left: 8px;">
+                                <img src="https://static.99acres.com/universalhp/img/projectOnDemandHeadingRera.png" style="height: 12px; width: 12px; object-fit: contain;" onerror="this.style.display='none'">
+                                <div class="m_newReraProject__reraStyle">RERA</div>
+                            </div>
+                        </div>
+                        <div class="npSrpWidget__shortlistIcon">
+                            <div class="style__shortlistHeart16">
+                                <i class="far fa-heart" style="color: #FFFFFF; font-size: 16px; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                        <div class="imgHover" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0;">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop" alt="Eldeco Live By The Greens" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://static.99acres.com/universalapp/img/defaultProj.png'">
+                        </div>
+                        <div class="npSrpWidget__possTag badges_large_secondary">
+                            <span>Ready To Move</span>
+                        </div>
+                    </div>
+                    <div class="npSrpWidget__xidRecommCont">
+                        <div class="cardContent__actionheadWrap">
+                            <a href="#" class="cardContent__recomProjName list_header_bold spacer2" title="Eureka Park By Tata Value Homes">Eureka Park By Tata Value Homes</a>
+                            <div class="caption_subdued_medium spacer8">
+                                <span>2, 3 BHK Apartment in Sector 150, Noida</span>
+                            </div>
+                            <div class="list_header_semiBold">₹ 1.53 - 1.9 Cr</div>
+                        </div>
+                        <div class="npSrpWidget__badgeContOthers spacer8" style="margin-top: 12px;"></div>
+                    </div>
+                </div>
+
+                <!-- Property 2: Godrej Nest -->
+                <div class="npSrpWidget__npSrpCard" style="width: 295px; border-radius: 20px; box-shadow: none; margin-bottom: 0px;">
+                    <div style="height: 155px; border-top-left-radius: 20px; border-top-right-radius: 20px; border: 1px solid rgba(0, 0, 0, 0.1); position: relative; overflow: hidden;">
+                        <div class="npSrpWidget__badgesWrapper">
+                            <div class="m_newReraProject__reraTag" style="display: flex; flex-direction: row; gap: 4px; padding: 4px 8px; margin-left: 8px;">
+                                <img src="https://static.99acres.com/universalhp/img/projectOnDemandHeadingRera.png" style="height: 12px; width: 12px; object-fit: contain;" onerror="this.style.display='none'">
+                                <div class="m_newReraProject__reraStyle">RERA</div>
+                            </div>
+                        </div>
+                        <div class="npSrpWidget__shortlistIcon">
+                            <div class="style__shortlistHeart16">
+                                <i class="far fa-heart" style="color: #FFFFFF; font-size: 16px; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                        <div class="imgHover" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0;">
+                            <img src="https://images.unsplash.com/photo-1600591370556-12e0d9c61bdf?w=400&h=300&fit=crop" alt="Godrej Nest" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://static.99acres.com/universalapp/img/defaultProj.png'">
+                        </div>
+                        <div class="npSrpWidget__possTag badges_large_secondary">
+                            <span>Under Construction</span>
+                        </div>
+                    </div>
+                    <div class="npSrpWidget__xidRecommCont">
+                        <div class="cardContent__actionheadWrap">
+                            <a href="#" class="cardContent__recomProjName list_header_bold spacer2" title="Godrej Nest">Godrej Nest</a>
+                            <div class="caption_subdued_medium spacer8">
+                                <span>2, 3, 4 BHK Apartment in Sector 150, Noida</span>
+                            </div>
+                            <div class="list_header_semiBold">₹ 1.25 - 4.6 Cr</div>
+                        </div>
+                        <div class="npSrpWidget__badgeContOthers spacer8" style="margin-top: 12px;"></div>
+                    </div>
+                </div>
+
+                <!-- Property 3: Godrej Palm Retreat -->
+                <div class="npSrpWidget__npSrpCard" style="width: 295px; border-radius: 20px; box-shadow: none; margin-bottom: 0px;">
+                    <div style="height: 155px; border-top-left-radius: 20px; border-top-right-radius: 20px; border: 1px solid rgba(0, 0, 0, 0.1); position: relative; overflow: hidden;">
+                        <div class="npSrpWidget__badgesWrapper">
+                            <div class="m_newReraProject__reraTag" style="display: flex; flex-direction: row; gap: 4px; padding: 4px 8px; margin-left: 8px;">
+                                <img src="https://static.99acres.com/universalhp/img/projectOnDemandHeadingRera.png" style="height: 12px; width: 12px; object-fit: contain;" onerror="this.style.display='none'">
+                                <div class="m_newReraProject__reraStyle">RERA</div>
+                            </div>
+                        </div>
+                        <div class="npSrpWidget__shortlistIcon">
+                            <div class="style__shortlistHeart16">
+                                <i class="far fa-heart" style="color: #FFFFFF; font-size: 16px; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                        <div class="imgHover" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0;">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=300&fit=crop" alt="Godrej Palm Retreat" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://static.99acres.com/universalapp/img/defaultProj.png'">
+                        </div>
+                        <div class="npSrpWidget__possTag badges_large_secondary">
+                            <span>Possession from Dec 2025</span>
+                        </div>
+                    </div>
+                    <div class="npSrpWidget__xidRecommCont">
+                        <div class="cardContent__actionheadWrap">
+                            <a href="#" class="cardContent__recomProjName list_header_bold spacer2" title="Godrej Palm Retreat">Godrej Palm Retreat</a>
+                            <div class="caption_subdued_medium spacer8">
+                                <span>3, 4 BHK Apartment in Sector 150, Noida</span>
+                            </div>
+                            <div class="list_header_semiBold">₹ 1.08 - 4.21 Cr</div>
+                        </div>
+                        <div class="npSrpWidget__badgeContOthers spacer8" style="margin-top: 12px;"></div>
+                    </div>
+                </div>
+
+                <!-- Property 4: Supertech Ecovillage -->
+                <div class="npSrpWidget__npSrpCard" style="width: 295px; border-radius: 20px; box-shadow: none; margin-bottom: 0px;">
+                    <div style="height: 155px; border-top-left-radius: 20px; border-top-right-radius: 20px; border: 1px solid rgba(0, 0, 0, 0.1); position: relative; overflow: hidden;">
+                        <div class="npSrpWidget__badgesWrapper">
+                            <div class="m_newReraProject__reraTag" style="display: flex; flex-direction: row; gap: 4px; padding: 4px 8px; margin-left: 8px;">
+                                <img src="https://static.99acres.com/universalhp/img/projectOnDemandHeadingRera.png" style="height: 12px; width: 12px; object-fit: contain;" onerror="this.style.display='none'">
+                                <div class="m_newReraProject__reraStyle">RERA</div>
+                            </div>
+                        </div>
+                        <div class="npSrpWidget__shortlistIcon">
+                            <div class="style__shortlistHeart16">
+                                <i class="far fa-heart" style="color: #FFFFFF; font-size: 16px; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                        <div class="imgHover" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0;">
+                            <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&h=300&fit=crop" alt="Supertech Ecovillage" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://static.99acres.com/universalapp/img/defaultProj.png'">
+                        </div>
+                        <div class="npSrpWidget__possTag badges_large_secondary">
+                            <span>Ready To Move</span>
+                        </div>
+                    </div>
+                    <div class="npSrpWidget__xidRecommCont">
+                        <div class="cardContent__actionheadWrap">
+                            <a href="#" class="cardContent__recomProjName list_header_bold spacer2" title="Supertech Ecovillage">Supertech Ecovillage</a>
+                            <div class="caption_subdued_medium spacer8">
+                                <span>3, 4 BHK Apartment in Sector 137, Noida</span>
+                            </div>
+                            <div class="list_header_semiBold">₹ 2.15 - 3.8 Cr</div>
+                        </div>
+                        <div class="npSrpWidget__badgeContOthers spacer8" style="margin-top: 12px;"></div>
+                    </div>
+                </div>
+
+                <!-- Property 5: Amarpali Silicon City -->
+                <div class="npSrpWidget__npSrpCard" style="width: 295px; border-radius: 20px; box-shadow: none; margin-bottom: 0px;">
+                    <div style="height: 155px; border-top-left-radius: 20px; border-top-right-radius: 20px; border: 1px solid rgba(0, 0, 0, 0.1); position: relative; overflow: hidden;">
+                        <div class="npSrpWidget__badgesWrapper">
+                            <div class="m_newReraProject__reraTag" style="display: flex; flex-direction: row; gap: 4px; padding: 4px 8px; margin-left: 8px;">
+                                <img src="https://static.99acres.com/universalhp/img/projectOnDemandHeadingRera.png" style="height: 12px; width: 12px; object-fit: contain;" onerror="this.style.display='none'">
+                                <div class="m_newReraProject__reraStyle">RERA</div>
+                            </div>
+                        </div>
+                        <div class="npSrpWidget__shortlistIcon">
+                            <div class="style__shortlistHeart16">
+                                <i class="far fa-heart" style="color: #FFFFFF; font-size: 16px; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                        <div class="imgHover" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0;">
+                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&h=300&fit=crop" alt="Amarpali Silicon City" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://static.99acres.com/universalapp/img/defaultProj.png'">
+                        </div>
+                        <div class="npSrpWidget__possTag badges_large_secondary">
+                            <span>New Launch</span>
+                        </div>
+                    </div>
+                    <div class="npSrpWidget__xidRecommCont">
+                        <div class="cardContent__actionheadWrap">
+                            <a href="#" class="cardContent__recomProjName list_header_bold spacer2" title="Amarpali Silicon City">Amarpali Silicon City</a>
+                            <div class="caption_subdued_medium spacer8">
+                                <span>2, 3 BHK Apartment in Sector 76, Noida</span>
+                            </div>
+                            <div class="list_header_semiBold">₹ 1.85 - 2.45 Cr</div>
+                        </div>
+                        <div class="npSrpWidget__badgeContOthers spacer8" style="margin-top: 12px;"></div>
+                    </div>
+                </div>
+
+                <!-- Property 6: DLF Garden City -->
+                <div class="npSrpWidget__npSrpCard" style="width: 295px; border-radius: 20px; box-shadow: none; margin-bottom: 0px;">
+                    <div style="height: 155px; border-top-left-radius: 20px; border-top-right-radius: 20px; border: 1px solid rgba(0, 0, 0, 0.1); position: relative; overflow: hidden;">
+                        <div class="npSrpWidget__badgesWrapper">
+                            <div class="m_newReraProject__reraTag" style="display: flex; flex-direction: row; gap: 4px; padding: 4px 8px; margin-left: 8px;">
+                                <img src="https://static.99acres.com/universalhp/img/projectOnDemandHeadingRera.png" style="height: 12px; width: 12px; object-fit: contain;" onerror="this.style.display='none'">
+                                <div class="m_newReraProject__reraStyle">RERA</div>
+                            </div>
+                        </div>
+                        <div class="npSrpWidget__shortlistIcon">
+                            <div class="style__shortlistHeart16">
+                                <i class="far fa-heart" style="color: #FFFFFF; font-size: 16px; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                        <div class="imgHover" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0;">
+                            <img src="https://images.unsplash.com/photo-1600585154084-4d24c75a0e6e?w=400&h=300&fit=crop" alt="DLF Garden City" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://static.99acres.com/universalapp/img/defaultProj.png'">
+                        </div>
+                        <div class="npSrpWidget__possTag badges_large_secondary">
+                            <span>Under Construction</span>
+                        </div>
+                    </div>
+                    <div class="npSrpWidget__xidRecommCont">
+                        <div class="cardContent__actionheadWrap">
+                            <a href="#" class="cardContent__recomProjName list_header_bold spacer2" title="DLF Garden City">DLF Garden City</a>
+                            <div class="caption_subdued_medium spacer8">
+                                <span>3, 4 BHK Apartment in Sector 128, Noida</span>
+                            </div>
+                            <div class="list_header_semiBold">₹ 3.2 - 5.8 Cr</div>
+                        </div>
+                        <div class="npSrpWidget__badgeContOthers spacer8" style="margin-top: 12px;"></div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="arrow__whiteBg arrow__rightIcon" onclick="scrollRecommendedProjects('right')" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); cursor: pointer; background: #FFFFFF; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 15;">
+                <i class="fas fa-chevron-right" style="color: #333333; font-size: 18px;"></i>
+            </div>
+        </div>
+                </div>
+            </section>
+
+            <!-- Recommended Properties Section -->
+            <section class="recommended-properties-detailed-section">
+                <div class="container">
+                    <div class="recommended-header">
+                        <h2 class="section-title">Recommended Properties</h2>
+                        <p class="recommended-subtitle">Curated especially for you</p>
+                    </div>
+                    <div class="properties-grid">
+                        <!-- Property 1: Antriksh Golf City Entrance -->
+                        <div class="property-card">
+                            <div class="property-image">
+                                <img src="https://images.unsplash.com/photo-1600591370556-12e0d9c61bdf?w=400&h=300&fit=crop" alt="Antriksh Golf City Entrance" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="property-content">
+                                <h3><a href="#">Antriksh Golf City Entrance</a></h3>
+                                <div class="property-price">
+                                    <span class="price">₹ 90 L</span>
+                                </div>
+                                <div class="property-specs">
+                                    2 BHK Apartment, 2 Baths
+                                </div>
+                                <p class="property-location">
+                                    In Antriksh Golf City, Sector 150, Noida
+                                </p>
+                                <p class="property-posted">Posted by Owner<span class="posted-time">6 months ago</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Property 2: Eldeco Live By The Greens Building -->
+                        <div class="property-card">
+                            <div class="property-image">
+                                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop" alt="Eldeco Live By The Greens Building" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="property-content">
+                                <h3><a href="#">Eldeco Live By The Greens Building</a></h3>
+                                <div class="property-price">
+                                    <span class="price">₹ 1.58 Cr</span>
+                                </div>
+                                <div class="property-specs">
+                                    2 BHK Apartment, 3 Baths
+                                </div>
+                                <p class="property-location">
+                                    In Eldeco Live By The Greens, Sector 150, Noida
+                                </p>
+                                <p class="property-posted">Posted by Owner<span class="posted-time">4 months ago</span></p>
+                            </div>
+                        </div>
+
+                        <!-- Property 3: Jaypee Aman Building -->
+                        <div class="property-card">
+                            <div class="property-image">
+                                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=300&fit=crop" alt="Jaypee Aman Building" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="property-content">
+                                <h3><a href="#">Jaypee Aman Building</a></h3>
+                                <div class="property-price">
+                                    <span class="price">₹ 92.75 L</span>
+                                </div>
+                                <div class="property-specs">
+                                    2 BHK Apartment, 2 Baths
+                                </div>
+                                <p class="property-location">
+                                    In Jaypee Aman, Sector 151, Noida
+                                </p>
+                                <p class="property-posted">Posted by Owner<span class="posted-time">3 months ago</span></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="recommended-properties-nav">
+                        <button class="arrow-nav arrow-nav-left" onclick="scrollRecommendedProperties('left')">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="arrow-nav arrow-nav-right" onclick="scrollRecommendedProperties('right')">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recommended Projects Section -->
+            <section class="recommended-projects-section">
+                <div class="container">
+                    <div class="npSrpWidget__npWidgtHeadingHP" style="background: transparent; padding-top: 0px;">
+                        <h2 class="title_l_bold">Recommended Property Types</h2>
+                        <div class="spacer4"></div>
+                        <div class="caption_subdued_large null">Browse properties by type</div>
+                    </div>
+                    <div class="npSrpWidget__npWidgtCardsWrp" style="max-width: 100%;">
+                        <div class="npSrpWidget__recomListWrap">
+                            <!-- Project 1 -->
+                            <div class="npSrpWidget__npSrpCard" style="width: 295px; border-radius: 20px; box-shadow: none; margin-bottom: 0px;">
+                                <div style="height: 155px; border-top-left-radius: 20px; border-top-right-radius: 20px; border: 1px solid rgba(0, 0, 0, 0.1); position: relative; overflow: hidden;">
+                                    <div class="npSrpWidget__badgesWrapper">
+                                        <div class="m_newReraProject__reraTag" style="display: flex; flex-direction: row; gap: 4px; padding: 4px 8px; margin-left: 8px;">
+                                            <img src="https://static.99acres.com/universalhp/img/projectOnDemandHeadingRera.png" style="height: 12px; width: 12px; object-fit: contain;" onerror="this.style.display='none'">
+                                            <div class="m_newReraProject__reraStyle">RERA</div>
+                                        </div>
+                                    </div>
+                                    <div class="npSrpWidget__shortlistIcon">
+                                        <div class="style__shortlistHeart16">
+                                            <i class="far fa-heart" style="color: #FFFFFF; font-size: 16px; cursor: pointer;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="imgHover" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0;">
+                                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=400&h=300&fit=crop" alt="Project" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://static.99acres.com/universalapp/img/defaultProj.png'">
+                                    </div>
+                                    <div class="npSrpWidget__possTag badges_large_secondary">
+                                        <span>New Launch</span>
+                                    </div>
+                                </div>
+                                <div class="npSrpWidget__xidRecommCont">
+                                    <div class="cardContent__actionheadWrap">
+                                        <a href="#" class="cardContent__recomProjName list_header_bold spacer2" title="Project Name">Supertech Ecovillage</a>
+                                        <div class="caption_subdued_medium spacer8">
+                                            <span>3, 4 BHK Apartment in Sector 137, Noida</span>
+                                        </div>
+                                        <div class="list_header_semiBold">₹ 2.15 - 3.8 Cr</div>
+                                    </div>
+                                    <div class="npSrpWidget__badgeContOthers spacer8" style="margin-top: 12px;"></div>
+                                </div>
+                            </div>
+                            <!-- Project 2 -->
+                            <div class="npSrpWidget__npSrpCard" style="width: 295px; border-radius: 20px; box-shadow: none; margin-bottom: 0px;">
+                                <div style="height: 155px; border-top-left-radius: 20px; border-top-right-radius: 20px; border: 1px solid rgba(0, 0, 0, 0.1); position: relative; overflow: hidden;">
+                                    <div class="npSrpWidget__badgesWrapper">
+                                        <div class="m_newReraProject__reraTag" style="display: flex; flex-direction: row; gap: 4px; padding: 4px 8px; margin-left: 8px;">
+                                            <img src="https://static.99acres.com/universalhp/img/projectOnDemandHeadingRera.png" style="height: 12px; width: 12px; object-fit: contain;" onerror="this.style.display='none'">
+                                            <div class="m_newReraProject__reraStyle">RERA</div>
+                                        </div>
+                                    </div>
+                                    <div class="npSrpWidget__shortlistIcon">
+                                        <div class="style__shortlistHeart16">
+                                            <i class="far fa-heart" style="color: #FFFFFF; font-size: 16px; cursor: pointer;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="imgHover" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0;">
+                                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=400&h=300&fit=crop" alt="Project" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://static.99acres.com/universalapp/img/defaultProj.png'">
+                                    </div>
+                                    <div class="npSrpWidget__possTag badges_large_secondary">
+                                        <span>New Launch</span>
+                                    </div>
+                                </div>
+                                <div class="npSrpWidget__xidRecommCont">
+                                    <div class="cardContent__actionheadWrap">
+                                        <a href="#" class="cardContent__recomProjName list_header_bold spacer2" title="Project Name">Amarpali Silicon City</a>
+                                        <div class="caption_subdued_medium spacer8">
+                                            <span>2, 3 BHK Apartment in Sector 76, Noida</span>
+                                        </div>
+                                        <div class="list_header_semiBold">₹ 1.85 - 2.45 Cr</div>
+                                    </div>
+                                    <div class="npSrpWidget__badgeContOthers spacer8" style="margin-top: 12px;"></div>
+                                </div>
+                            </div>
+                            <!-- Project 3 -->
+                            <div class="npSrpWidget__npSrpCard" style="width: 295px; border-radius: 20px; box-shadow: none; margin-bottom: 0px;">
+                                <div style="height: 155px; border-top-left-radius: 20px; border-top-right-radius: 20px; border: 1px solid rgba(0, 0, 0, 0.1); position: relative; overflow: hidden;">
+                                    <div class="npSrpWidget__badgesWrapper">
+                                        <div class="m_newReraProject__reraTag" style="display: flex; flex-direction: row; gap: 4px; padding: 4px 8px; margin-left: 8px;">
+                                            <img src="https://static.99acres.com/universalhp/img/projectOnDemandHeadingRera.png" style="height: 12px; width: 12px; object-fit: contain;" onerror="this.style.display='none'">
+                                            <div class="m_newReraProject__reraStyle">RERA</div>
+                                        </div>
+                                    </div>
+                                    <div class="npSrpWidget__shortlistIcon">
+                                        <div class="style__shortlistHeart16">
+                                            <i class="far fa-heart" style="color: #FFFFFF; font-size: 16px; cursor: pointer;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="imgHover" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0;">
+                                        <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=400&h=300&fit=crop" alt="Project" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://static.99acres.com/universalapp/img/defaultProj.png'">
+                                    </div>
+                                    <div class="npSrpWidget__possTag badges_large_secondary">
+                                        <span>New Launch</span>
+                                    </div>
+                                </div>
+                                <div class="npSrpWidget__xidRecommCont">
+                                    <div class="cardContent__actionheadWrap">
+                                        <a href="#" class="cardContent__recomProjName list_header_bold spacer2" title="Project Name">Panchsheel Greens</a>
+                                        <div class="caption_subdued_medium spacer8">
+                                            <span>2, 3, 4 BHK Apartment in Sector 143, Noida</span>
+                                        </div>
+                                        <div class="list_header_semiBold">₹ 1.95 - 3.2 Cr</div>
+                                    </div>
+                                    <div class="npSrpWidget__badgeContOthers spacer8" style="margin-top: 12px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="arrow__whiteBg arrow__rightIcon" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); cursor: pointer; background: #FFFFFF; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                            <i class="fas fa-chevron-right" style="color: #333333; font-size: 18px;"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="home-right-sidebar Personalized-hp__rightSec">
+            <!-- Guest User Activity Box -->
+            <div class="pageComponent abox__activityBox" data-label="ACTIVITY_SECTION">
+                <div class="abox__userInfo">
+                    <i class="icon_grayProf iconS_Common_24 fas fa-user-circle" style="color: #9CA3AF; font-size: 24px;"></i>
+                    <div>
+                        <div class="list_header_semiBold Ng800">Guest User</div>
+                    </div>
+                </div>
+                <div class="spacer20"></div>
+                <div class="abox__recentActivityCard">
+                    <div class="caption_strong_small bold spacer16">Your Recent Activity</div>
+                    <div class="abox__cardWrap">
+                        <div class="pageComponent" data-label="TUPLE">
+                            <div class="title_l_semiBold spacer8">5</div>
+                            <div class="caption_strong_medium_semi">Viewed</div>
+                            <div class="abox__arrow3Line abox__orangeArr">
+                                <i class="fas fa-arrow-up" style="color: #FF6600; font-size: 12px;"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer16"></div>
+                <button class="pageComponent buttons__primaryRegular" data-sstheme="_BUTTON_TOP_LEVEL" onclick="window.location.href='/auth/login'">
+                    <span class="" data-sstheme="_BUTTON_SPAN">Login/Register to Save Activity</span>
+                </button>
+                <div class="spacer8"></div>
+                <div class="caption_strong_small textC">& see your activities across browsers & devices...</div>
+            </div>
+
+            <div class="spacer12"></div>
+
+            <!-- Post Property Banner -->
+            <div class="ppfLaunchBanner__wrapper" style="height:160px;width:335px" data-label="POST_PROPERTY_HP_STICKY_BANNER" role="button" tabindex="0">
+                <div class="ppfLaunchBanner__contentWrapper">
+                    <div class="ppfLaunchBanner__heading Personalized-hp__headingCustomClass">Sell or rent faster at the right price!</div>
+                    <div class="ppfLaunchBanner__subHeading Personalized-hp__subHeadingCustomClass">List your property now</div>
+                    <div class="ppfLaunchBanner__btnPost" onclick="window.location.href='/properties/create'">Post Property, It's FREE</div>
+                    <div class="ppfLaunchBanner__heroImageWrapper Personalized-hp__brandAmbassadorImageCustomClass">
+                        <img class="ppfLaunchBanner__heroImage" src="/images/hp_ppf_banner.png" alt="Post Property" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+        </div>
+                </div>
+            </section>
+
+            <!-- Featured Properties -->
+            <% if (featuredProperties && featuredProperties.length > 0) { %>
+            <section class="featured-section">
+                <div class="container">
         <h2 class="section-title">Featured Properties</h2>
         <div class="properties-grid">
             <% featuredProperties.forEach(function(property) { %>
@@ -32,14 +496,14 @@
                 </div>
             <% }); %>
         </div>
-    </div>
-</section>
-<% } %>
+                </div>
+            </section>
+            <% } %>
 
-<!-- Latest Properties -->
-<% if (latestProperties && latestProperties.length > 0) { %>
-<section class="latest-section">
-    <div class="container">
+            <!-- Latest Properties -->
+            <% if (latestProperties && latestProperties.length > 0) { %>
+            <section class="latest-section">
+                <div class="container">
         <h2 class="section-title">Latest Properties</h2>
         <div class="properties-grid">
             <% latestProperties.forEach(function(property) { %>
@@ -68,38 +532,222 @@
                 </div>
             <% }); %>
         </div>
-        <div class="view-all">
-            <a href="/properties" class="btn-primary">View All Properties</a>
+                    <div class="view-all">
+                        <a href="/properties" class="btn-primary">View All Properties</a>
+                    </div>
+                </div>
+            </section>
+            <% } %>
+        </div>
+
+<!-- Projects in High Demand Section -->
+<section class="projects-high-demand-section">
+    <div class="container">
+        <div class="npSrpWidget__npWidgtHeadingHP" style="background: transparent; padding-top: 0px;">
+            <h2 class="title_l_bold">Projects in High Demand</h2>
+            <div class="spacer4"></div>
+            <div class="caption_subdued_large null">Most searched projects in Noida</div>
+        </div>
+        <div class="npSrpWidget__npWidgtCardsWrp" style="max-width: 100%;">
+            <div class="npSrpWidget__recomListWrap">
+                <!-- Project 1 -->
+                <div class="npSrpWidget__npSrpCard" style="width: 295px; border-radius: 20px; box-shadow: none; margin-bottom: 0px;">
+                    <div style="height: 155px; border-top-left-radius: 20px; border-top-right-radius: 20px; border: 1px solid rgba(0, 0, 0, 0.1); position: relative; overflow: hidden;">
+                        <div class="npSrpWidget__badgesWrapper">
+                            <div class="m_newReraProject__reraTag" style="display: flex; flex-direction: row; gap: 4px; padding: 4px 8px; margin-left: 8px;">
+                                <img src="https://static.99acres.com/universalhp/img/projectOnDemandHeadingRera.png" style="height: 12px; width: 12px; object-fit: contain;" onerror="this.style.display='none'">
+                                <div class="m_newReraProject__reraStyle">RERA</div>
+                            </div>
+                        </div>
+                        <div class="npSrpWidget__shortlistIcon">
+                            <div class="style__shortlistHeart16">
+                                <i class="far fa-heart" style="color: #FFFFFF; font-size: 16px; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                        <div class="imgHover" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0;">
+                            <img src="https://images.unsplash.com/photo-1600585154084-4d24c75a0e6e?w=400&h=300&fit=crop" alt="Project" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://static.99acres.com/universalapp/img/defaultProj.png'">
+                        </div>
+                        <div class="npSrpWidget__possTag badges_large_secondary">
+                            <span>Ready To Move</span>
+                        </div>
+                    </div>
+                    <div class="npSrpWidget__xidRecommCont">
+                        <div class="cardContent__actionheadWrap">
+                            <a href="#" class="cardContent__recomProjName list_header_bold spacer2" title="Project Name">Jaypee Greens</a>
+                            <div class="caption_subdued_medium spacer8">
+                                <span>2, 3, 4 BHK Apartment in Sector 134, Noida</span>
+                            </div>
+                            <div class="list_header_semiBold">₹ 2.5 - 4.8 Cr</div>
+                        </div>
+                        <div class="npSrpWidget__badgeContOthers spacer8" style="margin-top: 12px;"></div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="npSrpWidget__npSrpCard" style="width: 295px; border-radius: 20px; box-shadow: none; margin-bottom: 0px;">
+                    <div style="height: 155px; border-top-left-radius: 20px; border-top-right-radius: 20px; border: 1px solid rgba(0, 0, 0, 0.1); position: relative; overflow: hidden;">
+                        <div class="npSrpWidget__badgesWrapper">
+                            <div class="m_newReraProject__reraTag" style="display: flex; flex-direction: row; gap: 4px; padding: 4px 8px; margin-left: 8px;">
+                                <img src="https://static.99acres.com/universalhp/img/projectOnDemandHeadingRera.png" style="height: 12px; width: 12px; object-fit: contain;" onerror="this.style.display='none'">
+                                <div class="m_newReraProject__reraStyle">RERA</div>
+                            </div>
+                        </div>
+                        <div class="npSrpWidget__shortlistIcon">
+                            <div class="style__shortlistHeart16">
+                                <i class="far fa-heart" style="color: #FFFFFF; font-size: 16px; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                        <div class="imgHover" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0;">
+                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=400&h=300&fit=crop" alt="Project" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://static.99acres.com/universalapp/img/defaultProj.png'">
+                        </div>
+                        <div class="npSrpWidget__possTag badges_large_secondary">
+                            <span>Under Construction</span>
+                        </div>
+                    </div>
+                    <div class="npSrpWidget__xidRecommCont">
+                        <div class="cardContent__actionheadWrap">
+                            <a href="#" class="cardContent__recomProjName list_header_bold spacer2" title="Project Name">DLF Garden City</a>
+                            <div class="caption_subdued_medium spacer8">
+                                <span>3, 4 BHK Apartment in Sector 128, Noida</span>
+                            </div>
+                            <div class="list_header_semiBold">₹ 3.2 - 5.5 Cr</div>
+                        </div>
+                        <div class="npSrpWidget__badgeContOthers spacer8" style="margin-top: 12px;"></div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="npSrpWidget__npSrpCard" style="width: 295px; border-radius: 20px; box-shadow: none; margin-bottom: 0px;">
+                    <div style="height: 155px; border-top-left-radius: 20px; border-top-right-radius: 20px; border: 1px solid rgba(0, 0, 0, 0.1); position: relative; overflow: hidden;">
+                        <div class="npSrpWidget__badgesWrapper">
+                            <div class="m_newReraProject__reraTag" style="display: flex; flex-direction: row; gap: 4px; padding: 4px 8px; margin-left: 8px;">
+                                <img src="https://static.99acres.com/universalhp/img/projectOnDemandHeadingRera.png" style="height: 12px; width: 12px; object-fit: contain;" onerror="this.style.display='none'">
+                                <div class="m_newReraProject__reraStyle">RERA</div>
+                            </div>
+                        </div>
+                        <div class="npSrpWidget__shortlistIcon">
+                            <div class="style__shortlistHeart16">
+                                <i class="far fa-heart" style="color: #FFFFFF; font-size: 16px; cursor: pointer;"></i>
+                            </div>
+                        </div>
+                        <div class="imgHover" style="height: 100%; width: 100%; position: absolute; top: 0; left: 0;">
+                            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=400&h=300&fit=crop" alt="Project" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='https://static.99acres.com/universalapp/img/defaultProj.png'">
+                        </div>
+                        <div class="npSrpWidget__possTag badges_large_secondary">
+                            <span>Possession from Mar 2026</span>
+                        </div>
+                    </div>
+                    <div class="npSrpWidget__xidRecommCont">
+                        <div class="cardContent__actionheadWrap">
+                            <a href="#" class="cardContent__recomProjName list_header_bold spacer2" title="Project Name">Ace Divino</a>
+                            <div class="caption_subdued_medium spacer8">
+                                <span>2, 3, 4 BHK Apartment in Sector 107, Noida</span>
+                            </div>
+                            <div class="list_header_semiBold">₹ 1.65 - 3.1 Cr</div>
+                        </div>
+                        <div class="npSrpWidget__badgeContOthers spacer8" style="margin-top: 12px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow__whiteBg arrow__rightIcon" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%); cursor: pointer; background: #FFFFFF; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                <i class="fas fa-chevron-right" style="color: #333333; font-size: 18px;"></i>
+            </div>
         </div>
     </div>
 </section>
-<% } %>
+
+<!-- 99acres Exclusive Inline Banner -->
+<section class="exclusive-banner-section">
+    <div class="container">
+        <div class="exclusive-banner-wrapper">
+            <a href="#" class="exclusive-banner-link">
+                <img src="https://static.99acres.com/universalhp/img/exclusive-banner.jpg" alt="99acres Exclusive" class="exclusive-banner-image" onerror="this.style.display='none'">
+            </a>
+        </div>
+    </div>
+</section>
 
 <!-- Property Types Section -->
 <section class="property-types-section">
     <div class="container">
-        <h2 class="section-title">Browse by Property Type</h2>
+        <div class="npSrpWidget__npWidgtHeadingHP" style="background: transparent; padding-top: 0px;">
+            <h2 class="title_l_bold">Property Types</h2>
+            <div class="spacer4"></div>
+            <div class="caption_subdued_large null">Browse properties by type</div>
+        </div>
         <div class="property-types-grid">
             <a href="/properties?property_type=Apartment" class="property-type-card">
-                <i class="fas fa-building"></i>
-                <h3>Buy Apartments</h3>
-                <p>Flats & Apartments for Sale</p>
+                <div class="property-type-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3 class="property-type-title">Buy Apartments</h3>
+                <p class="property-type-desc">Flats & Apartments for Sale</p>
             </a>
             <a href="/properties?property_type=Villa" class="property-type-card">
-                <i class="fas fa-home"></i>
-                <h3>Buy Villas</h3>
-                <p>Independent Houses & Villas</p>
+                <div class="property-type-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3 class="property-type-title">Buy Villas</h3>
+                <p class="property-type-desc">Independent Houses & Villas</p>
             </a>
             <a href="/properties?property_type=Plot" class="property-type-card">
-                <i class="fas fa-map-marked-alt"></i>
-                <h3>Buy Plots</h3>
-                <p>Land & Plots for Sale</p>
+                <div class="property-type-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <h3 class="property-type-title">Buy Plots</h3>
+                <p class="property-type-desc">Land & Plots for Sale</p>
             </a>
             <a href="/properties?property_type=Commercial" class="property-type-card">
-                <i class="fas fa-store"></i>
-                <h3>Commercial</h3>
-                <p>Office, Shop & Showroom</p>
+                <div class="property-type-icon">
+                    <i class="fas fa-store"></i>
+                </div>
+                <h3 class="property-type-title">Commercial</h3>
+                <p class="property-type-desc">Office, Shop & Showroom</p>
             </a>
+        </div>
+    </div>
+</section>
+
+<!-- Offers for You Section -->
+<section class="offers-section">
+    <div class="container">
+        <div class="npSrpWidget__npWidgtHeadingHP" style="background: transparent; padding-top: 0px;">
+            <h2 class="title_l_bold">Offers for you</h2>
+            <div class="spacer4"></div>
+            <div class="caption_subdued_large null">Exclusive deals and discounts</div>
+        </div>
+        <div class="offers-grid">
+            <div class="offer-card">
+                <div class="offer-image">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=400&h=300&fit=crop" alt="Offer" onerror="this.src='https://static.99acres.com/universalapp/img/defaultProj.png'">
+                    <div class="offer-badge">Special Offer</div>
+                </div>
+                <div class="offer-content">
+                    <h3 class="offer-title">Flat 10% Off on Home Loans</h3>
+                    <p class="offer-desc">Get exclusive discounts on home loans from top banks</p>
+                    <a href="#" class="offer-link">View Details</a>
+                </div>
+            </div>
+            <div class="offer-card">
+                <div class="offer-image">
+                    <img src="https://images.unsplash.com/photo-1600591370556-12e0d9c61bdf?w=400&h=300&fit=crop" alt="Offer" onerror="this.src='https://static.99acres.com/universalapp/img/defaultProj.png'">
+                    <div class="offer-badge">Limited Time</div>
+                </div>
+                <div class="offer-content">
+                    <h3 class="offer-title">Zero Brokerage on Rentals</h3>
+                    <p class="offer-desc">No brokerage fees on rental properties this month</p>
+                    <a href="#" class="offer-link">View Details</a>
+                </div>
+            </div>
+            <div class="offer-card">
+                <div class="offer-image">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=400&h=300&fit=crop" alt="Offer" onerror="this.src='https://static.99acres.com/universalapp/img/defaultProj.png'">
+                    <div class="offer-badge">New</div>
+                </div>
+                <div class="offer-content">
+                    <h3 class="offer-title">Free Legal Consultation</h3>
+                    <p class="offer-desc">Get free legal advice for property purchase</p>
+                    <a href="#" class="offer-link">View Details</a>
+                </div>
+            </div>
         </div>
     </div>
 </section>

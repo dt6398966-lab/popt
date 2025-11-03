@@ -290,5 +290,191 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Recommended Properties Carousel Navigation
+    const recomListWrap = document.querySelector('.npSrpWidget__recomListWrap');
+    const rightArrow = document.querySelector('.arrow__rightIcon');
+    
+    if (recomListWrap && rightArrow) {
+        rightArrow.addEventListener('click', function() {
+            recomListWrap.scrollBy({
+                left: 300,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // Left arrow (if added later)
+    const leftArrow = document.querySelector('.arrow__leftIcon');
+    if (recomListWrap && leftArrow) {
+        leftArrow.addEventListener('click', function() {
+            recomListWrap.scrollBy({
+                left: -300,
+                behavior: 'smooth'
+            });
+        });
+    }
+
+    // Shortlist heart icon toggle
+    const shortlistHearts = document.querySelectorAll('.style__shortlistHeart16');
+    shortlistHearts.forEach(function(heart) {
+        heart.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const icon = this.querySelector('i');
+            if (icon) {
+                if (icon.classList.contains('far')) {
+                    icon.classList.remove('far');
+                    icon.classList.add('fas');
+                    icon.style.color = '#FF6600';
+                } else {
+                    icon.classList.remove('fas');
+                    icon.classList.add('far');
+                    icon.style.color = '#FFFFFF';
+                }
+            }
+        });
+    });
+});
+
+// Scroll Recommended Properties
+function scrollRecommendedProperties(direction) {
+    const grid = document.querySelector('.recommended-properties-detailed-section .properties-grid');
+    if (!grid) {
+        console.error('Properties grid not found');
+        return;
+    }
+    
+    const scrollAmount = 340; // Card width (320px) + gap (20px)
+    const currentScroll = grid.scrollLeft;
+    const maxScroll = grid.scrollWidth - grid.clientWidth;
+    
+    if (direction === 'left') {
+        const newScroll = Math.max(0, currentScroll - scrollAmount);
+        grid.scrollTo({
+            left: newScroll,
+            behavior: 'smooth'
+        });
+    } else {
+        const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+        grid.scrollTo({
+            left: newScroll,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Scroll Recommended Projects
+function scrollRecommendedProjects(direction) {
+    // Find the grid that's closest to the clicked button
+    const allGrids = document.querySelectorAll('.npSrpWidget__recomListWrap');
+    if (!allGrids || allGrids.length === 0) {
+        console.error('Projects grid not found');
+        return;
+    }
+    
+    // Use the first grid (for Recommended Projects section)
+    const grid = allGrids[0];
+    const scrollAmount = 311; // Card width (295px) + gap (16px)
+    const currentScroll = grid.scrollLeft;
+    const maxScroll = grid.scrollWidth - grid.clientWidth;
+    
+    if (direction === 'left') {
+        const newScroll = Math.max(0, currentScroll - scrollAmount);
+        grid.scrollTo({
+            left: newScroll,
+            behavior: 'smooth'
+        });
+    } else {
+        const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+        grid.scrollTo({
+            left: newScroll,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Initialize project navigation buttons
+document.addEventListener('DOMContentLoaded', function() {
+    // Find all right arrow buttons for Recommended Projects sections
+    const projectRightArrows = document.querySelectorAll('.arrow__rightIcon');
+    projectRightArrows.forEach(function(arrow) {
+        // Check if this arrow is in a projects section
+        const projectsWrapper = arrow.closest('.npSrpWidget__npWidgtCardsWrp');
+        if (projectsWrapper) {
+            arrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                scrollRecommendedProjects('right');
+            });
+        }
+    });
+    
+    // Also handle the recommended-projects-section specifically
+    const recommendedProjectsSection = document.querySelector('.recommended-projects-section');
+    if (recommendedProjectsSection) {
+        const projectRightArrow = recommendedProjectsSection.querySelector('.arrow__rightIcon');
+        if (projectRightArrow) {
+            projectRightArrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                scrollRecommendedProjects('right');
+            });
+        }
+    }
+    
+    // Handle Recommended Projects in recommended-properties-section (first section at top)
+    const recommendedPropertiesSection = document.querySelector('.recommended-properties-section');
+    if (recommendedPropertiesSection) {
+        const projectRightArrow = recommendedPropertiesSection.querySelector('.arrow__rightIcon');
+        if (projectRightArrow) {
+            // Remove any existing listeners to avoid duplicates
+            const newArrow = projectRightArrow.cloneNode(true);
+            projectRightArrow.parentNode.replaceChild(newArrow, projectRightArrow);
+            
+            newArrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                scrollRecommendedProjects('right');
+            });
+        }
+    }
+    
+    // Add left arrow for projects if not exists
+    const projectsSections = document.querySelectorAll('.npSrpWidget__npWidgtCardsWrp');
+    projectsSections.forEach(function(projectsSection) {
+        if (!projectsSection.querySelector('.arrow__leftIcon')) {
+            const leftArrow = document.createElement('div');
+            leftArrow.className = 'arrow__whiteBg arrow__leftIcon';
+            leftArrow.style.cssText = 'position: absolute; left: -50px; top: 50%; transform: translateY(-50%); cursor: pointer; background: #FFFFFF; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 10;';
+            leftArrow.innerHTML = '<i class="fas fa-chevron-left" style="color: #333333; font-size: 18px;"></i>';
+            leftArrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                scrollRecommendedProjects('left');
+            });
+            projectsSection.style.position = 'relative';
+            projectsSection.appendChild(leftArrow);
+        }
+    });
+    
+    // Ensure Recommended Properties navigation buttons work
+    const leftNavBtn = document.querySelector('.recommended-properties-nav .arrow-nav-left');
+    const rightNavBtn = document.querySelector('.recommended-properties-nav .arrow-nav-right');
+    
+    if (leftNavBtn) {
+        leftNavBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            scrollRecommendedProperties('left');
+        });
+    }
+    
+    if (rightNavBtn) {
+        rightNavBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            scrollRecommendedProperties('right');
+        });
+    }
 });
 
