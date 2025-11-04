@@ -476,5 +476,25 @@ document.addEventListener('DOMContentLoaded', function() {
             scrollRecommendedProperties('right');
         });
     }
+    
+    // Property Types Carousel Navigation
+    const propertyTypesArrow = document.querySelector('.cc__arrowContainerBox.cc__right');
+    if (propertyTypesArrow) {
+        propertyTypesArrow.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const slidingBox = document.querySelector('.cc__slidingBox[compattr="recomm_BROWSE_BY_PROP_TYPE"]');
+            if (slidingBox) {
+                const scrollAmount = 340; // Card width (320px) + gap (20px)
+                const currentScroll = slidingBox.scrollLeft;
+                const maxScroll = slidingBox.scrollWidth - slidingBox.clientWidth;
+                const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+                slidingBox.scrollTo({
+                    left: newScroll,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
 });
 

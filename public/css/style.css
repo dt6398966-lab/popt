@@ -2090,12 +2090,38 @@ body {
     margin-bottom: 24px;
 }
 
+/* Recommended Projects Section - Reduced Gap */
+.recommended-properties-section .npSrpWidget__npWidgtHeadingHP {
+    margin-bottom: 2px;
+}
+
 .title_l_bold {
     font-size: 28px;
     font-weight: 700;
     color: #1A1A1A;
     margin-bottom: 0;
     line-height: 1.2;
+}
+
+/* Recommended Projects Section - Reduced Font Sizes */
+.recommended-properties-section .title_l_bold {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+
+.recommended-properties-section .caption_subdued_large {
+    font-size: 14px;
+    color: #666666;
+    font-weight: 400;
+    margin-top: 2px;
+}
+
+.recommended-properties-section .spacer4 {
+    height: 2px;
+    width: 100%;
 }
 
 .spacer4 {
@@ -3132,4 +3158,226 @@ body {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
     }
+}
+
+/* Property Types Browse Section */
+.property-types-browse-section {
+    padding: 40px 0;
+    background-color: #FFFFFF;
+}
+
+.property-types-browse-section .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.property-types-browse-section .title_l_bold {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 4px;
+    margin-top: 8px;
+    position: relative;
+    display: block;
+    line-height: 1.3;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+    padding-left: 12px;
+}
+
+.property-types-browse-section .caption_strong_large {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666666;
+    margin-bottom: 16px;
+    padding-left: 12px;
+}
+
+.pc__cardCont {
+    position: relative;
+    width: 100%;
+}
+
+.cc__CarouselContainer {
+    position: relative;
+    width: 100%;
+}
+
+.cc__CarouselBox {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.cc__slidingBox {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.cc__slidingBox::-webkit-scrollbar {
+    display: none;
+}
+
+.possestionCard__coloredCard {
+    flex-shrink: 0;
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 340px;
+    border-radius: 12px;
+    padding: 24px 16px 16px 16px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.possestionCard__coloredCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.possestionCard__coloredCard[data-custominfo*='"id":"1"'] {
+    background-color: #FFF8E1;
+}
+
+.possestionCard__coloredCard[data-custominfo*='"id":"3"'] {
+    background-color: #E3F2FD;
+}
+
+.possestionCard__coloredCard[data-custominfo*='"id":"2"'] {
+    background-color: #E8F5E9;
+}
+
+.possestionCard__coloredCard[data-custominfo*='"id":"4"'] {
+    background-color: #F3E5F5;
+}
+
+.possestionCard__coloredCard[data-custominfo*='"id":"5"'] {
+    background-color: #FFF3E0;
+}
+
+.possestionCard__coloredCard[data-custominfo*='"id":"90"'] {
+    background-color: #E1F5FE;
+}
+
+.possestionCard__coloredCard[data-custominfo*='"id":"22"'] {
+    background-color: #FCE4EC;
+}
+
+.possestionCard__title {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: #4A5568;
+    margin-bottom: 0;
+    line-height: 1.1;
+    margin-top: 0;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.section_header_semiBold.possestionCard__title {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: #4A5568 !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    text-align: left !important;
+    padding-left: 20px !important;
+    margin-bottom: 0 !important;
+    line-height: 1.1 !important;
+}
+
+.possestionCard__coloredCard .caption_strong_small {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666666;
+    margin-bottom: -8px;
+    margin-top: 50px;
+    text-align: left;
+    padding-left: 20px;
+    line-height: 1.5;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.possestionCard__coloredCard picture {
+    display: block;
+    width: 100%;
+    height: 240px;
+    min-height: 240px;
+    margin-top: -8px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.possestionCard__coloredCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+    min-width: 100%;
+}
+
+.cc__whiteBg {
+    background-color: #FFFFFF;
+}
+
+.cc__arrowContainerBox {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.2s ease;
+}
+
+.cc__arrowContainerBox:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: #F5F5F5;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.cc__arrowContainerBox.cc__right {
+    right: -20px;
+}
+
+.cc__rightArrow {
+    color: #333333;
+    font-size: 18px;
+}
+
+.section_header_semiBold {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1A1A1A;
+}
+
+.spacer32 {
+    height: 32px;
+    width: 100%;
 }
