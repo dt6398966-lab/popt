@@ -516,5 +516,60 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    
+    // Handpicked Projects Carousel Navigation
+    const featuredProjectsSlider = document.getElementById('featuredProjectsSlider');
+    const featuredProjectsPrev = document.querySelector('.featuredProjectsCard__SliderPrev');
+    const featuredProjectsNext = document.querySelector('.featuredProjectsCard__SliderNext');
+    
+    if (featuredProjectsPrev) {
+        featuredProjectsPrev.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            slideFeaturedProjects('prev');
+        });
+    }
+    
+    if (featuredProjectsNext) {
+        featuredProjectsNext.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            slideFeaturedProjects('next');
+        });
+    }
 });
+
+// Handpicked Projects Slider Function
+function slideFeaturedProjects(direction) {
+    const slider = document.getElementById('featuredProjectsSlider');
+    if (!slider) {
+        console.error('Featured projects slider not found');
+        return;
+    }
+    
+    const scrollAmount = 340; // Card width (320px) + gap (20px)
+    const currentScroll = slider.scrollLeft;
+    const maxScroll = slider.scrollWidth - slider.clientWidth;
+    
+    if (direction === 'prev') {
+        const newScroll = Math.max(0, currentScroll - scrollAmount);
+        slider.scrollTo({
+            left: newScroll,
+            behavior: 'smooth'
+        });
+    } else {
+        const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+        slider.scrollTo({
+            left: newScroll,
+            behavior: 'smooth'
+        });
+    }
+}
+
+// Open Project Page Function
+function openProjectPageFp(url) {
+    if (url) {
+        window.location.href = url;
+    }
+}
 

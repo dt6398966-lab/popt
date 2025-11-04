@@ -3567,3 +3567,230 @@ body {
     height: 32px;
     width: 100%;
 }
+
+/* Handpicked Projects Section */
+.featuredCardContainer__featuredCardContainerCompo {
+    background-color: #FFFFFF;
+    padding: 40px 0;
+}
+
+.featuredCardContainer__featuredCardContainerCompo .xidHeading__PageHeadingwrap {
+    margin-bottom: 12px;
+    margin-left: 40px;
+    margin-top: 16px;
+}
+
+.featuredCardContainer__featuredCardContainerCompo .title_bold {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 4px;
+    margin-top: 0;
+    line-height: 1.2;
+    display: block;
+}
+
+.featuredCardContainer__featuredCardContainerCompo .caption_strong_large {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666666;
+    font-style: normal;
+    margin-top: 4px;
+    margin-bottom: 0;
+    line-height: 1.4;
+    display: block;
+}
+
+.SingleSlideSwipe__SingleSlideStremBox {
+    position: relative;
+    padding: 0 40px;
+}
+
+.SingleSlideSwipe__SingleSlideStrem {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+.SingleSlideSwipe__SingleSlideStrem::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.featuredProjectsCard__featuredProjectCard {
+    flex-shrink: 0;
+    width: 320px;
+    min-width: 320px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    position: relative;
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: visible;
+}
+
+.featuredProjectsCard__featuredProjectCard:hover {
+    transform: translateY(-4px);
+}
+
+.featuredProjectsCard__imageBox {
+    height: 220px;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.featuredProjectsCard__imageBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.featuredProjectsCard__featuredProjectCard:hover .featuredProjectsCard__imageBox img {
+    transform: scale(1.05);
+}
+
+.featuredProjectsCard__featuredLarge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+}
+
+.badges__featuredRegular {
+    background-color: #8B5CF6;
+    color: #FFFFFF;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.badges__featuredRegular div {
+    color: #FFFFFF;
+    font-weight: 400;
+}
+
+.featuredProjectsCard__shortlistItem {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.featuredProjectsCard__shortlistItem img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.2s ease;
+}
+
+.featuredProjectsCard__shortlistItem:hover img {
+    transform: scale(1.1);
+}
+
+.featuredProjectsCard__brandLogo {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    width: 80px;
+    height: 80px;
+    background: #FFFFFF;
+    border: 2px solid #E0E0E0;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+}
+
+.featuredProjectsCard__featuredProjectCard .list_header_bold {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.featuredProjectsCard__featuredProjectCard .caption_subdued_medium {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.featuredProjectsCard__featuredProjectCard .list_header_semiBold {
+    font-size: 16px;
+    color: #1A1A1A;
+    font-weight: 600;
+    text-align: center;
+}
+
+.featuredProjectsCard__SliderPrev,
+.featuredProjectsCard__SliderNext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    background: #FFFFFF;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.featuredProjectsCard__SliderPrev {
+    left: -20px;
+}
+
+.featuredProjectsCard__SliderNext {
+    right: -20px;
+}
+
+.featuredProjectsCard__SliderPrev:hover,
+.featuredProjectsCard__SliderNext:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    background-color: #F5F5F5;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.featuredProjectsCard__SliderPrev i,
+.featuredProjectsCard__SliderNext i {
+    color: #333333;
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    .SingleSlideSwipe__SingleSlideStremBox {
+        padding: 0 20px;
+    }
+    
+    .featuredProjectsCard__SliderPrev {
+        left: -10px;
+    }
+    
+    .featuredProjectsCard__SliderNext {
+        right: -10px;
+    }
+    
+    .featuredProjectsCard__featuredProjectCard {
+        width: 280px;
+        min-width: 280px;
+    }
+}
