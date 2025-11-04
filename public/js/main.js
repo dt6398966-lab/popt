@@ -496,5 +496,25 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+    
+    // Projects in High Demand Carousel Navigation
+    const projectsHighDemandArrow = document.querySelector('#npSrpWidget .arrow__whiteBg.arrow__rightIcon');
+    if (projectsHighDemandArrow) {
+        projectsHighDemandArrow.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const recomListWrap = document.querySelector('#npSrpWidget .npSrpWidget__recomListWrap');
+            if (recomListWrap) {
+                const scrollAmount = 286; // Card width (270px) + gap (16px)
+                const currentScroll = recomListWrap.scrollLeft;
+                const maxScroll = recomListWrap.scrollWidth - recomListWrap.clientWidth;
+                const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+                recomListWrap.scrollTo({
+                    left: newScroll,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
 });
 
