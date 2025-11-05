@@ -573,3 +573,39 @@ function openProjectPageFp(url) {
     }
 }
 
+// Recommended Insights Carousel Navigation
+document.addEventListener('DOMContentLoaded', function() {
+    const recommendedInsightsCarousel = document.querySelector('.carousel__slidingBox[compattr="recommInsights"]');
+    const rightArrow = document.querySelector('.recomInsightsContainer__customCarouselBoxCls .carousel__right[data-label="RIGHT_SCROLL"]');
+    const leftArrow = document.querySelector('.recomInsightsContainer__customCarouselBoxCls .carousel__left[data-label="LEFT_SCROLL"]');
+    
+    if (recommendedInsightsCarousel && rightArrow) {
+        rightArrow.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const scrollAmount = 220; // Card width (200px) + gap (20px)
+            const currentScroll = recommendedInsightsCarousel.scrollLeft;
+            const maxScroll = recommendedInsightsCarousel.scrollWidth - recommendedInsightsCarousel.clientWidth;
+            const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+            recommendedInsightsCarousel.scrollTo({
+                left: newScroll,
+                behavior: 'smooth'
+            });
+        });
+    }
+    
+    if (recommendedInsightsCarousel && leftArrow) {
+        leftArrow.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const scrollAmount = 220; // Card width (200px) + gap (20px)
+            const currentScroll = recommendedInsightsCarousel.scrollLeft;
+            const newScroll = Math.max(0, currentScroll - scrollAmount);
+            recommendedInsightsCarousel.scrollTo({
+                left: newScroll,
+                behavior: 'smooth'
+            });
+        });
+    }
+});
+

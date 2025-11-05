@@ -3794,3 +3794,431 @@ body {
         min-width: 280px;
     }
 }
+
+/* Recommended Insights Section Styles */
+[data-label="RECOMMENDED_INSIGHTS"] {
+    padding: 40px 0;
+    background-color: #FFFFFF;
+}
+
+.recomInsightsContainer__wrapperCls {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    padding: 0 40px;
+}
+
+.recomInsightsContainer__wrapperCls > div:first-child {
+    flex: 1;
+}
+
+.recomInsightsContainer__wrapperCls .title_l_bold {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+}
+
+.recomInsightsContainer__wrapperCls .caption_strong_large {
+    font-size: 14px;
+    color: #666666;
+    font-weight: 400;
+}
+
+.carousel__CarouselContainer {
+    padding: 0 40px;
+    position: relative;
+}
+
+.carousel__CarouselBox {
+    position: relative;
+}
+
+.carousel__slidingBox {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.carousel__slidingBox::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel__slidingBox > div {
+    flex-shrink: 0;
+    width: 200px;
+    min-width: 200px;
+}
+
+/* Locality Card Styles */
+.locCard__wrapperCls {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.locCard__wrapperCls:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.locCard__svgWrap {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.locCard__svgWrap svg {
+    width: 100%;
+    height: 100%;
+}
+
+.locCard__itemsWrap {
+    padding: 16px;
+    position: relative;
+}
+
+.locCard__imgWrap {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 82px;
+    height: 82px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #FFFFFF;
+    z-index: 2;
+}
+
+.locCard__imgWrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.locCard__iconCls {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 3;
+}
+
+.locCard__txtCls {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.locCard__subTxtCls {
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+/* Project Card Styles */
+.projCard__projWrapperCls {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 16px;
+}
+
+.projCard__projWrapperCls:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.projCard__txtCls {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 4px;
+}
+
+.projCard__subTxtCls {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666666;
+    margin-bottom: 12px;
+}
+
+.projCard__imgWrap {
+    width: 100%;
+    height: 106px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.projCard__imgWrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projCard__iconCls {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+}
+
+/* Locality Community Card Styles */
+.locComCard__wrapperCls {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.locComCard__wrapperCls:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.locComCard__svgWrap {
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
+
+.locComCard__svgWrap svg {
+    width: 100%;
+    height: 100%;
+}
+
+.locComCard__itemsWrap {
+    padding: 16px;
+    position: relative;
+}
+
+.locComCard__imgWrap {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #FFFFFF;
+    z-index: 2;
+}
+
+.locComCard__imgWrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.locComCard__txtCls {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 40px;
+    text-align: center;
+    color: #1A1A1A;
+}
+
+.bottomComp__iconTxtWrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.bottomComp__iconWrap {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottomComp__iconWrap svg {
+    width: 16px;
+    height: 16px;
+}
+
+.bottomComp__txtWrap {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Project Community Card Styles */
+.projComCard__wrapperCls {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 16px;
+}
+
+.projComCard__wrapperCls:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.projComCard__txtCls {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 4px;
+}
+
+.projComCard__subTxtCls {
+    font-size: 14px;
+    font-weight: 400;
+    color: #666666;
+    margin-bottom: 12px;
+}
+
+.projComCard__imgComp {
+    width: 100%;
+    height: 86px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.projComCard__imgComp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Guides Card Styles */
+.guidesCard__containerWrap {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 16px;
+    text-align: center;
+}
+
+.guidesCard__containerWrap:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.guidesCard__imgWrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+}
+
+.guidesCard__imgWrap img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Carousel Arrow Styles */
+.carousel__arrowContainerBox {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    background: #FFFFFF;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.2s ease;
+}
+
+.carousel__arrowContainerBox:hover {
+    background-color: #F5F5F5;
+}
+
+.carousel__right {
+    right: 0;
+}
+
+.carousel__left {
+    left: 0;
+}
+
+.carousel__rightArrow {
+    color: #333333;
+    font-size: 18px;
+}
+
+.carousel__leftArrow {
+    color: #333333;
+    font-size: 18px;
+}
+
+/* Insight Card Text Styles */
+.section_header_semiBold {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 4px;
+}
+
+.caption_strong_medium_semi {
+    font-size: 12px;
+    font-weight: 500;
+    color: #666666;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .recomInsightsContainer__wrapperCls {
+        padding: 0 20px;
+        flex-direction: column;
+        gap: 16px;
+    }
+    
+    .carousel__CarouselContainer {
+        padding: 0 20px;
+    }
+    
+    .carousel__arrowContainerBox {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .carousel__slidingBox > div {
+        width: 180px;
+        min-width: 180px;
+    }
+}
