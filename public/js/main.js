@@ -609,3 +609,63 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Inline Banner Carousel Navigation
+function carouselSlideInlineBanner(direction) {
+    const bannerContainer = document.querySelector('.SingleSlideSwipe__SingleSlideStrem_Inline_Banner');
+    const prevIcon = document.getElementById('inline_banner_prev_icon_wrapper');
+    const nextIcon = document.getElementById('inline_banner_next_icon_wrapper');
+    
+    if (!bannerContainer) return;
+    
+    const cardWidth = 328; // Card width (308px) + gap (20px)
+    const currentTransform = bannerContainer.style.transform;
+    const currentX = currentTransform ? parseInt(currentTransform.match(/-?\d+/)[0]) : 0;
+    
+    let newX = currentX;
+    
+    if (direction === 'next') {
+        newX = currentX - cardWidth;
+        const maxScroll = -(bannerContainer.scrollWidth - bannerContainer.parentElement.clientWidth);
+        newX = Math.max(maxScroll, newX);
+    } else if (direction === 'prev') {
+        newX = currentX + cardWidth;
+        newX = Math.min(0, newX);
+    }
+    
+    bannerContainer.style.transform = `translate3d(${newX}px, 0px, 0px)`;
+    
+    // Show/hide arrows based on position
+    if (prevIcon && nextIcon) {
+        if (newX >= 0) {
+            prevIcon.style.display = 'none';
+        } else {
+            prevIcon.style.display = 'flex';
+        }
+        
+        if (newX <= -(bannerContainer.scrollWidth - bannerContainer.parentElement.clientWidth)) {
+            nextIcon.style.display = 'none';
+        } else {
+            nextIcon.style.display = 'flex';
+        }
+    }
+}
+
+// Initialize inline banner arrow visibility
+document.addEventListener('DOMContentLoaded', function() {
+    const bannerContainer = document.querySelector('.SingleSlideSwipe__SingleSlideStrem_Inline_Banner');
+    const prevIcon = document.getElementById('inline_banner_prev_icon_wrapper');
+    const nextIcon = document.getElementById('inline_banner_next_icon_wrapper');
+    
+    if (bannerContainer && prevIcon && nextIcon) {
+        const containerWidth = bannerContainer.parentElement.clientWidth;
+        const contentWidth = bannerContainer.scrollWidth;
+        
+        if (contentWidth > containerWidth) {
+            nextIcon.style.display = 'flex';
+        } else {
+            nextIcon.style.display = 'none';
+            prevIcon.style.display = 'none';
+        }
+    }
+});
+

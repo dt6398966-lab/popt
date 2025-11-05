@@ -4200,6 +4200,52 @@ body {
     white-space: nowrap;
 }
 
+/* Inline Banner Styles */
+.SingleSlideSwipe__SingleSlideStreamBox {
+    overflow: hidden;
+    position: relative;
+}
+
+.SingleSlideSwipe__SingleSlideStrem_Inline_Banner {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease;
+    will-change: transform;
+}
+
+.featuredProjectsCard__featuredProjectCard_Inline_Banner {
+    flex-shrink: 0;
+    width: 308px;
+}
+
+.featuredProjectsCard__featuredProjectCard_Inline_Banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.inine_Banner_Image_Wrapper {
+    width: 100%;
+    height: auto;
+}
+
+.featuredProjectsCard__SliderPrev_Inline_Banner,
+.featuredProjectsCard__SliderNxt_Inline_Banner {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+}
+
+.featuredProjectsCard__SliderPrev_Inline_Banner {
+    left: -20px;
+}
+
+.featuredProjectsCard__SliderNxt_Inline_Banner {
+    right: -20px;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .recomInsightsContainer__wrapperCls {
@@ -4220,5 +4266,9 @@ body {
     .carousel__slidingBox > div {
         width: 180px;
         min-width: 180px;
+    }
+    
+    .featuredProjectsCard__featuredProjectCard_Inline_Banner {
+        width: 280px;
     }
 }
