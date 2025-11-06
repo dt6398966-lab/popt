@@ -4885,3 +4885,270 @@ body {
     color: #333333;
     font-size: 18px;
 }
+
+/* Budget Calculator Modal */
+.db__boxWrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.db__box {
+    position: relative;
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 1050px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+#ONBOARDING_LAYER_CLOSE_BUTTON {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    z-index: 10001;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#ONBOARDING_LAYER_CLOSE_BUTTON:hover {
+    background-color: #F5F5F5;
+    border-color: #CCCCCC;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+#ONBOARDING_LAYER_CLOSE_BUTTON .icon_close {
+    font-size: 20px;
+    color: #333333;
+    font-weight: 600;
+    display: block;
+}
+
+#ONBOARDING_LAYER_CLOSE_BUTTON .icon_close::before {
+    content: "\f00d";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    display: block;
+}
+
+#ONBOARDING_LAYER_CLOSE_BUTTON i.iconS_Common_20 {
+    font-size: 20px;
+    color: #333333;
+    font-weight: 600;
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+}
+
+#ONBOARDING_LAYER_CLOSE_BUTTON i.iconS_Common_20::before {
+    content: "\f00d";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.d_bc__budgetDialog {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.d_bc__budgetDialog .display_bold {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 20px;
+}
+
+.d_bc__twoCol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.d_bc__twoCol > div {
+    min-width: 0;
+    overflow: visible;
+}
+
+.d_bc__rangeGraph {
+    margin-bottom: 20px;
+    min-width: 0;
+    overflow: visible;
+}
+
+.styles__sliderWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    min-width: 0;
+    width: 100%;
+}
+
+.styles__sliderWrap .body_med {
+    font-size: 14px;
+    color: #666666;
+    font-weight: 400;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.styles__sliderWrap .list_header_semiBold {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1A1A1A;
+    white-space: nowrap;
+    flex-shrink: 0;
+    margin-left: 200px;
+}
+
+#tenureValue {
+    margin-left: 240px !important;
+}
+
+#emiValue {
+    margin-left: 240px !important;
+}
+
+.styles__graphLine {
+    margin: 16px 0;
+    width: 100%;
+    min-width: 0;
+    overflow: visible;
+}
+
+.graph__sliderWrapper {
+    position: relative;
+    width: 100%;
+    height: 8px;
+    background-color: #E0E0E0;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.graph__graphLine {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.graph__graph_blue_line {
+    position: absolute;
+    height: 100%;
+    background-color: #0078D4;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.graph__right_circle {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(50%);
+    width: 24px;
+    height: 24px;
+    background-color: #0078D4;
+    border: 3px solid #FFFFFF;
+    border-radius: 50%;
+    cursor: grab;
+    box-shadow: 0 2px 8px rgba(0, 120, 219, 0.5);
+    z-index: 10;
+}
+
+.graph__right_circle:active {
+    cursor: grabbing;
+}
+
+.graph__hidden_left_circle {
+    display: none;
+}
+
+.input_counter_inactive {
+    font-size: 12px;
+    color: #999999;
+    font-weight: 400;
+}
+
+.d_bc__textMarg {
+    margin-right: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1A1A1A;
+}
+
+#homeBudgetValue {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1A1A1A;
+    line-height: 1.2;
+}
+
+.d_bc__budgetDialog .title_bold {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1A1A1A;
+}
+
+.d_inlineBlock {
+    display: inline-block;
+}
+
+.spacer10 {
+    height: 10px;
+}
+
+.spacer20 {
+    height: 20px;
+}
+
+.spacer50 {
+    height: 50px;
+}
+
+@media (max-width: 768px) {
+    .d_bc__twoCol {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .db__box {
+        padding: 30px 20px;
+        max-width: 95%;
+    }
+}
