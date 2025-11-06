@@ -4272,3 +4272,393 @@ body {
         width: 280px;
     }
 }
+
+/* Demand Section Styles */
+#demand {
+    padding: 40px 0;
+    margin-top: 40px;
+    background-color: #FFFFFF;
+}
+
+#demand h3 {
+    margin: 0;
+    padding: 0;
+    margin-left: 20px;
+}
+
+#demand .title_l_bold {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 21px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 12px;
+}
+
+#demand .caption_strong_large {
+    font-size: 13px;
+    font-weight: 400;
+    color: #666666;
+    margin-top: 0;
+}
+
+/* Tabs Styles */
+.tabsCI__tagsWrapper {
+    margin-bottom: 24px;
+    margin-left: 20px;
+}
+
+.tabsCI__tagsWrap {
+    display: flex;
+    gap: 0px;
+    position: relative;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.tabsCI__alltabsCls {
+    font-size: 16px;
+    font-weight: 700;
+    color: #666666;
+    cursor: pointer;
+    padding: 8px 6px 8px 0;
+    transition: color 0.2s;
+    position: relative;
+}
+
+.tabsCI__alltabsCls:hover {
+    color: #0078D4;
+}
+
+.tabsCI__activeCls {
+    color: #0078D4;
+}
+
+.tabsCI__bar {
+    position: absolute;
+    bottom: -1px;
+    height: 3px;
+    background-color: #0078D4;
+    transition: left 0.3s ease, width 0.3s ease;
+}
+
+/* Demand Cards Container */
+.commonSD__dBoxWrap {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+.commonSD__dBoxWrap .carousel__CarouselContainer {
+    max-width: 100% !important;
+    padding: 0 20px;
+    position: relative;
+    width: 100% !important;
+    overflow: visible;
+}
+
+.commonSD__customCarouselBoxCls {
+    position: relative;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: visible;
+}
+
+/* Progress Bar Item Container */
+.ProgressBarItemContainer__dBox {
+    background-color: #F5F5F5 !important;
+    border: none;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-right: 20px;
+    min-width: 350px !important;
+    width: 350px !important;
+    max-width: 350px !important;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.ProgressBarItemContainer__dBox #DEMAND_CARD_TITLE {
+    font-size: 18px;
+    font-weight: 550;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+}
+
+.ProgressBarItemContainer__dBox #DEMAND_CARD_SUBTITLE {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.ProgressBarItemContainer__graphWrap {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    gap: 12px;
+}
+
+.ProgressBarItemContainer__graphWrap > div:first-child {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    gap: 4px;
+}
+
+.ProgressBarItemContainer__graphWrap > div:first-child > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ProgressBarItemContainer__graphWrap span.caption_subdued_large {
+    font-size: 14px;
+    color: #666666;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.ProgressBarItemContainer__title {
+    font-size: 14px;
+    font-weight: 550;
+    color: #1A1A1A;
+    text-decoration: none;
+    display: inline-block;
+    flex: 1;
+    min-width: 0;
+}
+
+.ProgressBarItemContainer__title:hover {
+    color: #0078D4;
+    text-decoration: underline;
+}
+
+#DEMAND__TUPLEBAR {
+    width: 100%;
+    margin-top: 4px;
+}
+
+.ProgressBarItemContainer__rightSideTxtCls {
+    font-size: 13px;
+    font-weight: 400;
+    color: #1A1A1A;
+    white-space: nowrap;
+    flex-shrink: 0;
+    align-self: flex-start;
+    padding-top: 12px;
+}
+
+/* Progress Bar Styles */
+.progress__progressBarRegular {
+    width: 100%;
+    height: 8px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.progress__showProgress {
+    height: 100%;
+    background-color: #ADD9FB;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+    min-width: 2px;
+}
+
+.progress__fullWidthAsContainerCls {
+    width: 100%;
+}
+
+/* View All Link */
+#DEMAND_CARD_VIEWALL {
+    font-size: 14px;
+    font-weight: 550;
+    color: #0078D4;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+#DEMAND_CARD_VIEWALL:hover {
+    text-decoration: underline;
+}
+
+/* Carousel Sliding Box for Demand */
+.carousel__slidingBox[compattr*="DEMAND"] {
+    display: flex !important;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 100% !important;
+    max-width: none !important;
+}
+
+.carousel__slidingBox[compattr*="DEMAND"]::-webkit-scrollbar {
+    display: none;
+}
+
+/* Feedback Layer */
+.FeedbackLayer__priceFeedback {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 0;
+    margin-top: 16px;
+    margin-left: 20px;
+    background: white;
+    text-align: left;
+    padding-left: 0px;
+}
+
+.FeedbackLayer__feedbackText {
+    font-size: 14px;
+    color: #999999;
+    margin: 0;
+    font-weight: 400;
+}
+
+.FeedbackLayer__priceFeedback span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #999999;
+    cursor: pointer;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+.FeedbackLayer__priceFeedback span:hover {
+    color: #666666;
+}
+
+.FeedbackLayer__priceFeedback span i,
+.FeedbackLayer__priceFeedback i {
+    color: #999999 !important;
+    font-size: 16px !important;
+    display: inline-block !important;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    font-style: normal;
+    text-indent: 0;
+    overflow: visible;
+}
+
+/* Hide empty icon content if custom icons don't load */
+.FeedbackLayer__priceFeedback span[data-label="THUMBSUP"] i:empty,
+.FeedbackLayer__priceFeedback span[data-label="THUMBSDOWN"] i:empty {
+    font-size: 0;
+}
+
+.FeedbackLayer__priceFeedback span:hover i,
+.FeedbackLayer__priceFeedback span:hover i {
+    color: #666666 !important;
+}
+
+.FeedbackLayer__yesBlueIcnSelected {
+    color: #999999 !important;
+    display: inline-block !important;
+    font-size: 16px !important;
+}
+
+.FeedbackLayer__rotateDown {
+    transform: rotate(180deg);
+    display: inline-block !important;
+}
+
+.icon_thumbsUpBlue {
+    color: #999999 !important;
+    display: inline-block !important;
+    font-size: 16px !important;
+}
+
+/* Add Font Awesome thumbs icons using ::before pseudo-elements */
+.FeedbackLayer__priceFeedback span[data-label="THUMBSUP"] i,
+.FeedbackLayer__priceFeedback span[data-label="THUMBSUP"] i.icon_thumbsUpBlue {
+    font-family: "Font Awesome 6 Free" !important;
+}
+
+.FeedbackLayer__priceFeedback span[data-label="THUMBSUP"] i::before,
+.FeedbackLayer__priceFeedback span[data-label="THUMBSUP"] i.icon_thumbsUpBlue::before {
+    content: "\f164";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+    display: inline-block;
+    color: #999999;
+    font-size: 16px;
+}
+
+.FeedbackLayer__priceFeedback span[data-label="THUMBSDOWN"] i,
+.FeedbackLayer__priceFeedback span[data-label="THUMBSDOWN"] i.FeedbackLayer__rotateDown {
+    font-family: "Font Awesome 6 Free" !important;
+}
+
+.FeedbackLayer__priceFeedback span[data-label="THUMBSDOWN"] i::before,
+.FeedbackLayer__priceFeedback span[data-label="THUMBSDOWN"] i.FeedbackLayer__rotateDown::before {
+    content: "\f165";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+    display: inline-block;
+    color: #999999;
+    font-size: 16px;
+}
+
+/* Fallback: Use Font Awesome classes directly if available */
+.FeedbackLayer__priceFeedback .fa-thumbs-up,
+.FeedbackLayer__priceFeedback .fa-thumbs-down,
+.FeedbackLayer__priceFeedback .fas.fa-thumbs-up,
+.FeedbackLayer__priceFeedback .fas.fa-thumbs-down {
+    color: #999999 !important;
+    font-size: 16px !important;
+    display: inline-block !important;
+}
+
+/* Info Icon */
+.infoDesktop__infoWrap {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.infoDesktop__infoRotate {
+    color: #999999;
+    font-size: 16px;
+}
+
+.infoDesktop__infoWrap:hover .infoDesktop__infoCompWrap {
+    display: block;
+}
+
+.infoDesktop__infoCompWrap {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    white-space: nowrap;
+    margin-top: 4px;
+}
+
+.infoDesktop__infoComp {
+    font-size: 12px;
+    color: #666666;
+    line-height: 1.4;
+}
