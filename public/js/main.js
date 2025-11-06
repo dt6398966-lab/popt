@@ -667,5 +667,24 @@ document.addEventListener('DOMContentLoaded', function() {
             prevIcon.style.display = 'none';
         }
     }
+
+    // Use Popular Tools Carousel Navigation
+    const popularToolsCarousel = document.querySelector('.carousel__slidingBox[compattr="dealercomp1_"]');
+    const popularToolsRightArrow = document.querySelector('.ini__caraousel .carousel__right');
+
+    if (popularToolsCarousel && popularToolsRightArrow) {
+        popularToolsRightArrow.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const scrollAmount = 662; // Card width (650px) + gap (12px)
+            const currentScroll = popularToolsCarousel.scrollLeft;
+            const maxScroll = popularToolsCarousel.scrollWidth - popularToolsCarousel.clientWidth;
+            const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+            popularToolsCarousel.scrollTo({
+                left: newScroll,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
 

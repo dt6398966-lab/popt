@@ -4662,3 +4662,226 @@ body {
     color: #666666;
     line-height: 1.4;
 }
+
+/* Use Popular Tools Section */
+.insightAndUtilities__insightsWrap {
+    padding: 40px 0 0px 0;
+    background-color: #F0F8FF;
+    margin-top: 40px;
+    margin-left: 60px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.ini__outerwrap {
+    padding: 0 20px;
+    margin-bottom: 24px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.ini__innerwrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.ini__innerwrap > img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.ini__innerwrap > div {
+    flex: 1;
+    min-width: 200px;
+}
+
+.ini__innerwrap h3.title_l_bold {
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.ini__innerwrap h3 .ellipsis2Lines {
+    display: block;
+}
+
+.ini__innerwrap p.caption_strong_large {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 400;
+    color: #666666;
+    line-height: 1.5;
+}
+
+.ini__setButtonmargin {
+    flex-shrink: 0;
+    margin-left: 340px;
+}
+
+.ini__setButtonmargin button.buttons__secondaryRegular {
+    background-color: #F0F8FF;
+    border: 1px solid #ADD9FB;
+    color: #0078D4;
+    border-radius: 4px;
+    padding: 9px 18px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.ini__setButtonmargin button.buttons__secondaryRegular:hover {
+    background-color: #F0F8FF;
+    border-color: #0078D4;
+}
+
+.ini__setButtonmargin button.buttons__secondaryRegular span {
+    color: #0078D4;
+}
+
+.ini__caraousel {
+    position: relative;
+    padding: 0 20px;
+    margin-top: 30px;
+    margin-left: -44px;
+}
+
+.ini__caraousel .carousel__CarouselContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.ini__caraousel .carousel__CarouselBox {
+    position: relative;
+}
+
+.ini__caraousel .carousel__slidingBox[compattr="dealercomp1_"] {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.ini__caraousel .carousel__slidingBox[compattr="dealercomp1_"]::-webkit-scrollbar {
+    display: none;
+}
+
+/* Tool Cards */
+.inc__outerwrap {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    padding: 20px 18px;
+    min-width: 650px;
+    max-width: 650px;
+    flex-shrink: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.inc__outerwrap:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.inc__imagewrap {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.inc__yellowBg {
+    background-color: #F5E6D3;
+}
+
+.inc__imagewrap img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+.inc__outerwrap .spacer16 {
+    margin: 16px 0;
+}
+
+.inc__innerwrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.inc__heading {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+    text-decoration: none;
+    display: block;
+    line-height: 1.3;
+}
+
+.inc__heading:hover {
+    color: #0078D4;
+    text-decoration: underline;
+}
+
+.inc__subheading {
+    font-size: 14px;
+    color: #666666;
+    line-height: 1.5;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Carousel Arrow */
+.ini__caraousel .carousel__arrowContainerBox.carousel__right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: #F0F8FF;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.ini__caraousel .carousel__arrowContainerBox.carousel__right:hover {
+    background-color: #F5F5F5;
+}
+
+.ini__caraousel .carousel__rightArrow {
+    color: #333333;
+    font-size: 18px;
+}
