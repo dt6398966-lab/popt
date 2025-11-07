@@ -49,12 +49,14 @@ const authRoutes = require('./routes/auth');
 const propertyRoutes = require('./routes/properties');
 const searchRoutes = require('./routes/search');
 const agentRoutes = require('./routes/agents');
+const emiCalculatorRoutes = require('./routes/emi-calculator');
 
 app.use('/', indexRoutes);
 app.use('/auth', authRoutes);
 app.use('/properties', propertyRoutes);
 app.use('/search', searchRoutes);
 app.use('/agents', agentRoutes);
+app.use('/home-loan-emi-calculator-hlpg', emiCalculatorRoutes);
 
 // Error handling middleware
 app.use((req, res, next) => {

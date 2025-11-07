@@ -122,7 +122,8 @@ body {
 }
 
 .theader-transparent-header {
-    background: rgba(0, 0, 0, 0.08);
+    background: url('https://static.99acres.com/images/homeloanreact/hamburgerImg.png') no-repeat center center;
+    background-size: cover;
     backdrop-filter: blur(1px);
     position: relative;
     z-index: 100;

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= typeof title !== 'undefined' ? title : 'EMI Calculator - Home Loan EMI Calculator | 99acres' %></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/emi-calculator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div id="app"><div></div>
+
+<div class="_99HomeLoanBnnr bannerBgemiHomeLoan">
+    <div class="wrapperNav">
+        <div class="_99HomeLoanHamIcn __hamClick"></div>
+        <div class="_99HomeLoanLogo" title="99acres.com"></div>
+        <div class="_99HomeLoanHamBurger __mobHamList">
+            <img alt="img" src="https://static.99acres.com/images/homeloanreact/hamburgerImg.png">
+            <i class="_99HomeLoanLogo"></i>
+            <div class="hamList">
+                <a href="#calculateEmi"><div><i class="ham_icn_calcEmi"></i>CALCULATE EMI</div></a>
+                <a href="#faqs"><div><i class="ham_icn_faqs"></i>FAQs</div></a>
+                <a href="#articles"><div><i class="ham_icn_articles"></i>ARTICLES</div></a>
+            </div>
+        </div>
+    </div>
+    <div class="_99HomeLoanMain">
+        <div>
+            <h1 class="seoH1TagHeading"><span class="golden">EMI Calculator </span>for your loan amount</h1>
+        </div>
+    </div>
+</div>
+
+<div class="_99HomeLoanContentBox">
+    <div class="_99HomeloanBxWrp">
+        <div class="_99HomeloanBxWrp _99calcEmi" id="calcEmiComponent">
+            <div class="_99HomeLoanBordrBox _99HomeLoanForm" style="margin-top: 0px;">
+                <form class="">
+                    <div class="eoiLyr_inpWrap " data-attr="inputWrapper">
+                        <span class="phnCodeValue">₹</span>
+                        <input class="__enableSubmitButton __phnNoVal pl10" data-inline="true" data-attr="inputText" data-role="none" type="text" data-mini="true" maxlength="12" value="30,00,000" id="loanAmount">
+                        <div class="inputTxtDisplay" id="loanAmountDisplay">Thirty Lakhs </div>
+                        <span class="slidingInputLabel">Loan amount</span>
+                    </div>
+                    <div class="eoiLyr_inpWrap " data-attr="inputWrapper">
+                        <span class="phnCodeValue  hlYears" id="tenureUnit">Years</span>
+                        <ul data-page="homeloan" class="phnCodeListing hide1" id="tenureUnitDropdown">
+                            <li class="phoneCodeListItem" data-value="years">Years</li>
+                            <li class="phoneCodeListItem" data-value="months">Months</li>
+                        </ul>
+                        <input class="__enableSubmitButton __phnNoVal" data-inline="true" data-attr="inputText" data-role="none" type="text" data-mini="true" maxlength="3" value="20" id="loanTenure">
+                        <span class="slidingInputLabel">Tenure</span>
+                    </div>
+                    <div class="eoiLyr_inpWrap " data-attr="inputWrapper">
+                        <input class="__enableSubmitButton __phnNoVal" data-inline="true" data-attr="inputText" data-role="none" type="text" data-mini="true" maxlength="5" value="8.9" id="rateOfInterest">
+                        <span class="inputUnit">%</span>
+                        <span class="slidingInputLabel">Rate of Interest</span>
+                    </div>
+                </form>
+                <div class="_99HomeLoanEmiChart">
+                    <div>
+                        <div id="container" class="emiChartContainer" style="overflow: hidden;">
+                            <canvas id="emiChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="_99HomeLoanEmi">
+                    <div class="emiSlot">
+                        <i class="_99HomeLoanIcns calcIcon"></i>Monthly EMI
+                    </div>
+                    <div class="emiPrice" id="monthlyEMI"><b>₹ 26,800</b></div>
+                    <div class="spacer20"></div>
+                    <div class="spacer20"></div>
+                    <div class="emiInfoTxt2">Total Payable amount</div>
+                    <div class="emiPrice hl_fs20" id="totalPayable"><b>₹ 64,31,790</b></div>
+                    <div class="spacer20"></div>
+                    <button class="btnBlue " id="getInstantLoan">Get instant loan</button>
+                    <div class="spacer10"></div>
+                    <div class="emiInfoTxt1"><b></b></div>
+                    <div class="emiInfoTxt2">It's easy with 99acres!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="_99HomeloanBxWrp20">
+        <h2 class="homeLoan99Head seoH1Tag">About EMI Calculator</h2>
+        <span class="homeLoan99SbTxt">Know how a bank provides a deal for their customers</span>
+        <div class="spacer30 sp15"></div>
+        <div class="homeLoan99Cont aboutPageContent">
+            <div>
+                <p>A home loan EMI calculator helps compute the monthly instalments that a borrower needs to pay against the total amount availed. Such a tool assists you in making an informed decision about the outflow towards the home loan every month.</p>
+            </div>
+            <span>... <em class="readMoreLink" id="readMoreBtn">Read More</em></span>
+            <div class="readMoreContent hide" id="readMoreContent">
+                <p>The EMI calculator uses a mathematical formula to calculate the monthly payment based on the principal amount, interest rate, and loan tenure. It helps you understand how much you'll need to pay each month and plan your finances accordingly.</p>
+                <p>EMI stands for Equated Monthly Installment, which is a fixed amount paid by the borrower to the lender every month. The EMI consists of both principal and interest components, with the interest portion being higher in the initial years and gradually decreasing over time.</p>
+            </div>
+        </div>
+        <div class="spacer30 sp15"></div>
+    </div>
+    
+    <div class="homeLona99AnABx _99HomeloanBxWrp20" id="faqsComponent">
+        <h3 class="homeLoan99Head">Frequently asked questions about EMI Calculator</h3>
+        <span class="homeLoan99SbTxt">Know what questions the users frequently asks about EMI calculators</span>
+        <div class="spacer30 sp15"></div>
+        <div class="homeLoan99AnABx">
+            <div class="__hmAccordion">
+                <div class="homeLoan99Ques">What is an EMI?</div>
+                <div>
+                    <div>
+                        <p>EMI stands for equated monthly installments. As a borrower, you need to pay the lender a fixed amount every month on a specified date. The EMI is the sum total of the principal amount and the interest amount divided over the tenure of the loan.</p>
+                        <p>However, your monthly value is fixed for each month, the principal amount paid and interest amount paid changes every month. For the first few years, the interest portion is higher. With time, the interest amount keeps reducing and principal amount keeps increasing. Therefore, your 70-75% interest will be paid in the first few years of the entire loan tenure.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="__hmAccordion">
+                <div class="homeLoan99Ques">What is a Home-Loan EMI?</div>
+                <div>
+                    <div>
+                        <p>Home loan is a loan taken from any financial institution for buying a house. The EMI that is calculated for this loan is termed as a Home loan EMI.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="__hmAccordion">
+                <div class="homeLoan99Ques">What is Pre-EMI?</div>
+                <div>
+                    <div>
+                        <p>For home loans disbursed against an under-construction property, the lender can offer an EMI that begins once the construction is complete. Until then, you can pay just the interest part of the loan that is termed as a Pre-EMI.</p>
+                        <p>Pre-EMI amount is less than full EMI amount since you will be paying just the interest component of the EMI and the principal loan amount remains intact. The Pre-EMI duration is not a part of your home loan duration.</p>
+                        <p>Let's take an example to understand this better. Say you have a loan of 15,00,000 lacs for 20 years on a property that gets completed in 3 years. Your calculated EMI is Rs. 25,000/-. During these 3 years you can pay the interest part of the EMI. That would be your Pre-EMI and the total loan duration would be 23 years (20+3).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="__hmAccordion">
+                <div class="homeLoan99Ques">Should I opt for Pre-EMI?</div>
+                <div>
+                    <div>
+                        <p>You should opt of Pre-EMI if:</p>
+                        <ul>
+                            <li>If you wish to save money during the pre-EMI period and invest it in such a way that they get good returns on the amount saved.</li>
+                            <li>If you wish to sell your property once the construction is complete.</li>
+                            <li>If you are waiting for an income change and feel now it is not possible to afford a full EMI.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="__hmAccordion">
+                <div class="homeLoan99Ques">How is home loan EMI calculated?</div>
+                <div>
+                    <div>
+                        <p>EMI is calculated using a simple mathematical formula, that is</p>
+                        <p><strong>EMI Amount = [P x R x (1+R)^N]/[(1+R)^N-1]</strong></p>
+                        <p>Here P stands for the principal loan amount, R is the rate of interest and N is the number of years for which the loan is taken.</p>
+                        <p>The value of the EMI changes according to these variables.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="__hmAccordion faq-hidden" style="display: none;">
+                <div class="homeLoan99Ques">How is EMI interest calculated?</div>
+                <div>
+                    <div>
+                        <p>EMI interest is calculated on the outstanding principal amount. In the initial years, a larger portion of the EMI goes towards interest payment, while the principal repayment is smaller. As you progress through the loan tenure, the interest component decreases and the principal component increases.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="__hmAccordion faq-hidden" style="display: none;">
+                <div class="homeLoan99Ques">What is a floating rate of interest?</div>
+                <div>
+                    <div>
+                        <p>A floating rate of interest is an interest rate that changes periodically based on market conditions and the lender's base rate or MCLR (Marginal Cost of Funds Based Lending Rate). When the base rate changes, your EMI or loan tenure may be adjusted accordingly.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="__hmAccordion faq-hidden" style="display: none;">
+                <div class="homeLoan99Ques">What if my floating rate of interest increases? Does that mean I will have to pay bigger amount of EMI?</div>
+                <div>
+                    <div>
+                        <p>If your floating rate of interest increases, you have two options:</p>
+                        <ul>
+                            <li>Increase your EMI amount to maintain the same loan tenure</li>
+                            <li>Keep the same EMI amount but extend the loan tenure</li>
+                        </ul>
+                        <p>Most lenders prefer to extend the tenure rather than increase the EMI, but you can choose based on your financial situation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="__hmAccordion faq-hidden" style="display: none;">
+                <div class="homeLoan99Ques">Can I get my EMI increased instead of getting my loan tenor increased?</div>
+                <div>
+                    <div>
+                        <p>Yes, you can request your lender to increase your EMI amount instead of extending the loan tenure when the interest rate increases. This helps you pay off your loan faster and reduces the total interest paid over the loan period. However, you should ensure that the increased EMI is affordable within your monthly budget.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="homeLoanViewMre"><a href="#" id="viewMoreFaq">View More</a></div>
+        </div>
+        <div class="spacer30 sp15"></div>
+    </div>
+</div>
+
+<!-- Chart.js for visualization -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/js/emi-calculator.js"></script>
+</body>
+</html>
