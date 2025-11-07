@@ -50,6 +50,7 @@ const propertyRoutes = require('./routes/properties');
 const searchRoutes = require('./routes/search');
 const agentRoutes = require('./routes/agents');
 const emiCalculatorRoutes = require('./routes/emi-calculator');
+const eligibilityCalculatorRoutes = require('./routes/eligibility-calculator');
 
 app.use('/', indexRoutes);
 app.use('/auth', authRoutes);
@@ -57,6 +58,7 @@ app.use('/properties', propertyRoutes);
 app.use('/search', searchRoutes);
 app.use('/agents', agentRoutes);
 app.use('/home-loan-emi-calculator-hlpg', emiCalculatorRoutes);
+app.use('/home-loan-eligibility-calculator-hlpg', eligibilityCalculatorRoutes);
 
 // Error handling middleware
 app.use((req, res, next) => {

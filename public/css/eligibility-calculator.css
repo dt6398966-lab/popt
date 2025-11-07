@@ -1,0 +1,1129 @@
+/* Eligibility Calculator Page Styles - Exact 99acres Match */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Banner Section */
+._99HomeLoanBnnr.bannerBgeligibilityHomeLoan {
+    background-color: #0078D4;
+    background-image: 
+        url('https://static.99acres.com/images/homeloanreact/hamburgerImg.png'),
+        linear-gradient(135deg, #0078D4 0%, #005a9e 100%);
+    background-size: cover, cover;
+    background-position: center, center;
+    background-repeat: no-repeat, no-repeat;
+    padding: 30px 20px 50px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+}
+
+/* Decorative overlay pattern */
+._99HomeLoanBnnr.bannerBgeligibilityHomeLoan::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.wrapperNav {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+._99HomeLoanHamIcn.__hamClick {
+    display: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+._99HomeLoanLogo {
+    display: block;
+    height: 40px;
+    width: auto;
+    background-image: url('https://static.99acres.com/universalhp/img/nnacres_white_v2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left center;
+    filter: brightness(0) invert(1);
+    min-width: 100px;
+}
+
+._99HomeLoanLogo img {
+    display: none;
+}
+
+._99HomeLoanHamBurger.__mobHamList {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+._99HomeLoanHamBurger.__mobHamList > img {
+    display: none;
+}
+
+._99HomeLoanHamBurger.__mobHamList > i._99HomeLoanLogo {
+    display: none;
+}
+
+._99HomeLoanHamBurger.__mobHamList .hamList {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+._99HomeLoanHamBurger.__mobHamList .hamList a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: opacity 0.2s;
+    text-transform: uppercase;
+}
+
+._99HomeLoanHamBurger.__mobHamList .hamList a:hover {
+    opacity: 0.85;
+}
+
+._99HomeLoanHamBurger.__mobHamList .hamList a div {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+._99HomeLoanHamBurger.__mobHamList .hamList a i {
+    font-size: 14px;
+}
+
+._99HomeLoanMain {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    padding-top: 20px;
+}
+
+._99HomeLoanMain > div {
+    display: block;
+}
+
+.seoH1TagHeading {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.4;
+    color: white;
+    letter-spacing: -0.5px;
+}
+
+.seoH1TagHeading .golden {
+    color: #FFD700;
+    font-weight: 700;
+}
+
+/* Content Box */
+._99HomeLoanContentBox {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+}
+
+._99HomeloanBxWrp {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+._99HomeLoanBordrBox._99HomeLoanForm.wd100 {
+    display: block;
+    width: 100%;
+}
+
+.loanEligibleWrap {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.loanEligibltyForm {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.loanEligibltyGraph {
+    flex: 1;
+    min-width: 0;
+}
+
+@media (max-width: 991px) {
+    .loanEligibleWrap {
+        flex-direction: column;
+    }
+    
+    .loanEligibltyForm,
+    .loanEligibltyGraph {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+}
+
+/* Toggle Switch */
+.toggleContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.toggleBtnTxt {
+    font-size: 15px;
+    color: #1A1A1A;
+    font-weight: 600;
+    display: block;
+    margin: 0;
+}
+
+.toggleBtn {
+    position: relative;
+    width: 180px;
+    height: 36px;
+    background: white;
+    border: 1px solid #d0d0d0;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.toggleBtn .switch {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #59cfb5;
+    border-radius: 18px 0 0 18px;
+    transition: transform 0.3s ease;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.toggleBtn.active .switch {
+    transform: translateX(100%);
+    border-radius: 0 18px 18px 0;
+}
+
+.toggleBtn .label {
+    flex: 1;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 2;
+    transition: color 0.3s ease;
+    line-height: 36px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggleBtn.off .label.left {
+    color: white;
+}
+
+.toggleBtn.off .label.right {
+    color: #666;
+}
+
+.toggleBtn.active .label.left {
+    color: #666;
+}
+
+.toggleBtn.active .label.right {
+    color: white;
+}
+
+/* Form Inputs - Two Column Layout */
+.loanEligibltyForm > div {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.eoiLyr_inpWrap {
+    position: relative;
+    margin-bottom: 20px;
+    flex: 1;
+    min-width: 200px;
+    padding-top: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.eoiLyr_inpWrap.wid50 {
+    flex: 0 0 calc(50% - 10px);
+    min-width: calc(50% - 10px);
+    max-width: calc(50% - 10px);
+}
+
+.phnCodeValue {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(calc(-50% + 4px));
+    font-size: 18px;
+    font-weight: 400;
+    color: #999;
+    z-index: 2;
+    pointer-events: none;
+    line-height: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Move rupee symbol down for Net income field */
+.netIncomeRupee {
+    transform: translateY(calc(-50% + 12px)) !important;
+}
+
+.phnCodeValue.hlYears {
+    cursor: pointer;
+    padding: 0;
+    background: transparent;
+    border-radius: 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: #999;
+    pointer-events: all;
+    left: auto;
+    right: 12px;
+    top: 50%;
+    transform: translateY(calc(-50% + 4px));
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    line-height: 20px;
+    height: 20px;
+}
+
+/* Move Monthly down and reduce text size for Net income field */
+#incomeUnit {
+    transform: translateY(calc(-50% + 8px)) !important;
+    font-size: 14px !important;
+}
+
+.phnCodeValue.hlYears::after {
+    content: '\f107';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 12px;
+    color: #999;
+    line-height: 1;
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.phnCodeListing {
+    position: absolute;
+    left: 12px;
+    top: calc(100% + 4px);
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    min-width: 100px;
+    list-style: none;
+    padding: 4px 0;
+    margin: 0;
+}
+
+.phnCodeListing.fullWidthOption {
+    min-width: 200px;
+}
+
+.phnCodeListing.hide1 {
+    display: none;
+}
+
+.phoneCodeListItem {
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.2s;
+}
+
+.phoneCodeListItem:hover {
+    background-color: #f5f5f5;
+}
+
+.__enableSubmitButton.__phnNoVal {
+    width: 100%;
+    padding: 0 12px;
+    padding-left: 12px;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 550;
+    color: #1A1A1A;
+    background-color: white;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+    height: 48px;
+    line-height: 48px;
+    vertical-align: middle;
+    margin: 0;
+}
+
+/* Adjust padding for Your Age field to accommodate "Years" on the right */
+#yourAge {
+    padding-right: 80px;
+}
+
+/* Move Net income value slightly to the right */
+#netIncome {
+    padding-left: 28px;
+}
+
+/* Move rupee symbol down for Existing EMI field */
+.existingEmiRupee {
+    transform: translateY(calc(-50% + 12px)) !important;
+}
+
+/* Move Existing EMI value slightly to the right */
+#existingEmi {
+    padding-left: 28px;
+}
+
+/* Move Existing EMI label slightly right */
+.existingEmiLabel {
+    left: 4px !important;
+}
+
+/* Move Monthly unit down for Existing EMI field */
+.existingEmiUnit {
+    transform: translateY(calc(-50% + 8px)) !important;
+    font-size: 14px !important;
+}
+
+/* Move percentage symbol down for Rate of Interest field */
+.rateOfInterestUnit {
+    transform: translateY(calc(-50% + 12px)) !important;
+}
+
+/* Move Rate of Interest value slightly to the right */
+#rateOfInterest {
+    padding-right: 50px;
+}
+
+/* Move Rate of Interest label slightly right */
+.rateOfInterestLabel {
+    left: 4px !important;
+}
+
+/* Move Years unit down for Tenure field */
+.tenureUnit {
+    transform: translateY(calc(-50% + 8px)) !important;
+    font-size: 14px !important;
+}
+
+/* Move Tenure value slightly to the right */
+#loanTenure {
+    padding-left: 20px;
+    font-weight: 600;
+}
+
+/* Move Tenure label slightly right */
+.tenureLabel {
+    left: 4px !important;
+}
+
+/* Primary Borrower and Co-Borrower Section Titles */
+.grnTtle {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 0;
+}
+
+/* Co-Borrower Section */
+.coBorrowerSection {
+    display: none;
+}
+
+#coBorrowerFields {
+    display: none;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#coBorrowerFields[style*="flex"] {
+    display: flex !important;
+}
+
+/* Focused label styles for Co-Borrower fields */
+.slidingInputLabelFocused {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 12px;
+    color: #999;
+    pointer-events: none;
+    background: transparent;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.inputUnitFocused {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(calc(-50% + 4px));
+    font-size: 16px;
+    font-weight: 400;
+    color: #999;
+    z-index: 2;
+    pointer-events: none;
+    line-height: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.notVisibleImportant {
+    visibility: hidden !important;
+}
+
+/* Co-Borrower field styling */
+.coBorrowerRupee {
+    transform: translateY(calc(-50% + 12px)) !important;
+}
+
+.coBorrowerEmiRupee {
+    transform: translateY(calc(-50% + 12px)) !important;
+}
+
+#coBorrowerNetIncome {
+    padding-left: 28px;
+}
+
+#coBorrowerExistingEmi {
+    padding-left: 28px;
+}
+
+.coBorrowerLabel {
+    left: 4px !important;
+}
+
+.coBorrowerEmiLabel {
+    left: 4px !important;
+}
+
+#coBorrowerIncomeUnit {
+    transform: translateY(calc(-50% + 8px)) !important;
+    font-size: 14px !important;
+}
+
+.coBorrowerEmiUnit {
+    transform: translateY(calc(-50% + 8px)) !important;
+    font-size: 14px !important;
+}
+
+/* Move "Years" slightly down for Your Age field */
+.yourAgeUnit {
+    transform: translateY(calc(-50% + 12px)) !important;
+}
+
+/* Move "Your Age" label slightly left */
+.yourAgeLabel {
+    left: -4px !important;
+}
+
+.__enableSubmitButton.__phnNoVal.pl10 {
+    padding-left: 40px;
+    padding-right: 100px;
+    line-height: 48px;
+}
+
+.__enableSubmitButton.__phnNoVal.pl10:not(:focus) {
+    padding-right: 100px;
+}
+
+.__enableSubmitButton.__phnNoVal:focus {
+    outline: none;
+    border-color: #0078D4;
+    background-color: white;
+    box-shadow: 0 0 0 2px rgba(0, 120, 212, 0.1);
+}
+
+.inputTxtDisplay {
+    position: absolute;
+    left: auto;
+    right: 12px;
+    top: 0;
+    font-size: 11px;
+    color: #999;
+    pointer-events: none;
+    font-weight: 400;
+    z-index: 3;
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+.slidingInputLabel {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 12px;
+    color: #999;
+    pointer-events: none;
+    background: transparent;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+/* Move Net income label slightly right */
+.netIncomeLabel {
+    left: 4px !important;
+}
+
+.__enableSubmitButton.__phnNoVal:focus ~ .slidingInputLabel,
+.__enableSubmitButton.__phnNoVal:not(:placeholder-shown) ~ .slidingInputLabel {
+    top: 0;
+    left: 12px;
+    font-size: 12px;
+    background: transparent;
+    padding: 0;
+    color: #999;
+    font-weight: 400;
+}
+
+.inputUnit {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(calc(-50% + 4px));
+    font-size: 16px;
+    font-weight: 400;
+    color: #999;
+    z-index: 2;
+    pointer-events: none;
+    line-height: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Occupation Dropdown */
+.slidingDropDown {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(calc(-50% + 4px));
+    font-size: 18px;
+    font-weight: 600;
+    color: #1A1A1A;
+    z-index: 2;
+    pointer-events: all;
+    cursor: pointer;
+    line-height: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.slidingDropDown::after {
+    content: '\f107';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 12px;
+    color: #999;
+    line-height: 1;
+    margin-left: 4px;
+}
+
+.eliOccupationField {
+    position: relative;
+}
+
+/* Add input box styling to Occupation field */
+.eliOccupationField::before {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: 0;
+    right: 0;
+    height: 48px;
+    border: 1px solid #d0d0d0;
+    border-radius: 4px;
+    background-color: white;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.eliOccupationField .slidingDropDown {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    top: calc(22px + 24px);
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 550;
+    color: #1A1A1A;
+    z-index: 2;
+    pointer-events: all;
+    cursor: pointer;
+    line-height: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    text-align: left;
+}
+
+/* Move dropdown arrow slightly more to the right, keep Salaried on left */
+.eliOccupationField .slidingDropDown::after {
+    margin-left: auto;
+    margin-right: 0;
+    position: absolute;
+    right: 0;
+}
+
+.bdrTp {
+    border-top: 1px solid #e0e0e0;
+    padding-top: 20px;
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Calculate Button */
+.LoanEligiblyBtn {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 100px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btnWhite {
+    font-size: 18px;
+    background: white;
+    color: #0078D4;
+    border: 1px solid #0078D4;
+    padding: 14px 50px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    min-height: 48px;
+}
+
+.btnWhite:hover {
+    background: #0078D4;
+    color: white;
+}
+
+/* Chart and Results Section */
+.loanEligibltyGraph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#eligibilityChartContainer {
+    width: 100%;
+    height: 331px;
+    position: relative;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.emiChartContainer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.resultsWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.eliChartLegend {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.borrowUptoLegend,
+.loanAmountLegend {
+    text-align: center;
+    flex: 1;
+}
+
+.borrowUptoLegend > div:first-child,
+.loanAmountLegend > div:first-child {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+    font-weight: 400;
+}
+
+.borrowUptoLegend .emiPrice {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.2;
+}
+
+.loanAmountLegend .emiPrice {
+    font-size: 24px;
+    font-weight: 700;
+    color: #59cfb5;
+    line-height: 1.2;
+}
+
+.graphLine {
+    width: 100%;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 20px 0;
+}
+
+._99HomeLoanEmi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.emiSlot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.emiPrice {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+
+.emiPrice b {
+    font-weight: 700;
+}
+
+.btnBlue {
+    background: #0078D4;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btnBlue:hover {
+    background: #005a9e;
+    box-shadow: 0 2px 8px rgba(0, 120, 212, 0.3);
+}
+
+.emiInfoTxt2 {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 0;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* About Section */
+._99HomeloanBxWrp20 {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.homeLoan99Head.seoH1Tag {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+}
+
+.homeLoan99Head {
+    font-size: 28px;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+}
+
+.homeLoan99SbTxt {
+    font-size: 12px;
+    color: #666;
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.homeLoan99Cont.aboutPageContent {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+}
+
+.homeLoan99Cont.aboutPageContent p {
+    margin-bottom: 12px;
+}
+
+.readMoreLink {
+    color: #0078D4;
+    cursor: pointer;
+    font-style: normal;
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.readMoreContent {
+    margin-top: 16px;
+}
+
+.readMoreContent.hide {
+    display: none;
+}
+
+/* FAQs Section */
+.homeLona99AnABx {
+    background: white;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.homeLoan99AnABx {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.__hmAccordion {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    background: white;
+}
+
+.__hmAccordion:hover {
+    border-color: #d0d0d0;
+}
+
+.homeLoan99Ques {
+    padding: 18px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1a1a1a;
+    cursor: pointer;
+    background: #fafafa;
+    position: relative;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+.homeLoan99Ques:hover {
+    background: #f5f5f5;
+}
+
+.homeLoan99Ques::after {
+    content: '+';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #0078D4;
+    font-weight: 300;
+    transition: transform 0.2s ease;
+    line-height: 1;
+}
+
+.__hmAccordion.active .homeLoan99Ques::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.__hmAccordion > div:not(.homeLoan99Ques) {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.__hmAccordion.active > div:not(.homeLoan99Ques) {
+    max-height: 2000px;
+}
+
+.__hmAccordion > div > div {
+    padding: 18px 20px;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+    background: white;
+}
+
+.__hmAccordion p {
+    margin-bottom: 12px;
+}
+
+.__hmAccordion ul,
+.__hmAccordion ol {
+    margin: 12px 0;
+    padding-left: 24px;
+}
+
+.__hmAccordion li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* Icon Styles */
+.ham_icn_checkEli::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+    margin-right: 8px;
+}
+
+.ham_icn_faqs::before {
+    content: "\f059";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+    margin-right: 8px;
+}
+
+.ham_icn_articles::before {
+    content: "\f15c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 400;
+    margin-right: 8px;
+}
+
+/* Spacers */
+.spacer10 {
+    height: 10px;
+    width: 100%;
+}
+
+.spacer20 {
+    height: 20px;
+    width: 100%;
+}
+
+.spacer30 {
+    height: 30px;
+    width: 100%;
+}
+
+.sp15 {
+    height: 15px;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .loanEligibleWrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .seoH1TagHeading {
+        font-size: 32px;
+    }
+
+    ._99HomeloanBxWrp {
+        padding: 20px;
+    }
+
+    .eoiLyr_inpWrap.wid50 {
+        flex: 1 1 100%;
+        min-width: 100%;
+    }
+
+    ._99HomeLoanHamBurger {
+        display: none;
+    }
+
+    ._99HomeLoanHamIcn {
+        display: block;
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+    }
+}
+
+

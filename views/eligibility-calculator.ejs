@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= typeof title !== 'undefined' ? title : 'Loan Eligibility Calculator - Home Loan Eligibility Calculator | 99acres' %></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/eligibility-calculator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<div id="app"><div></div>
+
+<div class="_99HomeLoanBnnr bannerBgeligibilityHomeLoan">
+    <div class="wrapperNav">
+        <div class="_99HomeLoanHamIcn __hamClick"></div>
+        <div class="_99HomeLoanLogo" title="99acres.com"></div>
+        <div class="_99HomeLoanHamBurger __mobHamList">
+            <img alt="img" src="https://static.99acres.com/images/homeloanreact/hamburgerImg.png">
+            <i class="_99HomeLoanLogo"></i>
+            <div class="hamList">
+                <a href="#checkEligibility"><div><i class="ham_icn_checkEli"></i>CHECK ELIGIBILITY</div></a>
+                <a href="#faqs"><div><i class="ham_icn_faqs"></i>FAQs</div></a>
+                <a href="#articles"><div><i class="ham_icn_articles"></i>ARTICLES</div></a>
+            </div>
+        </div>
+    </div>
+    <div class="_99HomeLoanMain">
+        <div>
+            <h1 class="seoH1TagHeading"><span class="golden">Loan Eligibility Calculator </span>for your borrowing capacity</h1>
+        </div>
+    </div>
+</div>
+
+<div class="_99HomeLoanContentBox">
+    <div class="_99HomeloanBxWrp">
+        <div class="_99HomeloanBxWrp _loanEligiblty" id="checkEligibility">
+            <div class="_99HomeLoanBordrBox _99HomeLoanForm wd100" style="margin-top: 0px;">
+                <form action="" method="get" class="loanEligibleWrap">
+                    <div class="loanEligibltyForm">
+                        <div class="toggleContainer">
+                            <span class="toggleBtnTxt">Number of Borrowers </span>
+                            <div class="toggleBtn off" id="container">
+                                <div class="switch" id="switch"></div>
+                                <div class="label left">One</div>
+                                <div class="label right">Two</div>
+                            </div>
+                        </div>
+                        <div class="spacer20"></div>
+                        <div class="grnTtle">Primary Borrower</div>
+                        <div class="spacer10"></div>
+                        <div>
+                            <div class="eoiLyr_inpWrap wid50" data-attr="inputWrapper">
+                                <input class="__enableSubmitButton __phnNoVal" data-inline="true" data-attr="inputText" data-role="none" type="text" data-mini="true" maxlength="2" value="35" id="yourAge">
+                                <span class="inputUnit yourAgeUnit" style="right: 150px;">Years</span>
+                                <span class="slidingInputLabel yourAgeLabel">Your Age</span>
+                            </div>
+                            <div class="eoiLyr_inpWrap wid50 eliOccupationField" data-attr="inputWrapper">
+                                <span class="slidingDropDown hlYears" id="occupationUnit">Salaried</span>
+                                <ul data-page="homeloan" class="phnCodeListing hide1 fullWidthOption" id="occupationDropdown">
+                                    <li class="phoneCodeListItem" data-value="salaried">Salaried</li>
+                                    <li class="phoneCodeListItem" data-value="self-employed">Self Employed</li>
+                                    <li class="phoneCodeListItem" data-value="business">Business</li>
+                                </ul>
+                                <span class="slidingInputLabel">Occupation</span>
+                            </div>
+                            <div class="eoiLyr_inpWrap wid50" data-attr="inputWrapper">
+                                <span class="phnCodeValue netIncomeRupee">₹</span>
+                                <span class="phnCodeValue hlYears" id="incomeUnit">Monthly</span>
+                                <ul data-page="homeloan" class="phnCodeListing hide1" id="incomeUnitDropdown">
+                                    <li class="phoneCodeListItem" data-value="monthly">Monthly</li>
+                                    <li class="phoneCodeListItem" data-value="annually">Annually</li>
+                                </ul>
+                                <input class="__enableSubmitButton __phnNoVal pl10" data-inline="true" data-attr="inputText" data-role="none" type="text" data-mini="true" maxlength="10" value="1,00,000" id="netIncome">
+                                <div class="inputTxtDisplay" id="netIncomeDisplay">One Lakhs </div>
+                                <span class="slidingInputLabel netIncomeLabel">Net income</span>
+                            </div>
+                            <div class="eoiLyr_inpWrap wid50" data-attr="inputWrapper">
+                                <span class="phnCodeValue existingEmiRupee">₹</span>
+                                <input class="__enableSubmitButton __phnNoVal pl10" data-inline="true" data-attr="inputText" data-role="none" type="text" data-mini="true" maxlength="8" value="10,000" id="existingEmi">
+                                <div class="inputTxtDisplay" id="existingEmiDisplay">Ten Thousand </div>
+                                <span class="inputUnit existingEmiUnit">Monthly</span>
+                                <span class="slidingInputLabel existingEmiLabel">Existing Monthly EMI</span>
+                            </div>
+                        </div>
+                        <div class="spacer20"></div>
+                        <div class="grnTtle coBorrowerSection" id="coBorrowerTitle" style="display: none;">Co-Borrower</div>
+                        <div class="spacer10 coBorrowerSection" id="coBorrowerSpacer" style="display: none;"></div>
+                        <div class="coBorrowerSection" id="coBorrowerFields" style="display: none;">
+                            <div class="eoiLyr_inpWrap wid50" data-attr="inputWrapper">
+                                <span class="phnCodeValue coBorrowerRupee">₹</span>
+                                <span class="phnCodeValue hlYears" id="coBorrowerIncomeUnit">Monthly</span>
+                                <ul data-page="homeloan" class="phnCodeListing hide1" id="coBorrowerIncomeUnitDropdown">
+                                    <li class="phoneCodeListItem" data-value="monthly">Monthly</li>
+                                    <li class="phoneCodeListItem" data-value="annually">Annually</li>
+                                </ul>
+                                <input class="__enableSubmitButton __phnNoVal pl10" data-inline="true" data-attr="inputText" data-role="none" type="text" data-mini="true" maxlength="10" value="" id="coBorrowerNetIncome">
+                                <div class="inputTxtDisplay" id="coBorrowerNetIncomeDisplay"></div>
+                                <span class="slidingInputLabel coBorrowerLabel">Net income</span>
+                            </div>
+                            <div class="eoiLyr_inpWrap wid50" data-attr="inputWrapper">
+                                <span class="phnCodeValue coBorrowerEmiRupee">₹</span>
+                                <input class="__enableSubmitButton __phnNoVal pl10" data-inline="true" data-attr="inputText" data-role="none" type="text" data-mini="true" maxlength="8" value="" id="coBorrowerExistingEmi">
+                                <div class="inputTxtDisplay" id="coBorrowerExistingEmiDisplay"></div>
+                                <span class="inputUnit coBorrowerEmiUnit">Monthly</span>
+                                <span class="slidingInputLabel coBorrowerEmiLabel">Existing Monthly EMI</span>
+                            </div>
+                        </div>
+                        <div class="bdrTp">
+                            <div class="eoiLyr_inpWrap wid50" data-attr="inputWrapper">
+                                <input class="__enableSubmitButton __phnNoVal" data-inline="true" data-attr="inputText" data-role="none" type="text" data-mini="true" maxlength="5" value="8.9" id="rateOfInterest">
+                                <span class="inputUnit rateOfInterestUnit" style="right: 185px;">%</span>
+                                <span class="slidingInputLabel rateOfInterestLabel">Rate of Interest</span>
+                            </div>
+                            <div class="eoiLyr_inpWrap wid50" data-attr="inputWrapper">
+                                <span class="phnCodeValue hlYears tenureUnit" id="tenureUnit">Years</span>
+                                <ul data-page="homeloan" class="phnCodeListing hide1" id="tenureUnitDropdown">
+                                    <li class="phoneCodeListItem" data-value="years">Years</li>
+                                    <li class="phoneCodeListItem" data-value="months">Months</li>
+                                </ul>
+                                <input class="__enableSubmitButton __phnNoVal" data-inline="true" data-attr="inputText" data-role="none" type="text" data-mini="true" maxlength="3" value="20" id="loanTenure">
+                                <span class="slidingInputLabel tenureLabel">Tenure</span>
+                            </div>
+                        </div>
+                        <div class="spacer20"></div>
+                        <div class="LoanEligiblyBtn">
+                            <button type="button" class="btnWhite" id="calculateEligibility">Calculate</button>
+                        </div>
+                        <div class="spacer10"></div>
+                    </div>
+                    <div class="loanEligibltyGraph">
+                        <div id="eligibilityChartContainer" class="emiChartContainer">
+                            <h3 style="font-size: 18px; font-weight: 600; color: #1A1A1A; margin-bottom: 20px;">Your Estimated Results</h3>
+                            <canvas id="eligibilityChart"></canvas>
+                        </div>
+                        <div class="resultsWrapper">
+                            <div class="eliChartLegend">
+                                <div class="borrowUptoLegend">
+                                    <div>You could borrow upto</div>
+                                    <div class="emiPrice" id="borrowAmount">₹ 67,16,630</div>
+                                </div>
+                                <div class="loanAmountLegend">
+                                    <div>Payable Amount</div>
+                                    <div class="emiPrice" id="payableAmount">₹ 1,44,00,000</div>
+                                </div>
+                            </div>
+                            <div class="spacer20"></div>
+                            <div class="spacer20"></div>
+                            <div class="graphLine"></div>
+                            <div class="_99HomeLoanEmi">
+                                <div class="emiSlot">Monthly EMI</div>
+                                <div class="emiPrice" id="monthlyEMI"><b>₹ 60,000</b></div>
+                            </div>
+                        </div>
+                        <div class="spacer20"></div>
+                        <button class="btnBlue" style="width: 260px; height: 42px; padding: 10px; font-size: 16px;" id="applyForLoan">Apply for Loan</button>
+                        <div class="spacer10"></div>
+                        <div class="emiInfoTxt2" style="font-size: 12px;">It's easy with 99acres!</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="_99HomeloanBxWrp20">
+        <h2 class="homeLoan99Head seoH1Tag">About Eligibility Calculator</h2>
+        <span class="homeLoan99SbTxt">Know how a bank provides a deal for their customers</span>
+        <div class="spacer30 sp15"></div>
+        <div class="homeLoan99Cont aboutPageContent">
+            <div>
+                <p>Lenders have drafted a set of parameters for borrowers that are to be fulfilled while availing for a home loan. Home loan eligibility criteria include age, income, work experience, and credit history.</p>
+            </div>
+            <span>... <em class="readMoreLink" id="readMoreBtn">Read More</em></span>
+            <div class="readMoreContent hide" id="readMoreContent">
+                <p>The eligibility calculator helps you understand how much loan amount you can get approved based on your income, age, existing liabilities, and other factors. Banks use various formulas to calculate your eligibility, typically considering your monthly income, existing EMIs, and the loan tenure.</p>
+                <p>Most lenders offer loans up to 60 times your monthly net income, but this can vary based on your credit score, employment stability, and other factors. The calculator provides an estimate to help you plan your home purchase better.</p>
+            </div>
+        </div>
+        <div class="spacer30 sp15"></div>
+    </div>
+    
+    <div class="homeLona99AnABx _99HomeloanBxWrp20" id="faqs">
+        <h3 class="homeLoan99Head">Frequently asked questions about Eligibility Calculator</h3>
+        <span class="homeLoan99SbTxt">Know what questions the users frequently asks about Eligibility calculators</span>
+        <div class="spacer30 sp15"></div>
+        <div class="homeLoan99AnABx">
+            <div class="__hmAccordion">
+                <div class="homeLoan99Ques">What are the eligibility criteria for a home loan?</div>
+                <div>
+                    <div>
+                        <p>There is an eligibility criterion that banks have before they go ahead sanctioning it. A few important of them are employment stability, age criteria, credit rating, financial stability etc.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="__hmAccordion">
+                <div class="homeLoan99Ques">How is eligibility for home loan calculated?</div>
+                <div>
+                    <div>
+                        <p>Some steps to calculate your home loan eligibility are:</p>
+                        <ol>
+                            <li>To calculate the income level, banks will investigate your salary slips and bank statements.</li>
+                            <li>Next, it calculates the amount saved assuming that 30% of your savings is from your INCOME.</li>
+                            <li>If there are existing loans, the EMI is reduced from the income level.</li>
+                            <li>According to the income level and savings, the bank calculates a home loan amount.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            <div class="__hmAccordion">
+                <div class="homeLoan99Ques">What is the minimum salary for home loan?</div>
+                <div>
+                    <div>
+                        <p>Banks usually up to 60 times your monthly net income (salary). You can calculate your home loan eligibility using the home loan eligibility calculator.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="__hmAccordion">
+                <div class="homeLoan99Ques">What are the eligibility requirements for an NRI seeking a home loan?</div>
+                <div>
+                    <div>
+                        <p>Following are the eligibility criteria for an NRI seeking home loan:</p>
+                        <ul>
+                            <li>An Indian citizen holding a valid Indian passport.</li>
+                            <li>The passport should be free from NO ENTRY stamp. This stamp does not allow an NRI to enter the country.</li>
+                            <li>The passport of the NRI applicant should have a valid entry visa.</li>
+                            <li>Valid PIO/OCI Card copy to be documented with foreign country passport for PIO/OCI.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="spacer30 sp15"></div>
+    </div>
+</div>
+
+<!-- Chart.js for visualization -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="/js/eligibility-calculator.js"></script>
+</body>
+</html>
+
