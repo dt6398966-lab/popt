@@ -306,8 +306,35 @@ function setupViewMoreFaq() {
     }
 }
 
-// Initialize on DOM load
+// Smooth scroll to section
+function setupSmoothScroll() {
+    // Handle anchor links with smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === '#' || href === '#calculateEmi' || href === '#faqs') {
+                e.preventDefault();
+                const targetId = href.substring(1); // Remove the #
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    // Calculate offset for fixed header (if any)
+                    const headerOffset = 100; // Adjust based on your header height
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+    setupSmoothScroll();
     setupInputFormatting();
     setupTenureUnitDropdown();
     setupAccordion();

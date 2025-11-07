@@ -1,5 +1,10 @@
 /* EMI Calculator Page Styles - Exact 99acres Match */
 
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
 /* Banner Section */
 ._99HomeLoanBnnr.bannerBgemiHomeLoan {
     background-color: #0078D4;
