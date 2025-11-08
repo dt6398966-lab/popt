@@ -95,20 +95,74 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Use Popular Tools Carousel Navigation
     const popularToolsCarousel = document.querySelector('.carousel__slidingBox[compattr="dealercomp1_"]');
-    const popularToolsRightArrow = document.querySelector('.ini__caraousel .carousel__right');
+    const popularToolsLeftArrow = document.getElementById('popularToolsLeft');
+    const popularToolsRightArrow = document.getElementById('popularToolsRight');
 
-    if (popularToolsCarousel && popularToolsRightArrow) {
+    if (popularToolsCarousel && popularToolsLeftArrow && popularToolsRightArrow) {
+        const scrollAmount = 662; // Card width (650px) + gap (12px)
+
+        // Right arrow click
         popularToolsRightArrow.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
-            const scrollAmount = 662; // Card width (650px) + gap (12px)
             const currentScroll = popularToolsCarousel.scrollLeft;
             const maxScroll = popularToolsCarousel.scrollWidth - popularToolsCarousel.clientWidth;
-                const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+            const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
             popularToolsCarousel.scrollTo({
-                    left: newScroll,
-                    behavior: 'smooth'
-                });
+                left: newScroll,
+                behavior: 'smooth'
+            });
+        });
+
+        // Left arrow click
+        popularToolsLeftArrow.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const currentScroll = popularToolsCarousel.scrollLeft;
+            const newScroll = Math.max(0, currentScroll - scrollAmount);
+            popularToolsCarousel.scrollTo({
+                left: newScroll,
+                behavior: 'smooth'
+            });
+        });
+
+        // Update arrow visibility based on scroll position
+        function updatePopularToolsArrowVisibility() {
+            const scrollLeft = popularToolsCarousel.scrollLeft;
+            const scrollWidth = popularToolsCarousel.scrollWidth;
+            const clientWidth = popularToolsCarousel.clientWidth;
+            const maxScroll = Math.max(0, scrollWidth - clientWidth);
+
+            // Hide left arrow when at the very beginning
+            if (scrollLeft <= 0.5) {
+                popularToolsLeftArrow.style.display = 'none';
+            } else {
+                popularToolsLeftArrow.style.display = 'flex';
+            }
+
+            // Hide right arrow when at the very end
+            if (maxScroll <= 0 || scrollLeft >= maxScroll - 0.5) {
+                popularToolsRightArrow.style.display = 'none';
+            } else {
+                popularToolsRightArrow.style.display = 'flex';
+            }
+        }
+
+        // Set arrows visible by default
+        popularToolsLeftArrow.style.display = 'none'; // Hidden initially since at start
+        popularToolsRightArrow.style.display = 'flex';
+
+        // Initial check
+        setTimeout(function() {
+            updatePopularToolsArrowVisibility();
+        }, 100);
+
+        // Update on scroll
+        popularToolsCarousel.addEventListener('scroll', updatePopularToolsArrowVisibility);
+
+        // Update on window resize
+        window.addEventListener('resize', function() {
+            setTimeout(updatePopularToolsArrowVisibility, 100);
         });
     }
 });
