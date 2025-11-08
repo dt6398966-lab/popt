@@ -5155,7 +5155,7 @@ body {
 
 /* Offers Section Styles */
 [data-label="OFFERS_SECTION"] {
-    margin: 40px 0;
+    margin: 60px 0 40px 0;
     padding: 0 20px;
 }
 
@@ -5165,7 +5165,7 @@ body {
 }
 
 [data-label="OFFERS_SECTION"] .title_l_bold {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 700;
     color: #1A1A1A;
     margin: 0;
@@ -5177,7 +5177,7 @@ body {
 }
 
 [data-label="OFFERS_SECTION"] .caption_strong_large {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 500;
     color: #666666;
     margin: 0;
