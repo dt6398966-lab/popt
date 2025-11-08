@@ -442,55 +442,77 @@ document.addEventListener('DOMContentLoaded', function() {
     const articleCarouselBox = document.getElementById('articleCarouselBox');
     const articleCarouselLeft = document.getElementById('articleCarouselLeft');
     const articleCarouselRight = document.getElementById('articleCarouselRight');
+    const articleSlidingBox = document.querySelector('#articleCarouselBox .carousel__slidingBox[compattr="article"]');
 
-    if (articleCarouselBox && articleCarouselLeft && articleCarouselRight) {
+    // The sliding box is the scrollable element
+    const scrollElement = articleSlidingBox || articleCarouselBox;
+
+    if (scrollElement && articleCarouselLeft && articleCarouselRight) {
         const scrollAmount = 320; // Width of one card + gap
 
         // Right arrow click
-        articleCarouselRight.addEventListener('click', function() {
-            articleCarouselBox.scrollBy({
-                left: scrollAmount,
+        articleCarouselRight.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const currentScroll = scrollElement.scrollLeft;
+            const maxScroll = scrollElement.scrollWidth - scrollElement.clientWidth;
+            const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+            scrollElement.scrollTo({
+                left: newScroll,
                 behavior: 'smooth'
             });
         });
 
         // Left arrow click
-        articleCarouselLeft.addEventListener('click', function() {
-            articleCarouselBox.scrollBy({
-                left: -scrollAmount,
+        articleCarouselLeft.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const currentScroll = scrollElement.scrollLeft;
+            const newScroll = Math.max(0, currentScroll - scrollAmount);
+            scrollElement.scrollTo({
+                left: newScroll,
                 behavior: 'smooth'
             });
         });
 
         // Update arrow visibility based on scroll position
         function updateArrowVisibility() {
-            const scrollLeft = articleCarouselBox.scrollLeft;
-            const scrollWidth = articleCarouselBox.scrollWidth;
-            const clientWidth = articleCarouselBox.clientWidth;
+            const scrollLeft = scrollElement.scrollLeft;
+            const scrollWidth = scrollElement.scrollWidth;
+            const clientWidth = scrollElement.clientWidth;
+            const maxScroll = Math.max(0, scrollWidth - clientWidth);
 
-            // Show/hide left arrow
-            if (scrollLeft > 0) {
-                articleCarouselLeft.style.display = 'flex';
-            } else {
+            // Hide left arrow when at the very beginning (scrollLeft is 0 or very close to 0)
+            if (scrollLeft <= 0.5) {
                 articleCarouselLeft.style.display = 'none';
+            } else {
+                articleCarouselLeft.style.display = 'flex';
             }
 
-            // Show/hide right arrow
-            if (scrollLeft < scrollWidth - clientWidth - 10) {
-                articleCarouselRight.style.display = 'flex';
-            } else {
+            // Hide right arrow when at the very end (scrollLeft is at or near maxScroll)
+            if (maxScroll <= 0 || scrollLeft >= maxScroll - 0.5) {
                 articleCarouselRight.style.display = 'none';
+            } else {
+                articleCarouselRight.style.display = 'flex';
             }
         }
 
-        // Initial check
-        updateArrowVisibility();
+        // Set initial display state
+        articleCarouselLeft.style.display = 'none';
+        articleCarouselRight.style.display = 'none';
+        
+        // Initial check with a small delay to ensure DOM is ready
+        setTimeout(function() {
+            updateArrowVisibility();
+        }, 100);
 
         // Update on scroll
-        articleCarouselBox.addEventListener('scroll', updateArrowVisibility);
+        scrollElement.addEventListener('scroll', updateArrowVisibility);
 
         // Update on window resize
-        window.addEventListener('resize', updateArrowVisibility);
+        window.addEventListener('resize', function() {
+            setTimeout(updateArrowVisibility, 100);
+        });
     }
 });
 
