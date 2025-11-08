@@ -395,3 +395,147 @@ function openProjectPageOffer(url) {
         window.open(url, '_blank');
     }
 }
+
+// Fix Popular Builders table layout to stack vertically
+function fixPopularBuildersTableLayout() {
+    const popularBuildersCards = document.querySelectorAll('[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard table');
+    
+    console.log('Found tables:', popularBuildersCards.length);
+    
+    popularBuildersCards.forEach(function(table, index) {
+        // Check if already replaced with divs
+        if (table.dataset.replaced === 'true') {
+            console.log('Table', index, 'already replaced with divs, skipping');
+            return;
+        }
+        
+        console.log('Processing table', index);
+        
+        // Get all tds in the first row
+        const firstRow = table.querySelector('tr');
+        if (!firstRow) {
+            console.log('No tr found in table', index);
+            return;
+        }
+        
+        const tds = firstRow.querySelectorAll('td');
+        console.log('Found', tds.length, 'tds in first row');
+        
+        if (tds.length < 2) {
+            console.log('Less than 2 tds, skipping');
+            return;
+        }
+        
+        // Get tbody or create one
+        let tbody = table.querySelector('tbody');
+        if (!tbody) {
+            tbody = document.createElement('tbody');
+            while (table.firstChild) {
+                tbody.appendChild(table.firstChild);
+            }
+            table.appendChild(tbody);
+            console.log('Created tbody');
+        }
+        
+        // If there are 2 tds in one row, move the second one to a new row
+        if (tds.length === 2 && firstRow.children.length === 2) {
+            const secondTd = tds[1];
+            console.log('Moving second td to new row');
+            
+            // Create a new row for the second td
+            const newRow = document.createElement('tr');
+            newRow.appendChild(secondTd);
+            
+            // Insert the new row after the first row
+            firstRow.parentNode.insertBefore(newRow, firstRow.nextSibling);
+        }
+        
+        // COMPLETELY REPLACE TABLE WITH DIVS to avoid table rendering issues
+        const parentDiv = table.parentElement;
+        if (!parentDiv) {
+            console.log('No parent div found');
+            return;
+        }
+        
+        const replacementDiv = document.createElement('div');
+        replacementDiv.className = 'builder-info-container';
+        replacementDiv.style.display = 'block';
+        replacementDiv.style.width = '100%';
+        
+        // Get all text content from ALL tds in ALL rows
+        const allTds = table.querySelectorAll('td');
+        console.log('Found', allTds.length, 'total tds to convert');
+        
+        allTds.forEach(function(td, tdIndex) {
+            const textDiv = document.createElement('div');
+            textDiv.className = td.className;
+            textDiv.innerHTML = td.innerHTML;
+            textDiv.style.display = 'block';
+            textDiv.style.width = '100%';
+            textDiv.style.margin = '0';
+            textDiv.style.padding = '0';
+            textDiv.style.boxSizing = 'border-box';
+            textDiv.style.float = 'none';
+            textDiv.style.clear = 'both';
+            textDiv.style.maxWidth = '100%';
+            
+            // Copy all inline styles from td
+            if (td.style && td.style.cssText) {
+                textDiv.style.cssText = td.style.cssText;
+            }
+            
+            // Add margin-bottom to first div
+            if (tdIndex === 0) {
+                textDiv.style.marginBottom = '6px';
+            }
+            
+            replacementDiv.appendChild(textDiv);
+            console.log('Created div for td', tdIndex, 'with class', td.className);
+        });
+        
+        // Replace table with div
+        parentDiv.replaceChild(replacementDiv, table);
+        console.log('Replaced table with div structure');
+        
+        // Mark as replaced
+        replacementDiv.dataset.replaced = 'true';
+    });
+}
+
+// Run immediately if DOM is ready, otherwise wait
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fixPopularBuildersTableLayout);
+} else {
+    fixPopularBuildersTableLayout();
+}
+
+// Also run after delays to catch dynamically loaded content
+setTimeout(fixPopularBuildersTableLayout, 100);
+setTimeout(fixPopularBuildersTableLayout, 300);
+setTimeout(fixPopularBuildersTableLayout, 500);
+setTimeout(fixPopularBuildersTableLayout, 1000);
+setTimeout(fixPopularBuildersTableLayout, 2000);
+
+// Use MutationObserver to catch dynamically added content
+let observer;
+document.addEventListener('DOMContentLoaded', function() {
+    const container = document.querySelector('[data-label="POPULAR_BUILDERS"]');
+    if (container) {
+        observer = new MutationObserver(function(mutations) {
+            console.log('MutationObserver triggered');
+            fixPopularBuildersTableLayout();
+        });
+        
+        observer.observe(container, {
+            childList: true,
+            subtree: true
+        });
+        console.log('MutationObserver started');
+    }
+});
+
+// Also try running on window load
+window.addEventListener('load', function() {
+    console.log('Window loaded, running fix');
+    fixPopularBuildersTableLayout();
+});

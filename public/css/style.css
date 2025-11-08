@@ -5432,3 +5432,671 @@ body {
     color: #333333;
     font-size: 18px;
 }
+
+/* Popular Builders Section Styles */
+[data-label="POPULAR_BUILDERS"] {
+    margin: 40px 0;
+    margin-top: 60px !important;
+    padding: 0 20px;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .title_l_bold {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0;
+    line-height: 1.2;
+    margin-left: 45px !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .caption_strong_large {
+    font-size: 13px;
+    font-weight: 500;
+    color: #666666;
+    margin: 0;
+    margin-top: 23px !important;
+    margin-left: 45px !important;
+    line-height: 1.5;
+}
+
+[data-label="POPULAR_BUILDERS"] .cc__CarouselContainer {
+    position: relative;
+    margin-top: 20px;
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    padding: 0 !important;
+    margin-left: 45px !important;
+    margin-right: 0 !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .cc__CarouselBox {
+    position: relative;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    padding-bottom: 20px;
+    width: 100% !important;
+    max-width: 900px !important;
+    display: block !important;
+    min-height: 180px !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+[data-label="POPULAR_BUILDERS"] .cc__CarouselBox::-webkit-scrollbar {
+    height: 6px;
+}
+
+[data-label="POPULAR_BUILDERS"] .cc__CarouselBox::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+[data-label="POPULAR_BUILDERS"] .cc__CarouselBox::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+[data-label="POPULAR_BUILDERS"] .cc__CarouselBox::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+[data-label="POPULAR_BUILDERS"] .cc__slidingBox {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 16px !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    min-width: max-content !important;
+    height: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    align-items: flex-start !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-behavior: smooth !important;
+    padding-bottom: 0 !important;
+    scrollbar-width: auto !important;
+    -ms-overflow-style: auto !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .cc__slidingBox > .dealerInFocus__dealerCardWrap {
+    display: none !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .cc__slidingBox > .pb__recomTwoRow {
+    display: grid !important;
+    grid-template-columns: 420px !important;
+    grid-template-rows: auto auto !important;
+    grid-auto-flow: row !important;
+    gap: 16px !important;
+    width: 420px !important;
+    min-width: 420px !important;
+    max-width: 420px !important;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .pb__recomTwoRow .dealerInFocus__dealerCardWrap {
+    display: block !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    grid-column: auto !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .cc__slidingBox::-webkit-scrollbar {
+    display: block !important;
+    height: 6px;
+}
+
+[data-label="POPULAR_BUILDERS"] .pb__recomTwoRow {
+    display: grid !important;
+    grid-template-columns: 420px !important;
+    grid-template-rows: auto auto !important;
+    grid-auto-flow: row !important;
+    gap: 16px !important;
+    min-width: 420px !important;
+    width: 420px !important;
+    max-width: 420px !important;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+    height: auto !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+    position: relative !important;
+    contain: layout style !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .pb__recomTwoRow > .dealerInFocus__dealerCardWrap:first-child {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .pb__recomTwoRow > .dealerInFocus__dealerCardWrap:nth-child(2) {
+    grid-column: 1 !important;
+    grid-row: 2 !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .pb__recomTwoRow > * {
+    grid-column: 1 !important;
+    max-width: 420px !important;
+    min-width: 0 !important;
+    width: 100% !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .pb__recomTwoRow > .dealerInFocus__dealerCardWrap {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 420px !important;
+    grid-column: 1 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    float: none !important;
+    clear: none !important;
+    margin: 0 !important;
+    position: relative !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .pb__recomTwoRow .dealerInFocus__dealerCardWrap {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 420px !important;
+    grid-column: span 1 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    float: none !important;
+    clear: none !important;
+    margin: 0 !important;
+    position: relative !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard {
+    display: flex !important;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: #FFFFFF !important;
+    border-radius: 12px;
+    border: 1px solid #E5E5E5 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 90px;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard:hover .dealerInFocus__imgCont {
+    transform: translateY(18px);
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__imgCont {
+    width: 90px !important;
+    height: 90px !important;
+    min-width: 90px !important;
+    min-height: 90px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    background: #F8F8F8 !important;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    padding: 8px;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #F0F0F0;
+    transform: translateY(18px);
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__imgCont::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #F5F5F5;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__imgCont picture,
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__imgCont picture source,
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__imgCont img {
+    width: 75% !important;
+    height: 75% !important;
+    max-width: 75% !important;
+    max-height: 55% !important;
+    object-fit: contain !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 1 !important;
+    transform: translateY(-10px);
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__imgCont img[src*="projectnoimage"],
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__imgCont img[src*="projectnoimage"] {
+    width: 75% !important;
+    height: 75% !important;
+    max-width: 75% !important;
+    max-height: 75% !important;
+    object-fit: contain !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 1 !important;
+    transform: translateY(-3px);
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__imgCont picture *,
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__imgCont img {
+    width: 75% !important;
+    height: 75% !important;
+    max-width: 75% !important;
+    max-height: 75% !important;
+    object-fit: contain !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 1 !important;
+    transform: translateY(-3px);
+}
+
+[data-label="POPULAR_BUILDERS"] .imgHover {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: auto !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard > div:last-child {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard > div:last-child {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    flex: 1 !important;
+    min-width: 0 !important;
+    overflow: visible !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard > div:last-child > table {
+    display: block !important;
+    width: 100% !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .builder-info-container {
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    gap: 16px !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .builder-info-container > div {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+    flex-shrink: 0 !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .builder-info-container {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 6px !important;
+    align-items: flex-end !important;
+    flex-wrap: nowrap !important;
+    transform: translateX(-95px) translateY(-40px);
+}
+
+[data-label="POPULAR_BUILDERS"] .builder-info-container > div:first-child {
+    flex: 0 0 auto !important;
+    min-width: 0 !important;
+    margin-bottom: 0 !important;
+    width: auto !important;
+    transform: translateX(-55px);
+}
+
+[data-label="POPULAR_BUILDERS"] .builder-info-container > div:last-child {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    margin-left: 0 !important;
+    transform: translateY(0);
+    width: auto !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .builder-info-container .section_header_semiBold {
+    font-size: 17px !important;
+    font-weight: 600 !important;
+    color: #1A1A1A !important;
+    margin: 0 !important;
+    display: block !important;
+    line-height: 1.4 !important;
+    white-space: normal !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    width: auto !important;
+    box-sizing: border-box !important;
+    text-align: right !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .builder-info-container .caption_subdued_large {
+    font-size: 14px !important;
+    color: #666666 !important;
+    display: block !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    box-sizing: border-box !important;
+    text-align: right !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard table,
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard table[data-fixed="true"] {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+    display: block !important;
+    table-layout: auto !important;
+    border: none !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard table[data-fixed="true"] tbody {
+    display: block !important;
+    width: 100% !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard table[data-fixed="true"] tr {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+    clear: both !important;
+    border: none !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard table[data-fixed="true"] td {
+    display: block !important;
+    width: 100% !important;
+    float: none !important;
+    clear: both !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-sizing: border-box !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard tbody {
+    display: block !important;
+    width: 100% !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard tr {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+    clear: both !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard tr:first-child {
+    margin-bottom: 0 !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard tr:last-child {
+    margin-top: 0 !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard td {
+    padding: 0 !important;
+    vertical-align: top !important;
+    display: block !important;
+    width: 100% !important;
+    float: none !important;
+    clear: both !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard td.section_header_semiBold {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 6px !important;
+    margin-right: 0 !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard td.caption_subdued_large {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard table tbody tr td {
+    display: block !important;
+    width: 100% !important;
+    float: none !important;
+    clear: both !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard .section_header_semiBold {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 6px !important;
+    display: block !important;
+    line-height: 1.4;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard .caption_subdued_large {
+    font-size: 13px;
+    color: #888888;
+    display: block;
+    line-height: 1.4;
+    margin-top: 0;
+}
+
+.cc__arrowContainerBox {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s ease;
+}
+
+.cc__arrowContainerBox:hover {
+    background: #F5F5F5;
+}
+
+.cc__arrowContainerBox.cc__right {
+    right: -20px;
+}
+
+.cc__rightArrow {
+    transform: rotate(90deg);
+    color: #333333;
+    font-size: 18px;
+}
+
+    font-size: 15px;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 4px;
+    display: block;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard .caption_subdued_large {
+    font-size: 12px;
+    color: #666666;
+    display: block;
+}
+
+.cc__arrowContainerBox {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s ease;
+}
+
+.cc__arrowContainerBox:hover {
+    background: #F5F5F5;
+}
+
+.cc__arrowContainerBox.cc__right {
+    right: -20px;
+}
+
+.cc__rightArrow {
+    transform: rotate(90deg);
+    color: #333333;
+    font-size: 18px;
+}
+
+    font-size: 15px;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 4px;
+    display: block;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard .caption_subdued_large {
+    font-size: 12px;
+    color: #666666;
+    display: block;
+}
+
+.cc__arrowContainerBox {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s ease;
+}
+
+.cc__arrowContainerBox:hover {
+    background: #F5F5F5;
+}
+
+.cc__arrowContainerBox.cc__right {
+    right: -20px;
+}
+
+.cc__rightArrow {
+    transform: rotate(90deg);
+    color: #333333;
+    font-size: 18px;
+}
+
+    font-size: 15px;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 4px;
+    display: block;
+}
+
+[data-label="POPULAR_BUILDERS"] .dealerInFocus__dealerInFocusCard .caption_subdued_large {
+    font-size: 12px;
+    color: #666666;
+    display: block;
+}
+
+.cc__arrowContainerBox {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s ease;
+}
+
+.cc__arrowContainerBox:hover {
+    background: #F5F5F5;
+}
+
+.cc__arrowContainerBox.cc__right {
+    right: -20px;
+}
+
+.cc__rightArrow {
+    transform: rotate(90deg);
+    color: #333333;
+    font-size: 18px;
+}
