@@ -4293,7 +4293,7 @@ body {
     font-size: 21px;
     font-weight: 700;
     color: #1A1A1A;
-    margin-bottom: 12px;
+    margin-bottom: -10px;
 }
 
 #demand .caption_strong_large {
@@ -6100,3 +6100,225 @@ body {
     color: #333333;
     font-size: 18px;
 }
+/* Top Gainers Section Styles */
+[data-label="TOP_GAINERS"] {
+    margin: 40px 0;
+    padding: 0 20px;
+    margin-top: 75px !important;
+    margin-left: 35px !important;
+    /* margin-right: 30px !important; */
+    width: 100% !important;
+    max-width: 100% !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
+
+[data-label="TOP_GAINERS"] .tg__headingCol {
+    margin-bottom: 20px;
+}
+
+[data-label="TOP_GAINERS"] .tg__headingCol h2 {
+    margin: 0;
+    padding: 0;
+}
+
+[data-label="TOP_GAINERS"] #TOP_GAINERS_HEADING {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 25px;
+}
+
+[data-label="TOP_GAINERS"] #TOP_GAINERS_SUBHEADING {
+    font-size: 14px;
+    color: #666666;
+    font-weight: 500;
+}
+
+[data-label="TOP_GAINERS"] .tg__gainerTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+[data-label="TOP_GAINERS"] .tg__gainerTable th {
+    background: #F8F8F8;
+    padding: 10px 16px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 14px;
+    color: #333333;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+[data-label="TOP_GAINERS"] .tg__gainerTable td {
+    padding: 10px 16px;
+    border-bottom: 1px solid #F0F0F0;
+    vertical-align: middle;
+}
+
+[data-label="TOP_GAINERS"] .tg__gainerTable tr:last-child td {
+    border-bottom: none;
+}
+
+[data-label="TOP_GAINERS"] .tg__gainerTable tr.tg__row:hover {
+    background: #FAFAFA;
+}
+
+[data-label="TOP_GAINERS"] .tg__locTuple {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+[data-label="TOP_GAINERS"] .tg__locTuple img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #F5F5F5;
+}
+
+[data-label="TOP_GAINERS"] .tg__locTuple > div {
+    flex: 1;
+}
+
+[data-label="TOP_GAINERS"] .tg__locTuple a {
+    color: #1A1A1A;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+[data-label="TOP_GAINERS"] .tg__locTuple a:hover {
+    color: #0066CC;
+}
+
+[data-label="TOP_GAINERS"] .tg__locTuple .caption_subdued_large {
+    color: #666666;
+    font-size: 13px;
+}
+
+[data-label="TOP_GAINERS"] .caption_subdued_medium {
+    color: #999999;
+    font-size: 12px;
+    margin-bottom: 1px;
+}
+
+[data-label="TOP_GAINERS"] .list_header_semiBold {
+    font-weight: 600;
+    font-size: 16px;
+    color: #1A1A1A;
+}
+
+[data-label="TOP_GAINERS"] .tg__priceTrendsWrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+[data-label="TOP_GAINERS"] .tg__chartTxt {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #28AD35;
+}
+
+[data-label="TOP_GAINERS"] .tg__chartTxt i {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 7px solid #28AD35;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+[data-label="TOP_GAINERS"] .tg__graph {
+    width: 100px;
+    height: 35px;
+    flex-shrink: 0;
+}
+
+[data-label="TOP_GAINERS"] .tg__graph .highcharts-container {
+    width: 100px !important;
+    height: 35px !important;
+}
+
+[data-label="TOP_GAINERS"] .tg__cta {
+    margin-top: 16px;
+}
+
+[data-label="TOP_GAINERS"] .FeedbackLayer__priceFeedback {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+}
+
+[data-label="TOP_GAINERS"] .FeedbackLayer__feedbackText {
+    font-size: 14px;
+    color: #666666;
+    font-weight: 500;
+    margin: 0;
+}
+
+[data-label="TOP_GAINERS"] [data-label="THUMBSUP"],
+[data-label="TOP_GAINERS"] [data-label="THUMBSDOWN"] {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #666666;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+[data-label="TOP_GAINERS"] [data-label="THUMBSUP"]:hover,
+[data-label="TOP_GAINERS"] [data-label="THUMBSDOWN"]:hover {
+    background: #F5F5F5;
+    color: #0066CC;
+}
+
+[data-label="TOP_GAINERS"] [data-label="THUMBSUP"] i,
+[data-label="TOP_GAINERS"] [data-label="THUMBSDOWN"] i {
+    font-size: 16px;
+}
+
+[data-label="TOP_GAINERS"] .FeedbackLayer__rotateDown {
+    transform: rotate(180deg);
+}
+
+@media (max-width: 768px) {
+    [data-label="TOP_GAINERS"] .tg__gainerTable {
+        font-size: 12px;
+    }
+    
+    [data-label="TOP_GAINERS"] .tg__gainerTable th,
+    [data-label="TOP_GAINERS"] .tg__gainerTable td {
+        padding: 12px 8px;
+    }
+    
+    [data-label="TOP_GAINERS"] .tg__locTuple img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    [data-label="TOP_GAINERS"] .tg__graph {
+        width: 80px;
+        height: 40px;
+    }
+}
+
