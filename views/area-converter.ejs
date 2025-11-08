@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= typeof title !== 'undefined' ? title : 'Area converter - Land Area Converter - Land measurement calculator | 99acres' %></title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/area-converter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body data-label="AREA_CONVERTER" class="pageComponent" topmost="true" data-custominfo='{"custom_object": {"page_type": "areaConverter"},"payload":{"rei":{"bizsegment":"REI"}}}' scroll="true" data-page-scroll="[25]">
+
+<div id="app">
+    <div>
+        <section data-hydration-on-demand="true">
+            <header id="Header-Wrap" class="component__headerWrapper  undefined pageComponent" topmost="true" data-label="SEARCH_HEADER">
+                <section class="component__headWidthSet ">
+                    <div class="component__logo ">
+                        <a href="/" title="India's leading Property Portal" class="pageComponent" data-label="LOGO">
+                            <img src="https://static.99acres.com/universalapp/img/nnares_logo_white_v2.png" height="36px" width="105px" alt="Logo" placeholder="https://static.99acres.com/universalapp/img/nnacres_logo_placeholder.png">
+                        </a>
+                    </div>
+                    <form class=" component__searchWrapper " id="lvl5_form" method="post" action="/search/property/buy?preference=S&area_unit=1&res_com=R" name="search_form" novalidate="">
+                        <input type="hidden" name="preference" id="preference" autocomplete="off" value="S">
+                        <input type="hidden" name="refSection" id="referrer_section" value="GNB">
+                        <input type="hidden" name="budget_min" id="budget_min" autocomplete="off" value="">
+                        <input type="hidden" name="budget_max" id="budget_max" autocomplete="off" value="">
+                        <input type="hidden" name="searchform" id="searchform" autocomplete="off" value="1">
+                        <input type="hidden" name="class" id="class" autocomplete="off" value="">
+                        <input type="hidden" name="bedroom_num" id="bedroom_num" autocomplete="off" value="">
+                        <input type="hidden" name="availability" id="availability" autocomplete="off" value="">
+                        <input type="hidden" name="res_com" id="res_com" autocomplete="off" value="R">
+                        <input type="hidden" name="property_type" id="property_type" autocomplete="off" value="">
+                        <input type="hidden" name="situatedIn" id="situatedIn" autocomplete="off" value="">
+                        <input type="hidden" name="businessType" id="businessType" autocomplete="off" value="">
+                        <input type="hidden" name="seatTypes" id="seatTypes" autocomplete="off" value="">
+                        <input type="hidden" name="planType" id="planType" autocomplete="off" value="">
+                        <input type="hidden" name="seatCountRng" id="seatCountRng" autocomplete="off" value="">
+                        <div style="display: flex; align-items: center;">
+                            <div id="buyRent-dd" class="component__projectChange">
+                                <div>
+                                    <span class="list_header_semiBold">Buy</span>
+                                    <i class="iconS_Common_16 icon_downArrow"></i>
+                                </div>
+                            </div>
+                            <div class="component__showMenu" id="suggesterCtx">
+                                <div class="component__searchTag false" id="searchTabContainer" style="margin-left: 0px;">
+                                    <div id="d_landmark_searchHeader" data-custominfo="{}" class="pageComponent component__searchInputWrapper component__noCityFilter" data-label="SEARCH_INPUT">
+                                        <input type="text" name="keyword" id="keyword" autocomplete="off" class="list_header_semiBold " placeholder="Enter Locality / Project / Society / Landmark" value="">
+                                    </div>
+                                    <div class="pageComponent component__nearme" data-label="NEAR_ME_SEARCH" data-custominfo='{"custom_object":{"preference":"S","res_com":"R","search_type":"LS"}}' style="cursor: pointer; height: 30px; border-radius: 36px; padding: 3px 10px; display: flex; align-items: center;">
+                                        <img src="https://www.99acres.com/universalapp/img/nearMeV2.png" width="32" height="32">
+                                        <!-- <img src="https://www.99acres.com/universalapp/img/nearMeTag.png" class="component__nearMeTag"> -->
+                                    </div>
+                                    <div class="component__searchRight">
+                                        <div>
+                                            <div class="pageComponent VoiceSearchWrapper__voiceCont" data-label="VOICE_SEARCH_HEADER" topmost="true">
+                                                <section>
+                                                    <div class="pageComponent undefined" data-label="VOICE_SEARCH" style="height: 32px;">
+                                                        <div class="SpeechToText__voiceIcon" style="height: 32px;">
+                                                            <img src="https://www.99acres.com/universalapp/img/mic.png" style="height: 32px;">
+                                                            <!-- <img src="https://www.99acres.com/universalapp/img/VoiceSearchTag.png" class=" SpeechToText__voiceTag undefined"> -->
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+                                        </div>
+                                        <span class="component__upside">|</span>
+                                        <i class="component__iconSearch iconS_Common_24 icon_search" style="cursor: pointer;"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="component__heightCollapse ">
+                            <div>
+                                <ul id="suggestions_custom" class="component__autoSuggestion component__autoSuggSlideRemove"></ul>
+                            </div>
+                            <div class="component__filterTag "></div>
+                        </div>
+                    </form>
+                    <div class="component__menuSection">
+                        <div data-label="PPF_HEADER" topmost="true" class="pageComponent component__postProperty component__op1">
+                            <div class="style__postContainer ">
+                                <div class="style__post">Post property</div>
+                                <div class="fre__outerwrap">FREE<div class="fre__innerwrap"></div></div>
+                            </div>
+                        </div>
+                        <div data-label="USER_PROFILE_DROPDOWN" class="pageComponent theader__userIcon theader__arrowIcn theader__op1" style="margin-top: 11px;">
+                            <i class="icon_userWhite theader__dot iconS_Common_24 theader__explicitSpriteSize"></i>
+                            <div class="theader__popupCity theader__login false">
+                                <div class="P500 hyperlinks_medium bold spacer16" data-label="LR.INITIATE">LOGIN / REGISTER</div>
+                                <ul class="body_small theader__loginList ">
+                                    <li><a data-label="LINK" data-custominfo='{"custom_object":{"url":"/recent-activity","label":"My Activity"}}' class="pageComponent Ng800 theader__fl" href="/recent-activity">My Activity</a></li>
+                                    <li><a data-label="LINK" data-custominfo='{"custom_object":{"url":"/recent-activity?activeTab=RECENT_SEARCH","label":"Recently Searched"}}' class="pageComponent Ng800 theader__fl" href="/recent-activity?activeTab=RECENT_SEARCH">Recently Searched</a></li>
+                                    <li><a data-label="LINK" data-custominfo='{"custom_object":{"url":"/recent-activity?activeTab=VIEWED","label":"Recently Viewed"}}' class="pageComponent Ng800 theader__fl" href="/recent-activity?activeTab=VIEWED">Recently Viewed</a></li>
+                                    <li><a data-label="LINK" data-custominfo='{"custom_object":{"url":"/recent-activity?activeTab=SHORTLISTED","label":"Shortlisted"}}' class="pageComponent Ng800 theader__fl" href="/recent-activity?activeTab=SHORTLISTED">Shortlisted</a></li>
+                                    <li><a data-label="LINK" data-custominfo='{"custom_object":{"url":"/recent-activity?activeTab=CONTACTED","label":"Contacted"}}' class="pageComponent Ng800 theader__fl" href="/recent-activity?activeTab=CONTACTED">Contacted</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div data-label="HAMBURGER" class="pageComponent hmenu__HamburgerMenuWrap">
+                            <div class="hmenu__op1">
+                                <i class="iconS_Common_24 icon_menuIcon hmenu__explicitSpriteSize"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </header>
+        </section>
+    </div>
+
+    <div class="ac__mainWrap">
+        <div class="ac__headWrap">
+            <div>
+                <div class="sh__breadcrumbs">
+                    <ul class="caption_subdued_small">
+                        <li><a href="https://www.99acres.com" title="Home">Home</a></li>
+                        <li>Area Converter </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="acs__asSectionWrap" style="background-image:url(https://www.99acres.com/universalapp/img/DesktopMainImage.webp);background-repeat:no-repeat;background-position:center" data-label="AREA_CONVERTER_TOOL" topmost="true">
+        <div class="acs__innerWrap">
+            <div class="acs__cardWrap"><h1 class="acs__headText title_l_bold">Area Converter</h1><div class="acs__subH caption_strong_medium_semi">Enter the value and select desired unit</div><div class="inputWrap__inputWrap "><div class="selectBox__selectBox" style="pointer-events:auto" tabindex="0" id="budget_container_id"><div class=" undefined inputField__inputContainer undefined undefined undefined"><input class="pageComponent" required="" data-label="state" id="state" label="State" inpvariant="select" list="[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object],[object Object]" style="cursor:pointer" value=""><div class="inputField__placeholder caption_subdued_large_semi   undefined "><span class=" undefined">State<span style="font-style:italic;opacity:0.6"></span></span></div></div><i class="iconS_Common_24 icon_downArrow"></i><div class="selectBox__selectList selectBox__hide undefined "><div><span>  Andhra Pradesh</span></div><div><span>  Arunachal Pradesh</span></div><div><span>  Assam</span></div><div><span>  Bihar</span></div><div><span>  Himachal Pradesh</span></div><div><span>  Gujarat</span></div><div><span>  Jammu and Kashmir</span></div><div><span>  Haryana</span></div><div><span>  Chattisgarh</span></div><div><span>  Goa</span></div><div><span>  Jharkhand</span></div><div><span>  Kerala</span></div><div><span>  Karnataka</span></div><div><span>  Maharashtra</span></div><div><span>  Madhya Pradesh</span></div><div><span>  Manipur</span></div><div><span>  Meghalaya</span></div><div><span>  Mizoram</span></div><div><span>  Nagaland</span></div><div><span>  Odisha</span></div><div><span>  Punjab</span></div><div><span>  Rajasthan</span></div><div><span>  Tamil Nadu</span></div><div><span>  Telangana</span></div><div><span>  Uttar Pradesh</span></div><div><span>  Tripura</span></div><div><span>  Uttarakhand</span></div><div><span>  West Bengal</span></div></div></div></div><div class="acs__subH caption_strong_small_semi"><i class="info__infoTag iconS_Common_12 icon_infoIcn"></i><span>States use different units of measuremets like - bigha, cent, etc.</span></div><div class="acs__inputWrap"><div class=" undefined inputField__inputContainer undefined undefined undefined"><input class="pageComponent inputField__inputField  inputField__cursortNone undefined" required="" label="From" type="number" min="0" value="" id="fromValue"><div class="inputField__placeholder caption_subdued_large_semi   undefined "><span class=" undefined">From<span style="font-style:italic;opacity:0.6"></span></span></div></div><div class="acs__innerDDWrap"><span class="acs__mr12">|</span><div ddtype="unitDropDown" class="comp__dropdownContainer     " id="fromUnitDropdown"><div class="comp__dropdownDisplay "><span class="Ng700">select unit</span><i class="iconS_Common_24 icon_downArrow "></i></div><div class="comp__dropdownList comp__hide" id="fromUnitList"></div></div></div></div><div class="acs__exchangeValue"><img src="https://static.99acres.com/universalapp/img/exchange.webp" height="50px" id="exchangeBtn" style="cursor: pointer;"></div><div class="acs__inputWrap"><div class=" undefined inputField__inputContainer undefined undefined undefined"><input class="pageComponent inputField__inputField  inputField__cursortNone undefined" required="" label="To" type="number" value="" id="toValue" readonly><div class="inputField__placeholder caption_subdued_large_semi   undefined "><span class=" undefined">To<span style="font-style:italic;opacity:0.6"></span></span></div></div><div class="acs__innerDDWrap acs__lowElevation"><span class="acs__mr12">|</span><div ddtype="unitDropDown" class="comp__dropdownContainer     " id="toUnitDropdown"><div class="comp__dropdownDisplay "><span class="Ng700">select unit</span><i class="iconS_Common_24 icon_downArrow "></i></div><div class="comp__dropdownList comp__hide" id="toUnitList"></div></div></div></div><div class="acs__conversionEquivalence" id="conversionEquivalence" style="display: none;"><i class="acs__lightbulbIcon">💡</i><span class="acs__equivalenceText"></span></div><div class="acs__subH3 caption_subdued_small">*This tool is for informational puproses only</div></div>
+        </div>
+    </div>
+
+    <div class="areaCS__areaConverterSection" topmost="true" data-label="AREA_CONVERTER_DETAILS">
+        <div class="areaCS__contentWrap areaCS__contentWrapForDefaultAreaSection">
+            <div class="areaCS__colLeft">
+                
+                <div>
+                    <!-- <h2 class="h2cArea__colorOverWrite list_header_bold">About Land Measurement Units</h2> -->
+                    <div class="h2cArea__mb24 display_l_bold">About Land Measurement Units</div>
+                    <div class="caption_strong_large">Land measurement in India has always been done using various local and native measurement units such as Bigha, Ground, Kanal, etc, depending upon the state. These are locally set benchmarks, which have been in usage for a long time. These unit measurements vary greatly across regions, which is why converting them to international standard units, or globally accepted units, also known as SI units is of paramount importance. In addition, to understand the exact area of land as well as to calculate the value of land, converting local units into SI units, using a land area calculator, is advisable.<br><br>Some of the common land measurement units across India are hectares, acres, square meters, square yards. Other than this, Bigha, Marla, Cent, Guntha, Ground are regional units and their size varies from state to state.</div>
+                </div>
+                
+                <div class="spacer50"></div>
+                
+                <div class="scarea__smallContentWrap">
+                    <div class="scarea__mb16 title_bold">Land area measurement units used in North India</div>
+                    <div class="caption_strong_large">Bigha, Biswa, Biswansi, Killa, Ghumaon, Kanal are popular land area measurement units used in Haryana, Uttar Pradesh, Uttarakhand, Punjab, etc. To convert these local units into SI units, use the area conversion calculator.</div>
+                </div>
+                
+                <div class="spacer50"></div>
+                
+                <div class="scarea__smallContentWrap">
+                    <div class="scarea__mb16 title_bold">Land area measurement units used in South India</div>
+                    <div class="caption_strong_large">Ankanam, Cent, Ground, Guntha, Kuncham are popular land measurement units used in states such as Tamil Nadu, Andhra Pradesh, Kerala, Karnataka, etc. Convert these local units into globally accepted measurement units using the area calculator.</div>
+                </div>
+                
+                <div class="spacer50"></div>
+                
+                <div class="scarea__smallContentWrap">
+                    <div class="scarea__mb16 title_bold">Land area measurement units used in East India</div>
+                    <div class="caption_strong_large">Chatak, Decimal, Dhur, Kattha, Lecha are popular land measurement units mostly used in West Bengal, Assam, Bihar, Tripura, Jharkhand, etc. For area conversion to other internationally recognized units, use the land area calculator.</div>
+                </div>
+                
+                <div class="spacer50"></div>
+                
+                <div class="scarea__smallContentWrap">
+                    <div class="scarea__mb16 title_bold">Land area measurement units used in West India</div>
+                    <div class="caption_strong_large">Bigha, Biswa and Biswansi are popular land area measurement units used in lower parts of Rajasthan and Gujarat. Convert these local units into globally used measurement units using an area calculator.</div>
+                </div>
+                
+            </div>
+            
+            <div class="areaCS__colRight">
+                <div itemscope="" itemtype="https://schema.org/SiteNavigationElement" class="asl__slideLinkWrap">
+                    <div class="asl__headWrap">
+                        <i class=""><img src="https://static.99acres.com/universalapp/img/linkIcon.webp" height="24px"></i>
+                        <h4 class="title_bold asl__sideLinkHeading">Popular Area Conversions</h4>
+                    </div>
+                    <div class="asl__linkWrap">
+                        <a itemprop="url" data-label="HECTARE_TO_ACRE" href="/hectare-to-acre-utyp"><span itemprop="name">Hectare to Acre</span></a>
+                        <a itemprop="url" data-label="ACRE_TO_HECTARE" href="/acre-to-hectare-utyp"><span itemprop="name">Acre to Hectare</span></a>
+                        <a itemprop="url" data-label="SQUARE_FEET_TO_CENT" href="/square-feet-to-cent-utyp"><span itemprop="name">Square Feet to Cent</span></a>
+                        <a itemprop="url" data-label="SQUARE_FEET_TO_SQUARE_METER" href="/square-feet-to-square-meter-utyp"><span itemprop="name">Square Feet to Square Meter</span></a>
+                        <a itemprop="url" data-label="SQUARE_FEET_TO_SQUARE_YARD" href="/square-feet-to-square-yard-utyp"><span itemprop="name">Square Feet to Square Yard</span></a>
+                        <a itemprop="url" data-label="SQUARE_FEET_TO_GAJ" href="/square-feet-to-gaj-utyp"><span itemprop="name">Square Feet to Gaj</span></a>
+                    </div>
+                </div>
+                <div class="spacer42"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rentFAQ__acFaqHeight pageComponent undefined " id="areaConverterFaq" data-testid="areaConverterFaq" data-label="FAQ" topmost="true">
+        <div class="rentFAQ__rentFAQWrap">
+            <div class="rentFAQ__rentFAQCont">
+                <div class="rentFAQ__faqBox ac__faqBox">
+                    <div class="caption_subdued_large bold spacer8"></div>
+                    <h2 class="display_l_bold Ng800">FAQS ON AREA MEASUREMENT UNITS</h2>
+                    <div class="spacer20"></div>
+                    <div class="rentFAQ__accordionWrap undefined">
+                        <div class="accordion__acco_wrapper ">
+                            <div id="acc_0" class="pageComponent accordion_content_rent__accord_container" data-label="COLLAPSE" data-custominfo="{}">
+                                <div class="accordion_content_rent__accord_head accordion_content_rent__accord_cont">
+                                    <h3 id="acc_0" class=" section_header_semiBold" style="width:92%">Which land measurement units are used in North India?</h3>
+                                    <i class="iconS_Common_20 icon_graySub"></i>
+                                </div>
+                                <div class="accordion_content_rent__accord_inner accordion_content_rent__open input_placeholder_completed">
+                                    <div class="body_large  Ng500" style="padding-left:20px">
+                                        <p>Some of the popular land measurement units used in North India are Bigha, Biswa, Killa, Ghumaon, Biswansi, Kanal and many more.</p>
+                                        <div class="spacer8"></div>
+                                        <ul class="body_large Ng500" style="padding-left:20px"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="acc_1" class="pageComponent accordion_content_rent__accord_container" data-label="EXPAND" data-custominfo="{}">
+                                <div class="accordion_content_rent__accord_head accordion_content_rent__accord_cont">
+                                    <h3 id="acc_1" class=" section_header_semiBold" style="width:92%">Which land measurement units are used in East India?</h3>
+                                    <i class="iconS_Common_20 icon_grayAdd"></i>
+                                </div>
+                                <div class="accordion_content_rent__accord_inner undefined input_placeholder_completed">
+                                    <div class="body_large  Ng500" style="padding-left:20px">
+                                        <p>In East India, people usually use Chatak, Dhur, Kattha, Lacha for land measurement purposes.</p>
+                                        <div class="spacer8"></div>
+                                        <ul class="body_large Ng500" style="padding-left:20px"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="acc_2" class="pageComponent accordion_content_rent__accord_container" data-label="EXPAND" data-custominfo="{}">
+                                <div class="accordion_content_rent__accord_head accordion_content_rent__accord_cont">
+                                    <h3 id="acc_2" class=" section_header_semiBold" style="width:92%">Which land measurement units are used in West India?</h3>
+                                    <i class="iconS_Common_20 icon_grayAdd"></i>
+                                </div>
+                                <div class="accordion_content_rent__accord_inner undefined input_placeholder_completed">
+                                    <div class="body_large  Ng500" style="padding-left:20px">
+                                        <p>Bigha, Biswa, Biswansi are some of the commonly used land measurement units in West India.</p>
+                                        <div class="spacer8"></div>
+                                        <ul class="body_large Ng500" style="padding-left:20px"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="acc_3" class="pageComponent accordion_content_rent__accord_container" data-label="EXPAND" data-custominfo="{}">
+                                <div class="accordion_content_rent__accord_head accordion_content_rent__accord_cont">
+                                    <h3 id="acc_3" class=" section_header_semiBold" style="width:92%">Which land measurement units are used in Central India?</h3>
+                                    <i class="iconS_Common_20 icon_grayAdd"></i>
+                                </div>
+                                <div class="accordion_content_rent__accord_inner undefined input_placeholder_completed">
+                                    <div class="body_large  Ng500" style="padding-left:20px">
+                                        <p>People mostly use Bigha and Kattha in Central India for measuring land parcels.</p>
+                                        <div class="spacer8"></div>
+                                        <ul class="body_large Ng500" style="padding-left:20px"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="acc_4" class="pageComponent accordion_content_rent__accord_container" data-label="EXPAND" data-custominfo="{}">
+                                <div class="accordion_content_rent__accord_head accordion_content_rent__accord_cont">
+                                    <h3 id="acc_4" class=" section_header_semiBold" style="width:92%">Which land measurement units are used in South India?</h3>
+                                    <i class="iconS_Common_20 icon_grayAdd"></i>
+                                </div>
+                                <div class="accordion_content_rent__accord_inner undefined input_placeholder_completed">
+                                    <div class="body_large  Ng500" style="padding-left:20px">
+                                        <p>For land measurement purposes, people use Ankanam, Cent, Ground, Guntha, Kuncham, etc. in South India.</p>
+                                        <div class="spacer8"></div>
+                                        <ul class="body_large Ng500" style="padding-left:20px"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rentFAQ__imgBox">
+                    <picture>
+                        <source srcset="https://static.99acres.com/universalapp/img/rentFAQ.webp" class="objectFitContain" width="478" height="384" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="" title="" type="image/webp">
+                        <img src="https://static.99acres.com/universalapp/img/rentFAQ.webp" class="objectFitContain" width="478" height="384" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="" title="">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ac__articleWrap">
+        <div itemscope="" itemtype="https://schema.org/SiteNavigationElement" class="rentArticle__testimonialWrap pageComponent" id="areaConverterArticle" data-label="AREA_CONVERTER_ARTICLE" topmost="true">
+            <div><span class="input_label_inactive bold"></span></div>
+            <h3 class="rentArticle__testimonialTitle display_bold rentArticle__subTitle">Trending Real estate Articles</h3>
+            <div>
+                <div class="carousel__CarouselContainer" style="carousel-width:0px">
+                    <div class="carousel__blueBackground   carousel__arrowContainerBox  null carousel__left       undefined pageComponent" id="articleCarouselLeft">
+                        <i class="iconS_Common_24 icon_arrowWhite carousel__leftArrow" style="transform: rotate(-90deg); display: block;"></i>
+                    </div>
+                    <div class=" carousel__CarouselBox " id="articleCarouselBox">
+                        <div compattr="article" class="carousel__slidingBox   ">
+                            <div data-label="ARTICLE_TUPLE"> 
+                                <div class="rentArticle__articleCard">
+                                    <div class="spacer10">
+                                        <picture>
+                                            <source srcset="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/10/352-270x180.jpg?1760696699000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="Why do flat prices in the same locality vary?" title="" type="image/jpg?1760696699000">
+                                            <img src="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/10/352-270x180.jpg?1760696699000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="Why do flat prices in the same locality vary?" title="">
+                                        </picture>
+                                    </div>
+                                    <a href="https://www.99acres.com/articles/why-property-prices-in-same-locality-vary.html" title="Why do flat prices in the same locality vary?" target="_blank" itemprop="url">
+                                        <div itemprop="name" class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer4">Why do flat prices in the same locality vary?</div>
+                                    </a>
+                                    <div class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer3">Why do flat prices in the same locality vary?</div>
+
+                                    <div class="ellipsis spacer16 rentArticle__areaConvertorStyle">Oct 16, 2025</div>
+                                    <div class="spacer10"></div>
+                                </div>
+                            </div>
+                            <div data-label="ARTICLE_TUPLE"> 
+                                <div class="rentArticle__articleCard">
+                                    <div class="spacer10">
+                                        <picture>
+                                            <source srcset="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/09/3188-1-270x180.jpg?1758555604000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="GDA road plan and its impact on homebuyers" title="" type="image/jpg?1758555604000">
+                                            <img src="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/09/3188-1-270x180.jpg?1758555604000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="GDA road plan and its impact on homebuyers" title="">
+                                        </picture>
+                                    </div>
+                                    <a href="https://www.99acres.com/articles/gda-road-widening-raj-nagar-extension-real-estate-impact.html" title="GDA road plan and its impact on homebuyers" target="_blank" itemprop="url">
+                                        <div itemprop="name" class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer4">GDA road plan and its impact on homebuyers</div>
+                                    </a>
+                                    <div class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer3">GDA road plan and its impact on homebuyers</div>
+                                    <div class="ellipsis spacer16 rentArticle__areaConvertorStyle">Sep 22, 2025</div>
+                                   
+                                    <div class="spacer10"></div>
+                                </div>
+                            </div>
+                            <div data-label="ARTICLE_TUPLE"> 
+                                <div class="rentArticle__articleCard">
+                                    <div class="spacer10">
+                                        <picture>
+                                            <source srcset="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/09/Venus-350x143.jpg?1760004402000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="Venus Star Construction: Legacy and beyond" title="" type="image/jpg?1760004402000">
+                                            <img src="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/09/Venus-350x143.jpg?1760004402000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="Venus Star Construction: Legacy and beyond" title="">
+                                        </picture>
+                                    </div>
+                                    <a href="https://www.99acres.com/articles/venus-star-construction.html" title="Venus Star Construction: Legacy and beyond" target="_blank" itemprop="url">
+                                        <div itemprop="name" class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer4">Venus Star Construction: Legacy and beyond</div>
+                                    </a>
+                                    <div class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer3">Venus Star Construction: Legacy and beyond</div>
+                                    <div class="ellipsis spacer16 rentArticle__areaConvertorStyle">Sep 18, 2025</div>
+                                    <div class="spacer10"></div>
+                                </div>
+                            </div>
+                            <div data-label="ARTICLE_TUPLE"> 
+                                <div class="rentArticle__articleCard">
+                                    <div class="spacer10">
+                                        <picture>
+                                            <source srcset="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/09/3188-1-270x180.jpg?1758555604000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="No OC for homes on 1,200 sq ft plus plots" title="" type="image/jpg?1758555604000">
+                                            <img src="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/09/3188-1-270x180.jpg?1758555604000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="No OC for homes on 1,200 sq ft plus plots" title="">
+                                        </picture>
+                                    </div>
+                                    <a href="https://www.99acres.com/articles/bangalore-occupancy-certificate-update.html" title="No OC for homes on 1,200 sq ft plus plots" target="_blank" itemprop="url">
+                                        <div itemprop="name" class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer4">No OC for homes on 1,200 sq ft plus plots</div>
+                                    </a>
+                                    <div class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer3">No OC for homes on 1,200 sq ft plus plots</div>
+                                    <div class="ellipsis spacer16 rentArticle__areaConvertorStyle">Sep 11, 2025</div>
+                                    <div class="spacer10"></div>
+                                </div>
+                            </div>
+                            <div data-label="ARTICLE_TUPLE"> 
+                                <div class="rentArticle__articleCard">
+                                    <div class="spacer10">
+                                        <picture>
+                                            <source srcset="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/09/3188-1-270x180.jpg?1758555604000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="5 broker questions for old resale homes" title="" type="image/jpg?1758555604000">
+                                            <img src="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/09/3188-1-270x180.jpg?1758555604000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="5 broker questions for old resale homes" title="">
+                                        </picture>
+                                    </div>
+                                    <a href="https://www.99acres.com/articles/broker-questions-for-ready-to-move-homes.html" title="5 broker questions for old resale homes" target="_blank" itemprop="url">
+                                        <div itemprop="name" class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer4">5 broker questions for old resale homes</div>
+                                    </a>
+                                    <div class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer3">5 broker questions for old resale homes</div>
+                                    <div class="ellipsis spacer16 rentArticle__areaConvertorStyle">Sep 09, 2025</div>
+                                    <div class="spacer10"></div>
+                                </div>
+                            </div>
+                            <div data-label="ARTICLE_TUPLE"> 
+                                <div class="rentArticle__articleCard">
+                                    <div class="spacer10">
+                                        <picture>
+                                            <source srcset="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/09/Venus-350x143.jpg?1760004402000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="Stages of a home buying &amp; role of a broker" title="" type="image/jpg?1760004402000">
+                                            <img src="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/09/Venus-350x143.jpg?1760004402000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="Stages of a home buying &amp; role of a broker" title="">
+                                        </picture>
+                                    </div>
+                                    <a href="https://www.99acres.com/articles/role-of-a-broker-in-home-buying.html" title="Stages of a home buying &amp; role of a broker" target="_blank" itemprop="url">
+                                        <div itemprop="name" class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer4">Stages of a home buying &amp; role of a broker</div>
+                                    </a>
+                                    <div class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer3">Stages of a home buying &amp; role of a broker</div>
+                                    <div class="ellipsis spacer16 rentArticle__areaConvertorStyle">Sep 08, 2025</div>
+                                    <div class="spacer10"></div>
+                                </div>
+                            </div>
+                            <div data-label="ARTICLE_TUPLE"> 
+                                <div class="rentArticle__articleCard">
+                                    <div class="spacer10">
+                                        <picture>
+                                            <source srcset="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/10/352-270x180.jpg?1760696699000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="Key Questions to Ask Your Broker" title="" type="image/jpg?1760696699000">
+                                            <img src="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/10/352-270x180.jpg?1760696699000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="Key Questions to Ask Your Broker" title="">
+                                        </picture>
+                                    </div>
+                                    <a href="https://www.99acres.com/articles/questions-to-ask-your-broker-when-buying-a-developer-property.html" title="Key Questions to Ask Your Broker" target="_blank" itemprop="url">
+                                        <div itemprop="name" style="margin-bottom:24.5px" class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer4">Key Questions to Ask Your Broker</div>
+                                    </a>
+                                    <div class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer3">Key Questions to Ask Your Broker</div>
+                                    <div class="ellipsis spacer16 rentArticle__areaConvertorStyle">Sep 07, 2025</div>
+                                    <div class="spacer10"></div>
+                                </div>
+                            </div>
+                            <div data-label="ARTICLE_TUPLE"> 
+                                <div class="rentArticle__articleCard">
+                                    <div class="spacer10">
+                                        <picture>
+                                            <source srcset="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/09/3188-1-270x180.jpg?1758555604000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="GST cut on building materials: Experts React" title="" type="image/jpg?1758555604000">
+                                            <img src="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/09/3188-1-270x180.jpg?1758555604000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="GST cut on building materials: Experts React" title="">
+                                        </picture>
+                                    </div>
+                                    <a href="https://www.99acres.com/articles/industry-reacts-to-gst-cut-on-building-materials.html" title="GST cut on building materials: Experts React" target="_blank" itemprop="url">
+                                        <div itemprop="name" class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer4">GST cut on building materials: Experts React</div>
+                                    </a>
+                                    <div class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer3">GST cut on building materials: Experts React</div>
+                                    <div class="ellipsis spacer16 rentArticle__areaConvertorStyle">Sep 04, 2025</div>
+                                    <div class="spacer10"></div>
+                                </div>
+                            </div>
+                            <div data-label="ARTICLE_TUPLE"> 
+                                <div class="rentArticle__articleCard">
+                                    <div class="spacer10">
+                                        <picture>
+                                            <source srcset="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/09/Venus-350x143.jpg?1760004402000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="How to fix structural damage due to seepage?" title="" type="image/jpg?1760004402000">
+                                            <img src="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/09/Venus-350x143.jpg?1760004402000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="How to fix structural damage due to seepage?" title="">
+                                        </picture>
+                                    </div>
+                                    <a href="https://www.99acres.com/articles/how-to-fix-structural-damage-due-to-seepage.html" title="How to fix structural damage due to seepage?" target="_blank" itemprop="url">
+                                        <div itemprop="name" class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer4">How to fix structural damage due to seepage?</div>
+                                    </a>
+                                    <div class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer3">How to fix structural damage due to seepage?</div>
+                                    <div class="ellipsis spacer16 rentArticle__areaConvertorStyle">Sep 01, 2025</div>
+                                    <div class="spacer10"></div>
+                                </div>
+                            </div>
+                            <div data-label="ARTICLE_TUPLE"> 
+                                <div class="rentArticle__articleCard">
+                                    <div class="spacer10">
+                                        <picture>
+                                            <source srcset="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/10/352-270x180.jpg?1760696699000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="How to find a good broker to buy a property?" title="" type="image/jpg?1760696699000">
+                                            <img src="https://imagecdn.99acres.com/microsite/wp-content/blogs.dir/6161/files/2025/10/352-270x180.jpg?1760696699000" class="objectFitContain" width="286" height="160" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;" alt="How to find a good broker to buy a property?" title="">
+                                        </picture>
+                                    </div>
+                                    <a href="https://www.99acres.com/articles/finding-a-good-real-estate-broker-bgid.html" title="How to find a good broker to buy a property?" target="_blank" itemprop="url">
+                                        <div itemprop="name" class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer4">How to find a good broker to buy a property?</div>
+                                    </a>        
+                                    <div class="rentArticle__twoLineElip ellipsis2Lines section_header_semiBold Ng800 spacer3">How to find a good broker to buy a property?</div>
+                                    <div class="ellipsis spacer16 rentArticle__areaConvertorStyle">Aug 27, 2025</div>
+                                    <div class="spacer10"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel__blueBackground   carousel__arrowContainerBox  null carousel__right       undefined pageComponent" id="articleCarouselRight">
+                        <i class="iconS_Common_24 icon_arrowWhite carousel__rightArrow" style="transform: rotate(90deg); display: block;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sfl__wrapper">
+        <div><span class="input_label_inactive bold">Explore on 99acres</span></div>
+        <!-- <h4 class="sfl__title_big">Lands in Popular Cities</h4> -->
+        <h4 class="sfl__title_big">Lands in Popular Cities</h4>
+        <div>
+            <div class="carousel__CarouselContainer" style="carousel-width:0px">
+                <div class=" carousel__CarouselBox ">
+                    <div compattr="fat_footer_links" class="carousel__slidingBox   sfl__custom">
+                        <div class="lc__seoCard">
+                            <div class="lc__upcase caption_strong_medium_semi lc__spacer12">Commercial Lands</div>
+                            <div>
+                                <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                    <a href="https://www.99acres.com/commercial-land-in-greater-noida-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                        <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Commercial land for sale in Greater Noida</span>
+                                    </a>
+                                </span>
+                                <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                    <a href="https://www.99acres.com/commercial-land-in-faridabad-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                        <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Commercial land for sale in Faridabad</span>
+                                    </a>
+                                </span>
+                                <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                    <a href="https://www.99acres.com/commercial-land-in-navi-mumbai-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                        <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Commercial land for sale in Navi Mumbai</span>
+                                    </a>
+                                </span>
+                                <div class="lc__hide">
+                                    <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                        <a href="https://www.99acres.com/commercial-land-in-ahmedabad-west-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                            <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Commercial land for sale in Ahmedabad West</span>
+                                        </a>
+                                    </span>
+                                    <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                        <a href="https://www.99acres.com/commercial-land-in-pune-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                            <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Commercial land for sale in Pune</span>
+                                        </a>
+                                    </span>
+                                    <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                        <a href="https://www.99acres.com/commercial-land-in-gurgaon-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                            <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Commercial land for sale in Gurgaon</span>
+                                        </a>
+                                    </span>
+                                    <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                        <a href="https://www.99acres.com/commercial-land-in-mumbai-andheri-dahisar-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                            <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Commercial land for sale in Western Mumbai</span>
+                                        </a>
+                                    </span>
+                                    <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                        <a href="https://www.99acres.com/commercial-land-in-noida-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                            <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Commercial land for sale in Noida</span>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="spacer8"></div>
+                            <a class="lc__viewmore caption_strong_medium spacer8">View 5 More</a>
+                        </div>
+                        <div class="lc__seoCard">
+                            <div class="lc__upcase caption_strong_medium_semi lc__spacer12">Agricultural Lands</div>
+                            <div>
+                                <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                    <a href="https://www.99acres.com/agricultural-land-in-greater-noida-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                        <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Agriculture land for sale in Greater Noida</span>
+                                    </a>
+                                </span>
+                                <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                    <a href="https://www.99acres.com/agricultural-land-in-navi-mumbai-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                        <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Agriculture land for sale in Navi Mumbai</span>
+                                    </a>
+                                </span>
+                                <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                    <a href="https://www.99acres.com/agricultural-land-in-chennai-south-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                        <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Agriculture land for sale in Chennai South</span>
+                                    </a>
+                                </span>
+                                <div class="lc__hide">
+                                    <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                        <a href="https://www.99acres.com/agricultural-land-in-pune-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                            <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Agriculture land for sale in Pune</span>
+                                        </a>
+                                    </span>
+                                    <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                        <a href="https://www.99acres.com/agricultural-land-in-gurgaon-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                            <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Agriculture land for sale in Gurgaon</span>
+                                        </a>
+                                    </span>
+                                    <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                        <a href="https://www.99acres.com/agricultural-land-in-hyderabad-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                            <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Agriculture land for sale in Hyderabad</span>
+                                        </a>
+                                    </span>
+                                    <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                        <a href="https://www.99acres.com/agricultural-land-in-mumbai-andheri-dahisar-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                            <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Agriculture land for sale in Western Mumbai</span>
+                                        </a>
+                                    </span>
+                                    <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                        <a href="https://www.99acres.com/agricultural-land-in-noida-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                            <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Agriculture land for sale in Noida</span>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="spacer8"></div>
+                            <a class="lc__viewmore caption_strong_medium spacer8">View 5 More</a>
+                        </div>
+                        <div class="lc__seoCard">
+                            <div class="lc__upcase caption_strong_medium_semi lc__spacer12">Industrial Lands</div>
+                            <div>
+                                <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                    <a href="https://www.99acres.com/industrial-land-in-greater-noida-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                        <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Industrial land for sale in Greater Noida</span>
+                                    </a>
+                                </span>
+                                <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                    <a href="https://www.99acres.com/industrial-land-in-navi-mumbai-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                        <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Industrial land for sale in Navi Mumbai</span>
+                                    </a>
+                                </span>
+                                <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                    <a href="https://www.99acres.com/industrial-land-in-chennai-south-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                        <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Industrial land for sale in Chennai South</span>
+                                    </a>
+                                </span>
+                                <div class="lc__hide">
+                                    <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                        <a href="https://www.99acres.com/industrial-land-in-pune-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                            <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Industrial land for sale in Pune</span>
+                                        </a>
+                                    </span>
+                                    <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                        <a href="https://www.99acres.com/industrial-land-in-gurgaon-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                            <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Industrial land for sale in Gurgaon</span>
+                                        </a>
+                                    </span>
+                                    <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                        <a href="https://www.99acres.com/industrial-land-in-hyderabad-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                            <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Industrial land for sale in Hyderabad</span>
+                                        </a>
+                                    </span>
+                                    <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                        <a href="https://www.99acres.com/industrial-land-in-mumbai-andheri-dahisar-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                            <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Industrial land for sale in Western Mumbai</span>
+                                        </a>
+                                    </span>
+                                    <span itemscope="" itemtype="https://schema.org/SiteNavigationElement">
+                                        <a href="https://www.99acres.com/industrial-land-in-noida-ffid" itemprop="url" target="_blank" data-label="LANDS_IN_POPULAR_CITIES">
+                                            <span itemprop="name" class="lc__links caption_subdued_medium spacer8 ellipsis">Industrial land for sale in Noida</span>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="spacer8"></div>
+                            <a class="lc__viewmore caption_strong_medium spacer8">View 5 More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ac__appBannerContainer">
+        <picture>
+            <source srcset="https://static.99acres.com/universalapp/img/d_hp_app_banner_default.webp" class="ac__appDImg" alt="Download 99acres Mobile App" title="99acres" type="image/webp" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;">
+            <img src="https://static.99acres.com/universalapp/img/d_hp_app_banner_default.webp" class="ac__appDImg" alt="Download 99acres Mobile App" title="99acres" decoding="auto" style="animation-name: gracefulimage; animation-duration: 0.3s; animation-iteration-count: 1; animation-timing-function: ease-in;">
+        </picture>
+    </div>
+
+    <div rootmargin="500" style="height:0px" id="rei_seo_footer_placeholder"></div>
+</div>
+
+<%- include('partials/footer') %>
+
+<script src="/js/area-converter.js"></script>
+</body>
+</html>
+

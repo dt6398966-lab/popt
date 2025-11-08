@@ -51,6 +51,7 @@ const searchRoutes = require('./routes/search');
 const agentRoutes = require('./routes/agents');
 const emiCalculatorRoutes = require('./routes/emi-calculator');
 const eligibilityCalculatorRoutes = require('./routes/eligibility-calculator');
+const areaConverterRoutes = require('./routes/area-converter');
 
 app.use('/', indexRoutes);
 app.use('/auth', authRoutes);
@@ -59,6 +60,7 @@ app.use('/search', searchRoutes);
 app.use('/agents', agentRoutes);
 app.use('/home-loan-emi-calculator-hlpg', emiCalculatorRoutes);
 app.use('/home-loan-eligibility-calculator-hlpg', eligibilityCalculatorRoutes);
+app.use('/area-converter-utyp', areaConverterRoutes);
 
 // Error handling middleware
 app.use((req, res, next) => {
