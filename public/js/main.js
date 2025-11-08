@@ -107,11 +107,11 @@ document.addEventListener('DOMContentLoaded', function() {
             e.stopPropagation();
             const currentScroll = popularToolsCarousel.scrollLeft;
             const maxScroll = popularToolsCarousel.scrollWidth - popularToolsCarousel.clientWidth;
-            const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+                const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
             popularToolsCarousel.scrollTo({
-                left: newScroll,
-                behavior: 'smooth'
-            });
+                    left: newScroll,
+                    behavior: 'smooth'
+                });
         });
 
         // Left arrow click
@@ -315,5 +315,83 @@ function calculateBudget() {
         } else {
             budgetValue.textContent = formatCurrency(minBudget) + ' - ' + formatCurrency(maxBudget);
         }
+    }
+}
+
+// Offers Carousel Navigation
+function offerSlide(direction) {
+    const slider = document.querySelector('.offerWidgetSlider');
+    const prevBtn = document.querySelector('.offer_slidePrev');
+    const nextBtn = document.querySelector('.offer_slideNext');
+    
+    if (!slider) return;
+    
+    const cardWidth = 312; // Card width
+    const gap = 20; // Gap between cards
+    const scrollAmount = cardWidth + gap;
+    
+    const currentTransform = slider.style.transform;
+    const currentX = currentTransform ? parseInt(currentTransform.match(/-?\d+/)[0]) : 0;
+    
+    let newX = currentX;
+    
+    if (direction === 'left') {
+        newX = currentX - scrollAmount;
+    } else if (direction === 'right') {
+        newX = currentX + scrollAmount;
+    }
+    
+    // Calculate max scroll
+    const wrapper = slider.parentElement;
+    const maxScroll = -(slider.scrollWidth - wrapper.clientWidth);
+    newX = Math.max(maxScroll, Math.min(0, newX));
+    
+    slider.style.transform = `translate(${newX}px, 0px)`;
+    
+    // Update arrow visibility
+    if (prevBtn && nextBtn) {
+        if (newX >= 0) {
+            prevBtn.style.display = 'none';
+        } else {
+            prevBtn.style.display = 'flex';
+        }
+        
+        if (newX <= maxScroll + 1) {
+            nextBtn.style.display = 'none';
+        } else {
+            nextBtn.style.display = 'flex';
+        }
+    }
+}
+
+// Initialize arrow visibility on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.offerWidgetSlider');
+    const prevBtn = document.querySelector('.offer_slidePrev');
+    const nextBtn = document.querySelector('.offer_slideNext');
+    
+    if (slider && prevBtn && nextBtn) {
+        // Check initial state
+        setTimeout(function() {
+            const wrapper = slider.parentElement;
+            const maxScroll = -(slider.scrollWidth - wrapper.clientWidth);
+            
+            // Hide left arrow initially (at start)
+            prevBtn.style.display = 'none';
+            
+            // Show right arrow if there's more content to scroll
+            if (maxScroll < 0) {
+                nextBtn.style.display = 'flex';
+            } else {
+                nextBtn.style.display = 'none';
+            }
+        }, 100);
+    }
+});
+
+// Open project page offer
+function openProjectPageOffer(url) {
+    if (url) {
+        window.open(url, '_blank');
     }
 }

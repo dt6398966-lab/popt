@@ -122,8 +122,7 @@ body {
 }
 
 .theader-transparent-header {
-    background: url('https://static.99acres.com/images/homeloanreact/hamburgerImg.png') no-repeat center center;
-    background-size: cover;
+    background: transparent;
     backdrop-filter: blur(1px);
     position: relative;
     z-index: 100;
@@ -5152,4 +5151,284 @@ body {
         padding: 30px 20px;
         max-width: 95%;
     }
+}
+
+/* Offers Section Styles */
+[data-label="OFFERS_SECTION"] {
+    margin: 40px 0;
+    padding: 0 20px;
+}
+
+[data-label="OFFERS_SECTION"] > div:first-child {
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+[data-label="OFFERS_SECTION"] .title_l_bold {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0;
+    line-height: 1.2;
+}
+
+[data-label="OFFERS_SECTION"] .title_l_bold.spacer8 {
+    margin-bottom: 26px;
+}
+
+[data-label="OFFERS_SECTION"] .caption_strong_large {
+    font-size: 16px;
+    font-weight: 500;
+    color: #666666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.offerWidgetWrapper {
+    position: relative;
+    overflow: hidden;
+    margin-top: 30px;
+    padding: 0 50px;
+}
+
+.offerWidgetSlider {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.deskOfferCard__offerCard {
+    min-width: 312px;
+    max-width: 312px;
+    flex-shrink: 0;
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.deskOfferCard__offerCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.deskOfferCard__offerCard > div:first-child {
+    flex: 1;
+}
+
+.deskOfferCard__imgContWrap {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    background: #FFFFFF;
+}
+
+.deskOfferCard__imgContWrap > div:first-child {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    min-height: 70px;
+    overflow: hidden;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.deskOfferCard__imgContWrap > div:first-child img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.deskOfferCard__imgContWrap > div:last-child {
+    padding: 0;
+    background: transparent;
+    flex: 1;
+    position: relative;
+    z-index: 1;
+}
+
+.deskOfferCard__offerCard > div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+}
+
+.deskOfferCard__offerCard > div:nth-child(2) .spacer10 {
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.deskOfferCard__imgContWrap .list_header_semiBold.Ng800 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000 !important;
+    line-height: 1.3;
+    margin: 0;
+    margin-top: 8px;
+}
+
+.deskOfferCard__imgContWrap .list_header_semiBold.Ng800 .spacer4 {
+    margin-top: 8px;
+}
+
+.deskOfferCard__imgContWrap .caption_strong_medium {
+    font-size: 12px;
+    color: #666666;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.deskOfferCard__imgContWrap .caption_strong_medium.spacer4 {
+    margin-top: 4px;
+}
+
+.deskOfferCard__imgContWrap .caption_strong_medium.spacer10 {
+    margin-top: 8px;
+}
+
+.deskOfferCard__imgContWrap .list_header_semiBold.Ng800:last-of-type {
+    margin-top: 12px;
+    color: #004E8F;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.deskOfferCard__callAction {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    background: #F0F8FF;
+    border-top: 1px dashed #B0BEC5;
+    border-radius: 0 0 12px 12px;
+    flex-shrink: 0;
+    margin-top: 0;
+}
+
+.deskOfferCard__callAction .offerIcon {
+    font-size: 24px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    color: #0078D4;
+}
+
+.deskOfferCard__callAction .iconS_Offer_24 {
+    display: inline-block !important;
+    width: 24px !important;
+    height: 24px !important;
+    flex-shrink: 0;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.deskOfferCard__callAction .icon_othersBlue {
+    display: inline-block !important;
+    width: 24px !important;
+    height: 24px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="%230078D4" stroke="%230078D4" stroke-width="1.5"/><line x1="8" y1="12" x2="16" y2="12" stroke="%230078D4" stroke-width="1.5"/><line x1="12" y1="8" x2="12" y2="16" stroke="%230078D4" stroke-width="1.5"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.deskOfferCard__callAction .icon_furniture {
+    display: inline-block !important;
+    width: 24px !important;
+    height: 24px !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="%230078D4" stroke="%230078D4" stroke-width="1.5"/><line x1="8" y1="12" x2="16" y2="12" stroke="%230078D4" stroke-width="1.5"/><line x1="12" y1="8" x2="12" y2="16" stroke="%230078D4" stroke-width="1.5"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.deskOfferCard__callAction .caption_strong_medium_semi {
+    font-size: 13px;
+    font-weight: 500;
+    color: #004E8F;
+    line-height: 1.4;
+    flex: 1;
+    margin: 0;
+}
+
+.hoverSlide {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #0078D4;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.deskOfferCard__offerCard:hover .hoverSlide {
+    transform: scaleX(1);
+}
+
+.nlpcarousel__arrowContainerBox {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    background: #FFFFFF;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+.nlpcarousel__arrowContainerBox span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.nlpcarousel__arrowContainerBox:hover {
+    background-color: #F5F5F5;
+}
+
+.nlpcarousel__left {
+    left: 0;
+}
+
+.nlpcarousel__right {
+    right: 0;
+}
+
+.nlpcarousel__leftArrow {
+    transform: rotate(-90deg);
+    color: #333333;
+    font-size: 18px;
+}
+
+.nlpcarousel__rightArrow {
+    transform: rotate(90deg);
+    color: #333333;
+    font-size: 18px;
 }
