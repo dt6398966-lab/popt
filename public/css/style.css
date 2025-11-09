@@ -6965,7 +6965,8 @@ body {
     display: flex;
     gap: 24px;
     align-items: center;
-    width: 100%;
+    width: 95% !important;
+    max-width: 95% !important;
     box-sizing: border-box;
     margin-top: 50px;
 }
