@@ -7279,3 +7279,247 @@ body {
     }
 }
 
+/* BROWSE_PROJECT_BY_BUDGET Section - Similar styling to BROWSE_BY_SELLER_TYPE */
+[data-label="BROWSE_PROJECT_BY_BUDGET"] {
+    margin: 40px 0;
+    margin-top: 60px !important;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .bbb__pinkBg {
+    background: #FFF8F0;
+    border-radius: 12px;
+    padding: 20px 24px 16px 24px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    width: 95% !important;
+    max-width: 95% !important;
+    box-sizing: border-box;
+    margin-top: 50px;
+    margin-left: 45px !important;
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .bbb__titleLeft {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .bbb__titleLeft > div:first-child {
+    flex-shrink: 0;
+    margin-top: -140px !important;
+    margin-left: 20px !important;
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .bbb__titleLeft picture,
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .bbb__titleLeft img {
+    width: 90px;
+    height: auto;
+    display: block;
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .bbb__titleLeft > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .bbb__titleLeft .title_l_bold {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0;
+    margin-top: 20px !important;
+    margin-left: -110px !important;
+    white-space: pre-line !important;
+    word-break: normal !important;
+    width: auto !important;
+    min-width: 150px !important;
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .bbb__compRightWrap {
+    flex: 1;
+    max-width: 550px;
+    margin-left: 90px;
+    margin-top: 90px !important;
+}
+
+/* White card wrapper for budget content */
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .bbb__whiteCard {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 50px !important;
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .bbb__compRightWrap .title_l_bold {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    margin-left: 26px;
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .bbb__compRightWrap .Ng500.f14 {
+    font-size: 14px;
+    color: #666666;
+    font-weight: 500;
+    margin-bottom: 0px;
+    margin-left: 26px;
+    margin-top: 25px;
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .ppb__advertiserCardWrap {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .ppb__advertiserCard {
+    display: flex !important;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    background: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+    overflow: visible !important;
+    position: relative;
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .ppb__advertiserCard:hover {
+    background: #F9F9F9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Green background icon styling */
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .ppb__iconBg {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .ppb__greenBg {
+    background-color: #E8F5E9;
+}
+
+/* Ensure rupee icons display properly */
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .ppb__iconBg i.icon_greenRupeeSingle,
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .ppb__iconBg i.icon_greenRupeeDouble,
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .ppb__iconBg i.icon_greenRupeeTriple {
+    display: block;
+    width: 32px;
+    height: 32px;
+    font-size: 24px;
+    line-height: 1;
+    color: #2E7D32;
+    font-weight: bold;
+}
+
+/* Add rupee symbols using CSS content */
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .ppb__iconBg i.icon_greenRupeeSingle::before {
+    content: '₹';
+    display: block;
+    font-size: 24px;
+    color: #2E7D32;
+    font-weight: normal;
+    transform: translate(9px, 4px);
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .ppb__iconBg i.icon_greenRupeeDouble::before {
+    content: '₹₹';
+    display: block;
+    font-size: 20px;
+    color: #2E7D32;
+    font-weight: normal;
+    letter-spacing: -2px;
+    transform: translate(6px, 4px);
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .ppb__iconBg i.icon_greenRupeeTriple::before {
+    content: '₹₹₹';
+    display: block;
+    font-size: 18px;
+    color: #2E7D32;
+    font-weight: normal;
+    letter-spacing: -2px;
+    transform: translate(4px, 4px);
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .ppb__advertiserCard > div:nth-child(2) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-left: 7px !important;
+    margin-top: 4px !important;
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .ppb__advertiserCard .section_header_semiBold {
+    font-weight: 800 !important;
+    color: #1A1A1A !important;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Target the project title divs directly */
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .ppb__advertiserCard > div:nth-child(2) > div:first-child {
+    font-weight: 550 !important;
+    color: #1A1A1A !important;
+    font-size: 16px;
+    margin: 0;
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .ppb__advertiserCard .caption_subdued_large {
+    font-size: 14px;
+    color: #666666;
+    margin: 0;
+}
+
+/* Arrow styling - same as BROWSE_BY_SELLER_TYPE */
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .ppb__arrow {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transform: rotate(0deg) translateX(-50px) !important;
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .ppb__arrow::before {
+    content: '→';
+    display: block;
+    color: #1A1A1A;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 1;
+    transform: rotate(0deg);
+    -webkit-text-stroke: 0.5px #1A1A1A;
+    text-stroke: 0.5px #1A1A1A;
+    text-shadow: 0.3px 0 0 #1A1A1A;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+[data-label="BROWSE_PROJECT_BY_BUDGET"] .ppb__advertiserCard > div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
