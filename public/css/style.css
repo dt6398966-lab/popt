@@ -7774,4 +7774,107 @@ body {
     transform: translate(5px, 5px) rotate(0deg); /* Moved arrow slightly right and down */
 }
 
+/* VERIFIED_PROPERTIES - Verified properties section */
+[data-label="VERIFIED_PROPERTIES"] {
+    margin: 60px 0 40px 0 !important; /* Increased top margin to create gap from above section */
+    padding: 0 80px;
+}
+
+[data-label="VERIFIED_PROPERTIES"] .vp__linkCard,
+[data-label="VERIFIED_PROPERTIES"] .pageComponent.vp__linkCard,
+.pageComponent[data-label="VERIFIED_PROPERTIES"].vp__linkCard {
+    background-color: #EAF7ED !important; /* Slightly light green background */
+    background: #EAF7ED !important; /* Slightly light green background */
+    background-image: none !important;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 1px !important; /* Reduced gap to allow button to move left */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    min-height: 180px !important; /* Slightly increased height */
+    max-width: 95% !important; /* Reduced width */
+    width: 95% !important; /* Reduced width */
+    margin-left: 30px !important; /* Move card to the right */
+}
+
+[data-label="VERIFIED_PROPERTIES"] .vp__linkCard:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: #E0F2E3;
+}
+
+[data-label="VERIFIED_PROPERTIES"] .vp__linkCard > div:first-child {
+    flex-shrink: 0;
+}
+
+[data-label="VERIFIED_PROPERTIES"] .vp__linkCard picture,
+[data-label="VERIFIED_PROPERTIES"] .vp__linkCard img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 200px;
+}
+
+[data-label="VERIFIED_PROPERTIES"] .vp__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 26px; /* Slightly increased gap between title and subtitle */
+}
+
+[data-label="VERIFIED_PROPERTIES"] .vp__content .title_semiBold {
+    font-size: 20px;
+    font-weight: 550 !important; /* Match Ng800 class */
+    color: #002B5B;
+    margin: 0;
+    margin-top: -8px !important; /* Move text slightly up */
+}
+
+[data-label="VERIFIED_PROPERTIES"] .vp__content .caption_strong_large {
+    font-size: 13px; /* Slightly reduced font */
+    color: #4A4A4A;
+    font-weight: 500;
+    margin: 0;
+}
+
+[data-label="VERIFIED_PROPERTIES"] .vp__circularLink {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #C8E6D0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: -40px !important; /* Move circle towards left */
+    position: relative;
+    left: -38px !important; /* Additional left positioning */
+}
+
+[data-label="VERIFIED_PROPERTIES"] .vp__circularLink:hover {
+    background: #B8D6C0;
+    transform: scale(1.05);
+}
+
+[data-label="VERIFIED_PROPERTIES"] .vp__circularLink i {
+    display: block;
+    width: 24px;
+    height: 24px;
+    color: #000000 !important; /* Black arrow */
+    font-size: 18px !important;
+    transform: translate(4px, 3px) rotate(0deg) !important; /* Move arrow slightly right and down */
+    /* Use Font Awesome icon if sprite doesn't work */
+}
+
+/* Fallback: Use sprite if available */
+[data-label="VERIFIED_PROPERTIES"] .vp__circularLink i.icon_darkArrow {
+    background-image: url('https://static.99acres.com/universalapp/img/common_sprite.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
 
