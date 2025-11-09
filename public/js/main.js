@@ -591,3 +591,233 @@ document.addEventListener('DOMContentLoaded', function() {
         card.style.transition = 'all 0.3s ease';
     });
 });
+
+// Recommended Projects Carousel Navigation
+function scrollRecommendedProjects(direction) {
+    const carousel = document.querySelector('.recommended-properties-section .npSrpWidget__recomListWrap');
+    if (!carousel) {
+        // Try alternative selector
+        const altCarousel = document.querySelector('.npSrpWidget__recomListWrap');
+        if (altCarousel) {
+            const scrollAmount = 320; // Card width (295px) + gap (25px)
+            const currentScroll = altCarousel.scrollLeft;
+            const maxScroll = altCarousel.scrollWidth - altCarousel.clientWidth;
+            
+            let newScroll;
+            if (direction === 'right') {
+                newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+            } else {
+                newScroll = Math.max(0, currentScroll - scrollAmount);
+            }
+            
+            altCarousel.scrollTo({
+                left: newScroll,
+                behavior: 'smooth'
+            });
+        }
+        return;
+    }
+    
+    const scrollAmount = 320; // Card width (295px) + gap (25px)
+    const currentScroll = carousel.scrollLeft;
+    const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+    
+    let newScroll;
+    if (direction === 'right') {
+        newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+    } else {
+        newScroll = Math.max(0, currentScroll - scrollAmount);
+    }
+    
+    carousel.scrollTo({
+        left: newScroll,
+        behavior: 'smooth'
+    });
+}
+
+// Property Types Carousel Navigation (Apartments, Villas and more)
+document.addEventListener('DOMContentLoaded', function() {
+    const propertyTypesSection = document.querySelector('[data-label="BROWSE_BY_PROP_TYPE"]');
+    if (propertyTypesSection) {
+        const slidingBox = propertyTypesSection.querySelector('.cc__slidingBox[compattr="recomm_BROWSE_BY_PROP_TYPE"]');
+        const rightArrow = propertyTypesSection.querySelector('[data-label="RIGHT_ARROW"]');
+        const leftArrow = propertyTypesSection.querySelector('[data-label="LEFT_ARROW"]');
+        
+        if (slidingBox && rightArrow) {
+            rightArrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const scrollAmount = 280; // Card width + gap
+                const currentScroll = slidingBox.scrollLeft;
+                const maxScroll = slidingBox.scrollWidth - slidingBox.clientWidth;
+                const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+                slidingBox.scrollTo({
+                    left: newScroll,
+                    behavior: 'smooth'
+                });
+            });
+        }
+        
+        if (slidingBox && leftArrow) {
+            leftArrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const scrollAmount = 280; // Card width + gap
+                const currentScroll = slidingBox.scrollLeft;
+                const newScroll = Math.max(0, currentScroll - scrollAmount);
+                slidingBox.scrollTo({
+                    left: newScroll,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    }
+    
+    // Projects in High Demand Carousel
+    const projectsInDemandSection = document.querySelector('[data-label="POPULAR_PROJECTS"]');
+    if (projectsInDemandSection) {
+        const slidingBox = projectsInDemandSection.querySelector('.npSrpWidget__recomListWrap');
+        const rightArrow = projectsInDemandSection.querySelector('.arrow__rightIcon');
+        const leftArrow = projectsInDemandSection.querySelector('.arrow__leftIcon');
+        
+        if (slidingBox && rightArrow) {
+            rightArrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const scrollAmount = 290; // Card width (270px) + gap (20px)
+                const currentScroll = slidingBox.scrollLeft;
+                const maxScroll = slidingBox.scrollWidth - slidingBox.clientWidth;
+                const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+                slidingBox.scrollTo({
+                    left: newScroll,
+                    behavior: 'smooth'
+                });
+            });
+        }
+        
+        if (slidingBox && leftArrow) {
+            leftArrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const scrollAmount = 290; // Card width (270px) + gap (20px)
+                const currentScroll = slidingBox.scrollLeft;
+                const newScroll = Math.max(0, currentScroll - scrollAmount);
+                slidingBox.scrollTo({
+                    left: newScroll,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    }
+    
+    // Handpicked Projects Carousel
+    const handpickedSection = document.querySelector('[data-label="FEATURED_PROJECTS"]');
+    if (handpickedSection) {
+        const slidingBox = handpickedSection.querySelector('#featuredProjectsSlider');
+        const rightArrow = handpickedSection.querySelector('.featuredProjectsCard__SliderNext');
+        const leftArrow = handpickedSection.querySelector('.featuredProjectsCard__SliderPrev');
+        
+        if (slidingBox && rightArrow) {
+            rightArrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const scrollAmount = 340; // Card width (320px) + gap (20px)
+                const currentScroll = slidingBox.scrollLeft;
+                const maxScroll = slidingBox.scrollWidth - slidingBox.clientWidth;
+                const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+                slidingBox.scrollTo({
+                    left: newScroll,
+                    behavior: 'smooth'
+                });
+            });
+        }
+        
+        if (slidingBox && leftArrow) {
+            leftArrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const scrollAmount = 340; // Card width (320px) + gap (20px)
+                const currentScroll = slidingBox.scrollLeft;
+                const newScroll = Math.max(0, currentScroll - scrollAmount);
+                slidingBox.scrollTo({
+                    left: newScroll,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    }
+    
+    // Popular Builders Carousel
+    const popularBuildersSection = document.querySelector('[data-label="POPULAR_BUILDERS"]');
+    if (popularBuildersSection) {
+        const carouselBox = popularBuildersSection.querySelector('.cc__CarouselBox');
+        const rightArrow = popularBuildersSection.querySelector('[data-label="RIGHT_ARROW"]');
+        const leftArrow = popularBuildersSection.querySelector('[data-label="LEFT_ARROW"]');
+        
+        if (carouselBox && rightArrow) {
+            rightArrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const scrollAmount = 300; // Approximate card width + gap
+                const currentScroll = carouselBox.scrollLeft;
+                const maxScroll = carouselBox.scrollWidth - carouselBox.clientWidth;
+                const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+                carouselBox.scrollTo({
+                    left: newScroll,
+                    behavior: 'smooth'
+                });
+            });
+        }
+        
+        if (carouselBox && leftArrow) {
+            leftArrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const scrollAmount = 300; // Approximate card width + gap
+                const currentScroll = carouselBox.scrollLeft;
+                const newScroll = Math.max(0, currentScroll - scrollAmount);
+                carouselBox.scrollTo({
+                    left: newScroll,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    }
+    
+    // Where are buyers searching in Noida Carousel
+    const demandCitySection = document.querySelector('[data-label="DEMAND_CITY"]');
+    if (demandCitySection) {
+        const slidingBox = demandCitySection.querySelector('.carousel__slidingBox[compattr="DEMAND_9_MICRO_MARKET_RESALE"]');
+        const rightArrow = demandCitySection.querySelector('[data-label="RIGHT_ARROW"]');
+        const leftArrow = demandCitySection.querySelector('[data-label="LEFT_ARROW"]');
+        
+        if (slidingBox && rightArrow) {
+            rightArrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const scrollAmount = 350; // Card width + gap
+                const currentScroll = slidingBox.scrollLeft;
+                const maxScroll = slidingBox.scrollWidth - slidingBox.clientWidth;
+                const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+                slidingBox.scrollTo({
+                    left: newScroll,
+                    behavior: 'smooth'
+                });
+            });
+        }
+        
+        if (slidingBox && leftArrow) {
+            leftArrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const scrollAmount = 350; // Card width + gap
+                const currentScroll = slidingBox.scrollLeft;
+                const newScroll = Math.max(0, currentScroll - scrollAmount);
+                slidingBox.scrollTo({
+                    left: newScroll,
+                    behavior: 'smooth'
+                });
+            });
+        }
+    }
+});

@@ -26,7 +26,7 @@ body {
     color: var(--text-primary);
     background-color: #FFFFFF;
     margin: 0;
-    padding: 0;
+    padding: 0 80px;
 }
 
 .container {
@@ -43,6 +43,9 @@ body {
     padding-bottom: 60px;
     overflow: visible;
     background: #FFFFFF;
+    margin-left: -80px;
+    margin-right: -80px;
+    width: calc(100% + 160px);
 }
 
 /* Top Banner - 340px height (99acres Exact) */
@@ -107,6 +110,9 @@ body {
     left: 0;
     width: 100%;
     z-index: 100;
+    padding-left: 80px;
+    padding-right: 80px;
+    box-sizing: border-box;
 }
 
 /* White background for lower part of header (below search box) */
@@ -3381,6 +3387,219 @@ body {
     padding-left: 12px;
 }
 
+/* Move arrows left for Property Types section - exact styling */
+.property-types-browse-section .cc__arrowContainerBox.cc__right {
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    cursor: pointer !important;
+    background: #FFFFFF !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    z-index: 15 !important;
+}
+
+.property-types-browse-section .cc__arrowContainerBox.cc__left {
+    left: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    cursor: pointer !important;
+    background: #FFFFFF !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    z-index: 15 !important;
+}
+
+/* Fix arrow icon styling to match exactly */
+.property-types-browse-section .cc__arrowContainerBox.cc__right i.fa-chevron-right,
+.property-types-browse-section .cc__arrowContainerBox.cc__right .cc__rightArrow {
+    color: #333333 !important;
+    font-size: 18px !important;
+    transform: translate(5px, 5px) rotate(0deg) !important;
+}
+
+.property-types-browse-section .cc__arrowContainerBox.cc__left i.fa-chevron-left,
+.property-types-browse-section .cc__arrowContainerBox.cc__left .cc__leftArrow {
+    color: #333333 !important;
+    font-size: 18px !important;
+    transform: translate(5px, 5px) rotate(0deg) !important;
+}
+
+/* Projects in High Demand Section Arrow Styling */
+[data-label="POPULAR_PROJECTS"] .arrow__whiteBg.arrow__rightIcon {
+    right: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    cursor: pointer !important;
+    background: #FFFFFF !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    z-index: 15 !important;
+}
+
+[data-label="POPULAR_PROJECTS"] .arrow__whiteBg.arrow__leftIcon {
+    left: 0 !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    cursor: pointer !important;
+    background: #FFFFFF !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    z-index: 15 !important;
+}
+
+[data-label="POPULAR_PROJECTS"] .arrow__whiteBg.arrow__rightIcon i.fa-chevron-right {
+    color: #333333 !important;
+    font-size: 18px !important;
+    transform: translate(4px, 2px) rotate(0deg) !important;
+}
+
+[data-label="POPULAR_PROJECTS"] .arrow__whiteBg.arrow__leftIcon i.fa-chevron-left {
+    color: #333333 !important;
+    font-size: 18px !important;
+    transform: translate(-4px, 2px) rotate(0deg) !important;
+}
+
+/* Handpicked Projects Section Arrow Positioning - Move arrows right and down */
+[data-label="FEATURED_PROJECTS"] .featuredProjectsCard__SliderPrev,
+[data-label="FEATURED_PROJECTS"] .featuredProjectsCard__SliderNext {
+    top: 52% !important;
+    transform: translateY(-50%) !important;
+}
+
+[data-label="FEATURED_PROJECTS"] .featuredProjectsCard__SliderPrev {
+    left: 10px !important;
+}
+
+[data-label="FEATURED_PROJECTS"] .featuredProjectsCard__SliderNext {
+    right: 10px !important;
+}
+
+[data-label="FEATURED_PROJECTS"] .featuredProjectsCard__SliderPrev:hover,
+[data-label="FEATURED_PROJECTS"] .featuredProjectsCard__SliderNext:hover {
+    top: 52% !important;
+    transform: translateY(-50%) scale(1.1) !important;
+}
+
+[data-label="FEATURED_PROJECTS"] .featuredProjectsCard__SliderPrev i,
+[data-label="FEATURED_PROJECTS"] .featuredProjectsCard__SliderNext i {
+    transform: translate(5px, 4px) rotate(0deg) !important;
+}
+
+/* Move "Where are buyers searching in Noida" text down */
+[data-label="DEMAND_CITY"] .caption_strong_large {
+    margin-top: 18px !important;
+}
+
+/* Move "View all Insights" button in "Use popular tools" section slightly right */
+#MORE_INSIGHTS_AND_UTILITIES_VIEW_ALL,
+[data-label="ALLINSIGHT.VIEWMORE"] {
+    margin-left: 100px !important;
+}
+
+/* Popular Builders Section - Add black arrow and move circle left */
+[data-label="POPULAR_BUILDERS"] .cc__arrowContainerBox.cc__right {
+    right: 0px !important;
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+[data-label="POPULAR_BUILDERS"] .cc__arrowContainerBox.cc__right .cc__rightArrow,
+[data-label="POPULAR_BUILDERS"] .cc__arrowContainerBox.cc__right i.iconS_Common_24,
+[data-label="POPULAR_BUILDERS"] .cc__arrowContainerBox.cc__right i.icon_upArrow,
+[data-label="POPULAR_BUILDERS"] .cc__arrowContainerBox.cc__right i.cc__rightArrow,
+[data-label="POPULAR_BUILDERS"] .cc__arrowContainerBox.cc__right i.fa-chevron-right {
+    color: #000000 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-size: 18px !important;
+    transform: translate(5px, 3px) rotate(0deg) !important;
+}
+
+/* Increase arrow size in BHK choice section */
+[data-label="BROWSE_BY_BHK"] .cc__arrowContainerBox span {
+    font-size: 32px !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Where are buyers searching in Noida - Make arrows visible and styled */
+[data-label="DEMAND_CITY"] .carousel__arrowContainerBox.carousel__left,
+[data-label="DEMAND_CITY"] .carousel__arrowContainerBox.carousel__right {
+    position: absolute !important;
+    top: 52% !important;
+    transform: translateY(-50%) !important;
+    cursor: pointer !important;
+    background: #FFFFFF !important;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    z-index: 15 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+[data-label="DEMAND_CITY"] .carousel__arrowContainerBox.carousel__left {
+    left: 10px !important;
+}
+
+[data-label="DEMAND_CITY"] .carousel__arrowContainerBox.carousel__right {
+    right: 10px !important;
+}
+
+[data-label="DEMAND_CITY"] .carousel__arrowContainerBox i.fa-chevron-left,
+[data-label="DEMAND_CITY"] .carousel__arrowContainerBox i.fa-chevron-right {
+    color: #333333 !important;
+    font-size: 18px !important;
+    transform: translate(5px, 4px) rotate(0deg) !important;
+}
+
+/* Recommended Insights Section - Move arrows slightly right and down */
+.recomInsightsContainer__customCarouselBoxCls .carousel__arrowContainerBox.carousel__left,
+.recomInsightsContainer__customCarouselBoxCls .carousel__arrowContainerBox.carousel__right {
+    position: absolute !important;
+    top: 52% !important;
+    transform: translateY(-50%) !important;
+}
+
+.recomInsightsContainer__customCarouselBoxCls .carousel__arrowContainerBox.carousel__left {
+    left: 10px !important;
+}
+
+.recomInsightsContainer__customCarouselBoxCls .carousel__arrowContainerBox.carousel__right {
+    right: 10px !important;
+}
+
+.recomInsightsContainer__customCarouselBoxCls .carousel__arrowContainerBox i.fa-chevron-left,
+.recomInsightsContainer__customCarouselBoxCls .carousel__arrowContainerBox i.fa-chevron-right {
+    transform: translate(5px, 4px) rotate(0deg) !important;
+}
+
 .pc__cardCont {
     position: relative;
     width: 100%;
@@ -6612,10 +6831,9 @@ body {
     display: flex;
     gap: 24px;
     align-items: center;
-    width: calc(100% - 55px);
+    width: 100%;
     box-sizing: border-box;
     margin-top: 50px;
-    margin-right: 330px;
 }
 
 [data-label="BROWSE_BY_SELLER_TYPE"] .ppb__titleLeft {
@@ -6887,7 +7105,7 @@ body {
     color: #333333;
     opacity: 1 !important;
     visibility: visible !important;
-    transform: rotate(0deg) !important;
+    transform: rotate(0deg) translateX(-50px) !important;
 }
 
 /* Right arrow icon - bold and pointing right */
@@ -6895,10 +7113,14 @@ body {
     content: '→';
     display: block;
     color: #1A1A1A;
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 900;
     line-height: 1;
     transform: rotate(0deg);
+    -webkit-text-stroke: 0.5px #1A1A1A;
+    text-stroke: 0.5px #1A1A1A;
+    text-shadow: 0.3px 0 0 #1A1A1A;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 [data-label="BROWSE_BY_SELLER_TYPE"] .ppb__advertiserCard > div:last-child {
