@@ -820,4 +820,95 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+    
+    // BROWSE_BY_POSSESSION Carousel
+    const browseByPossessionSection = document.querySelector('[data-label="BROWSE_BY_POSSESSION"]');
+    if (browseByPossessionSection) {
+        const slidingBox = browseByPossessionSection.querySelector('.cc__slidingBox[compattr="recomm_BROWSE_BY_POSSESSION"]');
+        const rightArrow = browseByPossessionSection.querySelector('[data-label="RIGHT_ARROW"]');
+        const leftArrow = browseByPossessionSection.querySelector('[data-label="LEFT_ARROW"]');
+        
+        // Function to update arrow visibility based on scroll position
+        function updateArrowVisibility() {
+            if (!slidingBox) return;
+            
+            const currentScroll = slidingBox.scrollLeft;
+            const maxScroll = slidingBox.scrollWidth - slidingBox.clientWidth;
+            const threshold = 5; // Small threshold to account for rounding
+            
+            // Hide left arrow when at the start
+            if (leftArrow) {
+                if (currentScroll <= threshold) {
+                    leftArrow.style.visibility = 'hidden';
+                    leftArrow.style.opacity = '0';
+                    leftArrow.style.pointerEvents = 'none';
+                } else {
+                    leftArrow.style.visibility = 'visible';
+                    leftArrow.style.opacity = '1';
+                    leftArrow.style.pointerEvents = 'auto';
+                }
+            }
+            
+            // Hide right arrow when at the end
+            if (rightArrow) {
+                if (currentScroll >= maxScroll - threshold) {
+                    rightArrow.style.visibility = 'hidden';
+                    rightArrow.style.opacity = '0';
+                    rightArrow.style.pointerEvents = 'none';
+                } else {
+                    rightArrow.style.visibility = 'visible';
+                    rightArrow.style.opacity = '1';
+                    rightArrow.style.pointerEvents = 'auto';
+                }
+            }
+        }
+        
+        // Update arrows on scroll
+        if (slidingBox) {
+            slidingBox.addEventListener('scroll', updateArrowVisibility);
+        }
+        
+        // Initial check - wait for layout to be ready
+        setTimeout(function() {
+            updateArrowVisibility();
+        }, 100);
+        
+        // Also check on window load
+        window.addEventListener('load', function() {
+            setTimeout(updateArrowVisibility, 100);
+        });
+        
+        if (slidingBox && rightArrow) {
+            rightArrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const scrollAmount = 320; // Card width (270px) + gap (20px)
+                const currentScroll = slidingBox.scrollLeft;
+                const maxScroll = slidingBox.scrollWidth - slidingBox.clientWidth;
+                const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+                slidingBox.scrollTo({
+                    left: newScroll,
+                    behavior: 'smooth'
+                });
+                // Update visibility after scroll
+                setTimeout(updateArrowVisibility, 300);
+            });
+        }
+        
+        if (slidingBox && leftArrow) {
+            leftArrow.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                const scrollAmount = 320; // Card width (270px) + gap (20px)
+                const currentScroll = slidingBox.scrollLeft;
+                const newScroll = Math.max(0, currentScroll - scrollAmount);
+                slidingBox.scrollTo({
+                    left: newScroll,
+                    behavior: 'smooth'
+                });
+                // Update visibility after scroll
+                setTimeout(updateArrowVisibility, 300);
+            });
+        }
+    }
 });
