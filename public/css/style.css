@@ -7523,3 +7523,255 @@ body {
     justify-content: center;
 }
 
+/* UPCOMING_LOCALITIES - Emerging localities section */
+[data-label="UPCOMING_LOCALITIES"] {
+    margin: 40px 0;
+    padding: 0 20px; /* Reduced padding to allow more width for carousel */
+    width: 100%;
+    max-width: 100%;
+}
+
+[data-label="UPCOMING_LOCALITIES"] .sec__headingWrap {
+    margin-bottom: 16px;
+    margin-left: 0px !important; /* Moved heading section right */
+    margin-top: 10px !important; /* Moved heading section down */
+}
+
+[data-label="UPCOMING_LOCALITIES"] .sec__headingWrap .title_l_bold {
+    font-size: 22px !important; /* Reduced font size */
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+}
+
+[data-label="UPCOMING_LOCALITIES"] .sec__headingWrap .caption_strong_large {
+    font-size: 14px !important; /* Reduced font size */
+    color: #666666;
+    font-weight: 500;
+}
+
+/* Card container */
+[data-label="UPCOMING_LOCALITIES"] .scd__outerwrap {
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid #E0E7FF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 16px;
+    margin-right: 0; /* Removed margin-right since gap handles spacing */
+    min-width: 280px;
+    max-width: 280px;
+    width: 280px; /* Ensure all cards have same width */
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+[data-label="UPCOMING_LOCALITIES"] .scd__outerwrap:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-color: #C7D2FE;
+}
+
+/* Upper card section */
+[data-label="UPCOMING_LOCALITIES"] .scd__uppercard {
+    margin-bottom: 16px;
+}
+
+[data-label="UPCOMING_LOCALITIES"] .scd__left {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+/* Circular image */
+[data-label="UPCOMING_LOCALITIES"] .scd__imagewrap {
+    flex-shrink: 0;
+}
+
+[data-label="UPCOMING_LOCALITIES"] .scd__circularImg {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: block;
+}
+
+[data-label="UPCOMING_LOCALITIES"] .scd__circularImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Text content */
+[data-label="UPCOMING_LOCALITIES"] .scd__left > div:last-child {
+    flex: 1;
+    min-width: 0;
+}
+
+[data-label="UPCOMING_LOCALITIES"] .scd__left .list_header_semiBold {
+    font-size: 14px; /* Reduced from 16px */
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+[data-label="UPCOMING_LOCALITIES"] .scd__left .caption_strong_medium_semi {
+    font-size: 12px; /* Reduced from 14px */
+    color: #666666;
+    font-weight: 500;
+    margin-top: 4px;
+}
+
+/* Rating badge */
+[data-label="UPCOMING_LOCALITIES"] .rb__goodSmall,
+[data-label="UPCOMING_LOCALITIES"] .rb__averageSmall {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    background-color: #10B981;
+    color: #FFFFFF;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 11px; /* Reduced from 12px */
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+[data-label="UPCOMING_LOCALITIES"] .rb__averageSmall {
+    background-color: #F59E0B;
+}
+
+[data-label="UPCOMING_LOCALITIES"] .rb__wrap {
+    display: inline-flex;
+    align-items: center;
+}
+
+[data-label="UPCOMING_LOCALITIES"] .rb__dynamIcon {
+    font-size: 11px; /* Reduced from 12px to match rating badge */
+    line-height: 1;
+}
+
+/* Bottom CTA section */
+[data-label="UPCOMING_LOCALITIES"] .scd__cta {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Increased gap between Insights and Projects */
+    padding-top: 12px;
+    border-top: 1px solid #E5E7EB;
+    margin-top: auto; /* Push CTA to bottom for consistent card height */
+}
+
+[data-label="UPCOMING_LOCALITIES"] .hyperlinks_small {
+    font-size: 14px;
+    color: #2563EB;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+[data-label="UPCOMING_LOCALITIES"] .hyperlinks_small:hover {
+    color: #1D4ED8;
+    text-decoration: underline;
+}
+
+[data-label="UPCOMING_LOCALITIES"] .scd__cta > div {
+    display: inline-block;
+    position: relative;
+}
+
+[data-label="UPCOMING_LOCALITIES"] .scd__cta > div:first-child {
+    margin-left: 38px !important; /* Moved Insights slightly right */
+}
+
+[data-label="UPCOMING_LOCALITIES"] .scd__cta > div:first-child::after {
+    content: '';
+    position: absolute;
+    right: -16px; /* Adjusted separator position for increased gap */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 14px;
+    background-color: #D1D5DB;
+}
+
+/* Carousel styling */
+[data-label="UPCOMING_LOCALITIES"] .sec__caraousel {
+    margin-left: -45px !important; /* Moved slightly left */
+    width: calc(100% + 60px); /* Increased width of main carousel container */
+    max-width: calc(100% + 60px);
+}
+
+[data-label="UPCOMING_LOCALITIES"] .carousel__CarouselContainer {
+    width: 100%;
+    max-width: 100%;
+}
+
+[data-label="UPCOMING_LOCALITIES"] .carousel__CarouselBox {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+[data-label="UPCOMING_LOCALITIES"] .carousel__slidingBox {
+    display: flex;
+    gap: 90px; /* Increased gap between cards */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    margin-left: 10px !important; /* Moved all cards right */
+}
+
+[data-label="UPCOMING_LOCALITIES"] .carousel__slidingBox::-webkit-scrollbar {
+    display: none;
+}
+
+[data-label="UPCOMING_LOCALITIES"] .carousel__slidingBox > div {
+    flex-shrink: 0;
+}
+
+/* Arrow styling */
+[data-label="UPCOMING_LOCALITIES"] .carousel__arrowContainerBox {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: #FFFFFF;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 15;
+    transition: all 0.2s ease;
+    visibility: visible; /* Controlled by JS */
+    opacity: 1; /* Controlled by JS */
+}
+
+[data-label="UPCOMING_LOCALITIES"] .carousel__arrowContainerBox:hover {
+    background: #F9FAFB;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+[data-label="UPCOMING_LOCALITIES"] .carousel__arrowContainerBox.carousel__right {
+    right: -10px !important; /* Moved arrow slightly left */
+}
+
+[data-label="UPCOMING_LOCALITIES"] .carousel__arrowContainerBox.carousel__left {
+    left: 0;
+}
+
+[data-label="UPCOMING_LOCALITIES"] .carousel__arrowContainerBox i {
+    color: #333333;
+    font-size: 18px;
+    transform: translate(5px, 5px) rotate(0deg); /* Moved arrow slightly right and down */
+}
+
+
