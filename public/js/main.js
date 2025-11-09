@@ -539,3 +539,55 @@ window.addEventListener('load', function() {
     console.log('Window loaded, running fix');
     fixPopularBuildersTableLayout();
 });
+
+// Advertiser Type Card Click Handlers (Dealer/Owner)
+document.addEventListener('DOMContentLoaded', function() {
+    const advertiserCards = document.querySelectorAll('[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__advertiserCard');
+    
+    advertiserCards.forEach(function(card) {
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            // Get the custom info to determine if it's Dealer or Owner
+            const customInfo = card.getAttribute('data-custominfo');
+            let advertiserType = '';
+            
+            if (customInfo) {
+                try {
+                    const info = JSON.parse(customInfo);
+                    if (info.custom_object && info.custom_object.id === 'A') {
+                        // Dealer - map to agent or builder
+                        advertiserType = 'dealer';
+                    } else if (info.custom_object && info.custom_object.id === 'O') {
+                        // Owner - map to seller
+                        advertiserType = 'owner';
+                    }
+                } catch (e) {
+                    console.error('Error parsing custom info:', e);
+                }
+            }
+            
+            // Alternative: check the text content
+            if (!advertiserType) {
+                const cardText = card.textContent || '';
+                if (cardText.includes('Dealer')) {
+                    advertiserType = 'dealer';
+                } else if (cardText.includes('Owner')) {
+                    advertiserType = 'owner';
+                }
+            }
+            
+            // Navigate to properties page with advertiser type filter
+            if (advertiserType) {
+                window.location.href = '/properties?advertiser_type=' + advertiserType;
+            } else {
+                // Fallback to properties page
+                window.location.href = '/properties';
+            }
+        });
+        
+        // Add hover effect
+        card.style.transition = 'all 0.3s ease';
+    });
+});

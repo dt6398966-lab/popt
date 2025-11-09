@@ -6598,3 +6598,327 @@ body {
     }
 }
 
+/* Browse by Seller Type Section Styles */
+[data-label="BROWSE_BY_SELLER_TYPE"] {
+    margin: 40px 0 40px 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__pinkBg {
+    background: #FFF8F0;
+    border-radius: 12px;
+    padding: 20px 24px 16px 24px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    width: calc(100% - 55px);
+    box-sizing: border-box;
+    margin-top: 50px;
+    margin-right: 330px;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__titleLeft {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-shrink: 0;
+    background: transparent;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__titleLeft > div:first-child {
+    transform: translate(10px, -50px);
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__titleLeft picture,
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__titleLeft img {
+    width: 90px;
+    height: auto;
+    display: block;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__titleLeft > div:last-child {
+    margin-top: 65px;
+    margin-left: -105px;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__titleLeft .title_l_bold {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__titleLeft .caption_strong_large {
+    font-size: 14px;
+    color: #666666;
+    font-weight: 500;
+    margin-top: 50px;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__compRightWrap {
+    flex: 1;
+    background: white;
+    border-radius: 8px;
+    padding: 16px 24px 24px 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    max-width: 550px;
+    margin-left: 90px;
+    margin-top: 40px;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__compRightWrap .title_l_bold {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 8px;
+    margin-top: 20px;
+    margin-left: 26px;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__compRightWrap .Ng500.f14 {
+    font-size: 14px;
+    color: #666666;
+    font-weight: 500;
+    margin-bottom: 0px;
+    margin-left: 26px;
+    margin-top: 25px;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__advertiserCardWrap {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__advertiserCard {
+    display: flex !important;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border-radius: 8px;
+    background: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid transparent;
+    overflow: visible !important;
+    position: relative;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__advertiserCard:hover {
+    background: #F9F9F9;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__imgCont {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__imgCont {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 48px !important;
+    height: 48px !important;
+    flex-shrink: 0 !important;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__imgCont i {
+    display: inline-block !important;
+    width: 48px !important;
+    height: 48px !important;
+    line-height: 48px !important;
+    font-size: 0 !important;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__imgCont i.iconS_home_48 {
+    display: inline-block !important;
+    width: 48px !important;
+    height: 48px !important;
+    font-size: 0 !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__imgCont i.icon_dealerIcn,
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__imgCont i.icon_ownerIcn {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 48px !important;
+    height: 48px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    position: relative !important;
+}
+
+/* Create person with house icon using CSS - improved design */
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__imgCont {
+    position: relative;
+    background: transparent;
+    width: 48px;
+    height: 48px;
+}
+
+/* Person silhouette - circular blue background */
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__imgCont i.icon_dealerIcn,
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__imgCont i.icon_ownerIcn {
+    background: #4A90E2;
+    border-radius: 50%;
+    position: relative;
+    overflow: visible;
+    display: block;
+    width: 48px;
+    height: 48px;
+}
+
+/* Person head (circular) - using icon's ::before */
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__imgCont i.icon_dealerIcn::before,
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__imgCont i.icon_ownerIcn::before {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: #6BA3E8;
+    border-radius: 50%;
+    top: 6px;
+    left: 13px;
+    z-index: 2;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Person body/shirt - using icon's ::after */
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__imgCont i.icon_dealerIcn::after,
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__imgCont i.icon_ownerIcn::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 22px;
+    background: #4A90E2;
+    border-radius: 0 0 16px 16px;
+    bottom: 4px;
+    left: 8px;
+    z-index: 1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* House icon overlay - using container's ::after (positioned at bottom right) */
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__imgCont::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 15px;
+    background: #FF8C42;
+    border-radius: 2px;
+    bottom: 2px;
+    right: 2px;
+    z-index: 3;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+/* House roof triangle - using container's ::before */
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__imgCont::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 8px solid #E67E30;
+    bottom: 17px;
+    right: 2px;
+    z-index: 4;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__advertiserCard > div:nth-child(2) {
+    flex: 1;
+    min-width: 0;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__advertiserCard .section_header_semiBold {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    color: #1A1A1A !important;
+    margin-bottom: 4px !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 1 !important;
+    line-height: 1.4 !important;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__advertiserCard .caption_subdued_large {
+    font-size: 14px !important;
+    color: #666666 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 1 !important;
+    line-height: 1.4 !important;
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__arrow {
+    width: 24px;
+    height: 24px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #333333;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: rotate(0deg) !important;
+}
+
+/* Right arrow icon - bold and pointing right */
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__arrow::before {
+    content: '→';
+    display: block;
+    color: #1A1A1A;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1;
+    transform: rotate(0deg);
+}
+
+[data-label="BROWSE_BY_SELLER_TYPE"] .ppb__advertiserCard > div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    [data-label="BROWSE_BY_SELLER_TYPE"] .ppb__pinkBg {
+        flex-direction: column;
+        padding: 24px 16px;
+    }
+    
+    [data-label="BROWSE_BY_SELLER_TYPE"] .ppb__titleLeft {
+        width: 100%;
+    }
+    
+    [data-label="BROWSE_BY_SELLER_TYPE"] .ppb__compRightWrap {
+        width: 100%;
+    }
+}
+

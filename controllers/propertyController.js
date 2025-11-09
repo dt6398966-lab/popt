@@ -8,6 +8,7 @@ exports.getAllProperties = async (req, res) => {
     const offset = (page - 1) * limit;
 
     const where = { is_active: true };
+    const userWhere = {};
 
     // Filters
     if (req.query.city) where.city = { [Op.like]: `%${req.query.city}%` };
@@ -23,13 +24,28 @@ exports.getAllProperties = async (req, res) => {
     }
     if (req.query.bedrooms) where.bedrooms = req.query.bedrooms;
 
+    // Advertiser type filter (Dealer/Owner)
+    if (req.query.advertiser_type) {
+      if (req.query.advertiser_type === 'dealer') {
+        // Dealer includes agents and builders
+        userWhere.user_type = { [Op.in]: ['agent', 'builder'] };
+      } else if (req.query.advertiser_type === 'owner') {
+        // Owner means individual sellers
+        userWhere.user_type = 'seller';
+      }
+    }
+
+    const includeOptions = [{
+      model: User,
+      as: 'owner',
+      attributes: ['id', 'name', 'email', 'phone', 'user_type'],
+      where: Object.keys(userWhere).length > 0 ? userWhere : undefined,
+      required: Object.keys(userWhere).length > 0
+    }];
+
     const { count, rows } = await Property.findAndCountAll({
       where,
-      include: [{
-        model: User,
-        as: 'owner',
-        attributes: ['id', 'name', 'email', 'phone']
-      }],
+      include: includeOptions,
       order: [['createdAt', 'DESC']],
       limit,
       offset
