@@ -1,3 +1,80 @@
+// Trending Real Estate Articles Carousel Navigation
+document.addEventListener('DOMContentLoaded', function() {
+    const articleCarouselBox = document.getElementById('articleCarouselBox');
+    const articleCarouselLeft = document.getElementById('articleCarouselLeft');
+    const articleCarouselRight = document.getElementById('articleCarouselRight');
+    const articleSlidingBox = document.querySelector('#articleCarouselBox .carousel__slidingBox[compattr="article"]');
+
+    // The sliding box is the scrollable element
+    const scrollElement = articleSlidingBox || articleCarouselBox;
+
+    if (scrollElement && articleCarouselLeft && articleCarouselRight) {
+        const scrollAmount = 326; // Width of one card (286px) + gap (40px)
+
+        // Right arrow click
+        articleCarouselRight.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const currentScroll = scrollElement.scrollLeft;
+            const maxScroll = scrollElement.scrollWidth - scrollElement.clientWidth;
+            const newScroll = Math.min(maxScroll, currentScroll + scrollAmount);
+            scrollElement.scrollTo({
+                left: newScroll,
+                behavior: 'smooth'
+            });
+        });
+
+        // Left arrow click
+        articleCarouselLeft.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const currentScroll = scrollElement.scrollLeft;
+            const newScroll = Math.max(0, currentScroll - scrollAmount);
+            scrollElement.scrollTo({
+                left: newScroll,
+                behavior: 'smooth'
+            });
+        });
+
+        // Update arrow visibility based on scroll position
+        function updateArrowVisibility() {
+            const scrollLeft = scrollElement.scrollLeft;
+            const scrollWidth = scrollElement.scrollWidth;
+            const clientWidth = scrollElement.clientWidth;
+            const maxScroll = Math.max(0, scrollWidth - clientWidth);
+
+            // Hide left arrow when at the very beginning (scrollLeft is 0 or very close to 0)
+            if (scrollLeft <= 0.5) {
+                articleCarouselLeft.style.display = 'none';
+            } else {
+                articleCarouselLeft.style.display = 'flex';
+            }
+
+            // Hide right arrow when at the very end (scrollLeft is at or near maxScroll)
+            if (maxScroll <= 0 || scrollLeft >= maxScroll - 0.5) {
+                articleCarouselRight.style.display = 'none';
+            } else {
+                articleCarouselRight.style.display = 'flex';
+            }
+        }
+
+        // Set initial display state
+        articleCarouselLeft.style.display = 'none';
+        articleCarouselRight.style.display = 'none';
+        
+        // Initial check with a small delay to ensure DOM is ready
+        setTimeout(function() {
+            updateArrowVisibility();
+        }, 100);
+
+        // Update on scroll
+        scrollElement.addEventListener('scroll', updateArrowVisibility);
+
+        // Update on window resize
+        window.addEventListener('resize', updateArrowVisibility);
+    }
+});
+
 // Recommended Insights Carousel Navigation
 document.addEventListener('DOMContentLoaded', function() {
     const recommendedInsightsCarousel = document.querySelector('.carousel__slidingBox[compattr="recommInsights"]');

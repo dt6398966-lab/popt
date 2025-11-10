@@ -8015,4 +8015,256 @@ body {
     text-align: center;
 }
 
+/* Trending Real estate Articles Section */
+.ac__articleWrap {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.rentArticle__testimonialWrap {
+    margin-bottom: 40px;
+}
+
+.rentArticle__testimonialTitle {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 0;
+    margin-left: 0;
+}
+
+.rentArticle__subTitle {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 32px;
+}
+
+.rentArticle__articleCard {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 286px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 220px;
+    margin-bottom: 6px;
+    margin-left: 10px;
+}
+
+.rentArticle__articleCard .spacer10 {
+    position: relative;
+    height: auto;
+}
+
+.rentArticle__articleCard picture,
+.rentArticle__articleCard img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    display: block;
+}
+
+.rentArticle__articleCard a {
+    text-decoration: none;
+    display: block;
+    margin: 12px 16px 0;
+}
+
+.rentArticle__twoLineElip {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0;
+    line-height: 1.4;
+    min-height: auto;
+}
+
+.ellipsis2Lines {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rentArticle__areaConvertorStyle {
+    font-size: 14px;
+    color: #999;
+    margin: 4px 16px 8px 5px;
+}
+
+.rentArticle__oneLineDesc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0 16px 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Carousel styles for Articles Section */
+.ac__articleWrap .carousel__CarouselContainer {
+    position: relative;
+    margin-left: -25px;
+    max-width: 1600px;
+    width: 100%;
+}
+
+.ac__articleWrap .carousel__CarouselBox {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    width: 100%;
+    position: relative;
+}
+
+.ac__articleWrap .carousel__slidingBox[compattr="article"]::-webkit-scrollbar {
+    display: none;
+}
+
+.ac__articleWrap .carousel__slidingBox[compattr="article"] {
+    display: flex !important;
+    gap: 110px !important;
+    overflow-x: auto !important;
+    scroll-behavior: smooth !important;
+}
+
+.ac__articleWrap .carousel__slidingBox[compattr="article"] [data-label="ARTICLE_TUPLE"] {
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+}
+
+.ac__articleWrap .carousel__blueBackground {
+    background: white;
+}
+
+.ac__articleWrap .carousel__arrowContainerBox {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    padding: 0;
+}
+
+.ac__articleWrap .carousel__arrowContainerBox i,
+.ac__articleWrap .carousel__arrowContainerBox i.iconS_Common_24,
+.ac__articleWrap .carousel__arrowContainerBox i.icon_upArrow,
+.ac__articleWrap .carousel__arrowContainerBox i.fa-chevron-left,
+.ac__articleWrap .carousel__arrowContainerBox i.fa-chevron-right {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #000000 !important;
+    font-size: 18px !important;
+}
+
+.ac__articleWrap .carousel__left {
+    left: 20px;
+}
+
+.ac__articleWrap .carousel__right {
+    right: 20px;
+}
+
+.ac__articleWrap .carousel__leftArrow,
+.ac__articleWrap .carousel__rightArrow {
+    color: #000000 !important;
+    font-size: 20px;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.ac__articleWrap .carousel__leftArrow.fa-chevron-left {
+    transform: none !important;
+}
+
+.ac__articleWrap .carousel__rightArrow.fa-chevron-right {
+    transform: none !important;
+}
+
+.ac__articleWrap .carousel__blueBackground .carousel__leftArrow,
+.ac__articleWrap .carousel__blueBackground .carousel__rightArrow {
+    color: #000000 !important;
+}
+
+.ac__articleWrap .carousel__blueBackground .carousel__leftArrow.fa-chevron-left {
+    transform: none !important;
+}
+
+.ac__articleWrap .carousel__blueBackground .carousel__rightArrow.fa-chevron-right {
+    transform: none !important;
+}
+
+.ac__articleWrap .carousel__arrowContainerBox.carousel__blueBackground {
+    background: white;
+    transition: background 0.3s;
+}
+
+.ac__articleWrap .carousel__arrowContainerBox.carousel__blueBackground:hover {
+    background: #f5f5f5;
+}
+
+.ac__articleWrap .carousel__arrowContainerBox:hover {
+    background: #f5f5f5;
+}
+
+/* Responsive styles for Articles Section */
+@media (max-width: 768px) {
+    .ac__articleWrap {
+        padding: 40px 15px;
+    }
+
+    .rentArticle__testimonialTitle {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+    .rentArticle__articleCard {
+        width: 260px;
+    }
+
+    .ac__articleWrap .carousel__slidingBox[compattr="article"] {
+        gap: 20px !important;
+    }
+
+    .ac__articleWrap .carousel__left {
+        left: 0;
+    }
+
+    .ac__articleWrap .carousel__right {
+        right: 0;
+    }
+}
+
 
