@@ -8910,6 +8910,81 @@ body {
     }
 }
 
+/* Go to Top Button */
+.bttb__up_arrow_wrapper {
+    position: fixed;
+    bottom: 30px;
+    right: 70px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E3F2FD;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+}
+
+.bttb__up_arrow_wrapper.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.bttb__up_arrow_wrapper:hover {
+    background-color: #BBDEFB;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.bttb__up_arrow {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1565C0;
+    font-size: 20px;
+}
+
+.icon_goToTop::before {
+    content: '↑';
+    font-size: 24px;
+    font-weight: 900;
+    color: #1565C0;
+    line-height: 1;
+    -webkit-text-stroke: 0.5px #1565C0;
+    text-stroke: 0.5px #1565C0;
+}
+
+/* Responsive styles for Go to Top Button */
+@media (max-width: 768px) {
+    .bttb__up_arrow_wrapper {
+        bottom: 20px;
+        right: 60px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .bttb__up_arrow {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .icon_goToTop::before {
+        font-size: 20px;
+        font-weight: 900;
+        -webkit-text-stroke: 0.4px #1565C0;
+        text-stroke: 0.4px #1565C0;
+    }
+}
+
 /* Mobile App Banner Section */
 .d_hp_appBanner {
     max-width: 1200px;

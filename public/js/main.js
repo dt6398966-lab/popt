@@ -1079,3 +1079,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+// Go to Top Button Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const goToTopButton = document.querySelector('[data-label="GOTO_TOP"]');
+    
+    if (goToTopButton) {
+        // Show/hide button based on scroll position
+        function toggleGoToTopButton() {
+            if (window.pageYOffset > 300) {
+                goToTopButton.classList.add('show');
+            } else {
+                goToTopButton.classList.remove('show');
+            }
+        }
+        
+        // Scroll to top when button is clicked
+        goToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Listen for scroll events
+        window.addEventListener('scroll', toggleGoToTopButton);
+        
+        // Initial check
+        toggleGoToTopButton();
+    }
+});
