@@ -8493,4 +8493,420 @@ body {
     }
 }
 
+/* Explore Our Services Section - Final Perfect CSS */
+.d_offerings__exploreServicesCard {
+    max-width: 1200px;
+    width: 100%;
+    margin: 60px auto;
+    padding: 0;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.d_offerings__exploreServicesCard:hover {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+.d_offerings__exploreBg {
+    background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&h=400&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f5f7fa;
+    padding: 45px 60px 40px 60px;
+    border-bottom: none;
+    position: relative;
+    min-height: 220px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+
+.d_offerings__exploreBg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.55) 50%, rgba(255, 255, 255, 0.75) 100%);
+    z-index: 0;
+    pointer-events: none;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+}
+
+.d_offerings__exploreBg > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensure background image shows on large screens */
+@media (min-width: 1025px) {
+    .d_offerings__exploreBg {
+        background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&h=400&fit=crop') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+    }
+    
+    .d_offerings__exploreBg::before {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.45) 50%, rgba(255, 255, 255, 0.65) 100%) !important;
+        backdrop-filter: blur(5px) !important;
+        -webkit-backdrop-filter: blur(5px) !important;
+    }
+}
+
+.d_offerings__exploreBg .caption_subdued_large {
+    font-size: 13px;
+    font-weight: 700;
+    color: #666666;
+    margin-bottom: 10px;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+.d_offerings__exploreBg .display_xl_bold {
+    font-size: 38px;
+    font-weight: 700;
+    color: #1A1A1A;
+    line-height: 1.25;
+    margin: 0;
+    letter-spacing: -0.8px;
+}
+
+.d_offerings__contentCard {
+    list-style: none;
+    padding: 30px 0 0 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+.d_offerings__contentCard li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.offeringCards__offeringCard {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 30px;
+    border-bottom: 1px solid #F0F0F0;
+    border-right: 1px solid #F0F0F0;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.offeringCards__offeringCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: linear-gradient(180deg, #FF6600 0%, #FF8533 100%);
+    transition: height 0.3s ease;
+}
+
+.offeringCards__offeringCard:hover {
+    background-color: #FAFBFC;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateX(4px);
+    border-right-color: #E0E0E0;
+}
+
+.offeringCards__offeringCard:hover::before {
+    height: 100%;
+}
+
+.offeringCards__offeringCard:nth-child(3n) {
+    border-right: none;
+}
+
+.offeringCards__offeringCard:nth-last-child(-n+3) {
+    border-bottom: none;
+}
+
+.offeringCards__offeringCard > div:first-child {
+    flex-shrink: 0;
+    width: 85px;
+    height: 85px;
+    min-width: 85px;
+    min-height: 85px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #F5F5F5;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.offeringCards__offeringCard:hover > div:first-child {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Remove duplicate and consolidate picture/image styles */
+.offeringCards__offeringCard > div:first-child picture {
+    width: 100% !important;
+    height: 100% !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex: 1 1 auto !important;
+}
+
+.offeringCards__offeringCard > div:first-child picture source {
+    display: none !important;
+}
+
+.offeringCards__offeringCard > div:first-child picture img,
+.offeringCards__offeringCard > div:first-child img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    object-fit: contain !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+}
+
+/* Force image display - override any inline styles */
+.offeringCards__offeringCard > div:first-child * {
+    max-width: 100% !important;
+}
+
+.offeringCards__offeringCard > div:first-child picture[style],
+.offeringCards__offeringCard > div:first-child img[style] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.offeringCards__offeringCard:hover > div:first-child img {
+    transform: scale(1.1);
+}
+
+.offeringCards__offeringCard > div:nth-child(2) {
+    flex: 1;
+    min-width: 0;
+}
+
+.offeringCards__offeringCard .list_header_semiBold {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1A1A1A;
+    margin-bottom: 5px;
+    line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+/* Free logo image styling */
+.offeringCards__offeringCard .list_header_semiBold img {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: 20px !important;
+    width: auto !important;
+    vertical-align: middle !important;
+    margin-left: 4px !important;
+    object-fit: contain !important;
+}
+
+.offeringCards__offeringCard:hover .list_header_semiBold {
+    color: #FF6600;
+}
+
+.offeringCards__offeringCard .caption_subdued_medium {
+    font-size: 13px;
+    color: #666666;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.offeringCards__offeringCard:hover .caption_subdued_medium {
+    color: #555555;
+}
+
+.offeringCards__arrowCont {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999999;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 50%;
+    background-color: transparent;
+}
+
+.offeringCards__offeringCard:hover .offeringCards__arrowCont {
+    transform: translateX(5px);
+    color: #FF6600;
+    background-color: rgba(255, 102, 0, 0.1);
+}
+
+.offeringCards__arrowCont::after {
+    content: '→';
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.spacer8 {
+    margin-bottom: 32px;
+}
+
+.spacer4 {
+    margin-bottom: 16px;
+}
+
+/* Responsive styles for Explore Services */
+@media (max-width: 1024px) {
+    .d_offerings__exploreServicesCard {
+        max-width: 100%;
+        margin: 50px auto;
+        padding: 0 20px;
+    }
+
+    .d_offerings__exploreBg {
+        padding: 40px 40px 35px 40px;
+    }
+
+    .d_offerings__exploreBg .display_xl_bold {
+        font-size: 32px;
+    }
+
+    .d_offerings__contentCard {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 25px 0 0 0;
+    }
+
+    .offeringCards__offeringCard:nth-child(3n) {
+        border-right: 1px solid #F0F0F0;
+    }
+
+    .offeringCards__offeringCard:nth-child(2n) {
+        border-right: none;
+    }
+
+    .offeringCards__offeringCard:nth-last-child(-n+2) {
+        border-bottom: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .d_offerings__exploreServicesCard {
+        margin: 40px auto;
+        padding: 0 15px;
+        border-radius: 12px;
+    }
+
+    .d_offerings__exploreBg {
+        padding: 35px 30px 30px 30px;
+        background-image: none;
+        background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+        min-height: 180px;
+    }
+
+    .d_offerings__exploreBg::before {
+        display: none;
+    }
+
+    .d_offerings__exploreBg .display_xl_bold {
+        font-size: 28px;
+        letter-spacing: -0.5px;
+    }
+
+    .d_offerings__exploreBg .caption_subdued_large {
+        font-size: 12px;
+        margin-bottom: 10px;
+        letter-spacing: 0.5px;
+    }
+
+    .d_offerings__contentCard {
+        grid-template-columns: 1fr;
+        padding: 20px 0 0 0;
+    }
+
+    .offeringCards__offeringCard {
+        border-right: none !important;
+        padding: 20px 24px;
+        gap: 16px;
+    }
+
+    .offeringCards__offeringCard:not(:last-child) {
+        border-bottom: 1px solid #F0F0F0;
+    }
+
+    .offeringCards__offeringCard > div:first-child {
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+        min-height: 70px;
+    }
+
+    .offeringCards__offeringCard > div:first-child img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .offeringCards__offeringCard .list_header_semiBold {
+        font-size: 15px;
+    }
+
+    .offeringCards__offeringCard .list_header_semiBold img {
+        height: 18px !important;
+        width: auto !important;
+        display: inline-block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .offeringCards__offeringCard .caption_subdued_medium {
+        font-size: 12px;
+    }
+
+    .offeringCards__arrowCont {
+        width: 24px;
+        height: 24px;
+    }
+
+    .offeringCards__arrowCont::after {
+        font-size: 16px;
+    }
+}
+
 
