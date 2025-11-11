@@ -8515,7 +8515,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #f5f7fa;
+    background-color: #FFF8E7;
     padding: 45px 60px 40px 60px;
     border-bottom: none;
     position: relative;
@@ -8531,11 +8531,11 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.55) 50%, rgba(255, 255, 255, 0.75) 100%);
+    background: linear-gradient(135deg, rgba(255, 248, 231, 0.85) 0%, rgba(255, 248, 231, 0.75) 50%, rgba(255, 248, 231, 0.9) 100%);
     z-index: 0;
     pointer-events: none;
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 
 .d_offerings__exploreBg > * {
@@ -8543,19 +8543,20 @@ body {
     z-index: 1;
 }
 
-/* Ensure background image shows on large screens */
+/* Ensure background image shows on large screens with cream color */
 @media (min-width: 1025px) {
     .d_offerings__exploreBg {
         background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&h=400&fit=crop') !important;
         background-size: cover !important;
         background-position: center !important;
         background-repeat: no-repeat !important;
+        background-color: #FFF8E7 !important;
     }
     
     .d_offerings__exploreBg::before {
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.45) 50%, rgba(255, 255, 255, 0.65) 100%) !important;
-        backdrop-filter: blur(5px) !important;
-        -webkit-backdrop-filter: blur(5px) !important;
+        background: linear-gradient(135deg, rgba(255, 248, 231, 0.8) 0%, rgba(255, 248, 231, 0.7) 50%, rgba(255, 248, 231, 0.85) 100%) !important;
+        backdrop-filter: blur(3px) !important;
+        -webkit-backdrop-filter: blur(3px) !important;
     }
 }
 
@@ -8906,6 +8907,54 @@ body {
 
     .offeringCards__arrowCont::after {
         font-size: 16px;
+    }
+}
+
+/* Mobile App Banner Section */
+.d_hp_appBanner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 80px auto 60px auto;
+    padding: 0;
+    display: block;
+    position: relative;
+}
+
+.Personalized-hp__appDImg {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    max-width: 100% !important;
+    object-fit: contain !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Personalized-hp__appDImg:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Responsive styles for Mobile App Banner */
+@media (max-width: 1024px) {
+    .d_hp_appBanner {
+        max-width: 100%;
+        margin: 50px auto;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .d_hp_appBanner {
+        margin: 40px auto;
+        padding: 0 15px;
+    }
+    
+    .Personalized-hp__appDImg {
+        border-radius: 8px;
     }
 }
 
