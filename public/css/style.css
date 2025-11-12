@@ -144,6 +144,8 @@ body {
     justify-content: space-between;
     gap: 12px;
     flex-wrap: nowrap;
+    overflow: visible;
+    position: relative;
 }
 
 /* Logo */
@@ -198,11 +200,12 @@ body {
     display: flex;
     justify-content: center;
     min-width: 0;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .theader-nav-menu {
     width: 100%;
+    overflow: visible;
 }
 
 .theader-nav-list {
@@ -214,10 +217,12 @@ body {
     padding: 0;
     flex-wrap: nowrap;
     justify-content: center;
+    overflow: visible;
 }
 
 .theader-nav-item {
     position: relative;
+    overflow: visible;
 }
 
 .theader-nav-link {
@@ -267,23 +272,609 @@ body {
     line-height: 1;
 }
 
-/* Dropdown Menu */
-.theader-dropdown-menu {
+/* Dropdown Menu - For Buyers */
+.theader-top-menu-content {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: white;
-    min-width: 600px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-radius: 8px;
-    padding: 20px;
+    width: 1000px;
+    max-width: 95vw;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12), 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 0 0 8px 8px;
+    padding: 0;
     display: none;
     z-index: 1001;
-    margin-top: 8px;
+    margin-top: 0;
+    border-top: 3px solid #FF6600;
+    min-height: auto;
+    max-height: none;
+    visibility: visible;
+    opacity: 1;
+    overflow: hidden;
+    animation: dropdownFadeIn 0.25s ease-out;
 }
 
-.theader-nav-item:hover .theader-dropdown-menu {
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.theader-nav-item:hover .theader-top-menu-content,
+.theader-nav-item.theader-active .theader-top-menu-content {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Main dropdown container */
+.theader__topMenuContent {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 28px 36px 24px;
+    max-height: none;
+    overflow: visible;
+    position: relative;
+}
+
+/* Custom scrollbar for dropdown */
+.theader__topMenuContent::-webkit-scrollbar {
+    width: 6px;
+}
+
+.theader__topMenuContent::-webkit-scrollbar-track {
+    background: #f8f8f8;
+    border-radius: 3px;
+}
+
+.theader__topMenuContent::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 3px;
+    transition: background 0.2s ease;
+}
+
+.theader__topMenuContent::-webkit-scrollbar-thumb:hover {
+    background: #999;
+}
+
+/* Main list container */
+.theader__topMenuContent > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 36px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.theader__topMenuContent > ul > li {
+    flex: 0 0 auto;
+    min-width: 170px;
+    max-width: 200px;
+    position: relative;
+}
+
+.theader__topMenuContent > ul > li::after {
+    content: '';
+    position: absolute;
+    right: -18px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #E0E0E0;
+    opacity: 0.6;
+}
+
+.theader__topMenuContent > ul > li:last-child::after {
+    display: none;
+}
+
+/* Category headings (BUY A HOME, etc.) */
+.theader__topMenuContent > ul > li > span[data-label] {
     display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin-bottom: 12px;
+    cursor: pointer;
+    line-height: 1.5;
+    transition: color 0.2s ease;
+    letter-spacing: 0.3px;
+    padding-bottom: 4px;
+}
+
+.theader__topMenuContent > ul > li > span[data-label]:hover {
+    color: #FF6600;
+}
+
+/* Submenu container */
+.theader__topMenuContentListing {
+    margin-top: 0;
+}
+
+.theader__topMenuContentListing > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section headers (PROPERTIES IN NOIDA, POPULAR SEARCHES) */
+.theader__topMenuContentListing > ul > li > a.normal {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    color: #666666;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 8px;
+    margin-top: 12px;
+    text-decoration: none;
+    line-height: 1.5;
+    transition: color 0.2s ease;
+}
+
+.theader__topMenuContentListing > ul > li > a.normal:hover {
+    color: #333333;
+}
+
+.theader__topMenuContentListing > ul > li > a.normal:first-child {
+    margin-top: 0;
+}
+
+/* Nested submenu */
+.theader__topMenuContentListing .theader__topMenuContentListing {
+    margin-left: 0;
+}
+
+.theader__cHover {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.theader__cHover li {
+    margin-bottom: 6px;
+}
+
+.theader__cHover li a {
+    display: block;
+    font-size: 13px;
+    color: #1A1A1A;
+    text-decoration: none;
+    line-height: 1.6;
+    transition: all 0.2s ease;
+    padding: 4px 6px;
+    border-radius: 4px;
+    margin-left: -6px;
+}
+
+.theader__cHover li a:hover {
+    color: #FF6600;
+    background-color: #FFF5F0;
+    padding-left: 8px;
+}
+
+/* Single row layout */
+.theader__singleRow {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Insights Panel - Right Side */
+.theader__topMenuImg {
+    position: absolute;
+    right: 36px;
+    top: 28px;
+    width: 240px;
+    background: linear-gradient(135deg, #E8F4F8 0%, #E0F0F5 100%);
+    border-radius: 10px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    max-height: none;
+    overflow: visible;
+    box-shadow: 0 4px 12px rgba(0, 78, 143, 0.12);
+    border: 1px solid rgba(0, 78, 143, 0.1);
+}
+
+.theader__hoverHide {
+    display: block;
+}
+
+/* Insights content */
+.theader__insightLists {
+    position: relative;
+}
+
+.theader__arrw {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    color: #004E8F;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    background: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.theader__arrw:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.theader__insightImg {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.theader__insightImg > div {
+    flex: 1;
+}
+
+.theader__insightsContainer {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+/* Hide the large deskIn.png image - it's too big and not needed */
+.theader__insightsContainer[src*="deskIn"] {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+.badges_regular_primary_subtle {
+    font-size: 9px;
+    font-weight: 600;
+    color: #004E8F;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 4px;
+    display: inline-block;
+    padding: 2px 6px;
+    background: rgba(0, 78, 143, 0.08);
+    border-radius: 3px;
+}
+
+.title_l_bold {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1A1A1A;
+    line-height: 1.3;
+    letter-spacing: -0.2px;
+}
+
+/* Insight points list */
+.theader__insightPoints {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 6px;
+    padding: 2px 0;
+    transition: transform 0.2s ease;
+}
+
+.theader__insightPoints:hover {
+    transform: translateX(2px);
+}
+
+.theader__insightPoints:last-child {
+    margin-bottom: 0;
+}
+
+.theader__insightsList {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.body_small {
+    font-size: 13px;
+    color: #1A1A1A;
+    line-height: 1.5;
+    transition: color 0.2s ease;
+}
+
+.theader__insightPoints:hover .body_small {
+    color: #004E8F;
+}
+
+.spacer20 {
+    height: 10px;
+}
+
+.spacer10 {
+    margin-bottom: 10px;
+}
+
+/* White button overlay */
+.theader__whiteBtn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    border-radius: 8px;
+}
+
+.theader__hover {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    background: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1A1A1A;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #E0E0E0;
+}
+
+.theader__hover:hover {
+    background: #F8F8F8;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    color: #FF6600;
+}
+
+/* Hide large images in dropdown - only show small icons */
+/* Hide ALL images in the Insights panel except checkmarks */
+.theader__topMenuImg picture,
+.theader__topMenuImg img:not(.theader__insightsList),
+.theader__insightImg img:not(.theader__insightsList),
+.theader__insightLists img:not(.theader__insightsList) {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+}
+
+/* Specifically hide the deskIn.png image - multiple selectors for complete hiding */
+.theader__topMenuImg img[src*="deskIn"],
+.theader__insightImg img[src*="deskIn"]:not(.theader__insightsList),
+img.theader__insightsContainer[src*="deskIn"],
+img[alt="Insights"][src*="deskIn"],
+.theader__insightLists img[src*="deskIn"]:not(.theader__insightsList),
+.theader__insightsContainer[src*="deskIn"],
+.theader__topMenuImg .theader__insightImg img:not(.theader__insightsList) {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    left: -9999px !important;
+    content: none !important;
+}
+
+/* Also hide any background images in the insight panel */
+.theader__insightImg {
+    background-image: none !important;
+}
+
+/* Hide any picture elements in the Insights panel */
+.theader__topMenuImg.theader__insgihtHeight picture,
+.theader__hoverHide picture {
+    display: none !important;
+}
+
+/* Ensure no pseudo-elements show images */
+.theader__insightImg::before,
+.theader__insightImg::after,
+.theader__topMenuImg::before,
+.theader__topMenuImg::after {
+    background-image: none !important;
+    content: none !important;
+}
+
+/* Contact information at bottom */
+.theader__navBtmTxt {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #E8E8E8;
+    text-align: center;
+    font-size: 12px;
+    color: #666666;
+    line-height: 1.4;
+    background: #FAFAFA;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 12px;
+}
+
+.theader__navBtmTxt .Ng500 {
+    color: #666666;
+    font-weight: 600;
+}
+
+/* Contact heading section */
+.theader__headingTab {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #E8E8E8;
+    text-align: left;
+    background: #FAFAFA;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 12px;
+}
+
+.caption_subdued_large_semi {
+    font-size: 12px;
+    color: #666666;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.theader__contactDetailWrapper {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+}
+
+.caption_strong_large_semi {
+    font-size: 17px;
+    font-weight: 600;
+    color: #1A1A1A;
+    letter-spacing: -0.3px;
+}
+
+.theader__timeDetail {
+    font-size: 11px;
+    color: #666666;
+    font-weight: 600;
+}
+
+.caption_subdued_medium {
+    font-size: 12px;
+    color: #666666;
+    line-height: 1.4;
+}
+
+/* View All link */
+.theader__viewAll {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid #E8E8E8;
+    font-size: 13px;
+    font-weight: 600;
+    color: #FF6600;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    transition: all 0.2s ease;
+    padding-left: 4px;
+    border-radius: 4px;
+}
+
+.theader__viewAll:hover {
+    color: #E55A00;
+    background-color: #FFF5F0;
+    padding-left: 8px;
+}
+
+/* Badge for NEW */
+.badges__primaryRegular {
+    display: inline-block;
+    background-color: #004E8F;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-left: 8px;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    box-shadow: 0 1px 3px rgba(0, 78, 143, 0.3);
+}
+
+/* Hidden elements */
+.theader__disVis {
+    visibility: hidden;
+    display: none;
+}
+
+/* Utility classes for text colors */
+.Ng400 {
+    color: #666666;
+    font-weight: 400;
+}
+
+.Ng500 {
+    color: #666666;
+    font-weight: 500;
+}
+
+/* Height utility for insights panel */
+.theader__insgihtHeight {
+    min-height: auto;
+    max-height: none;
+}
+
+/* Page component base */
+.pageComponent {
+    display: inline-block;
+}
+
+/* Icon styles */
+.iconS_Common_24 {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.icon_upArrowBlue {
+    color: #004E8F;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .theader-top-menu-content {
+        width: 900px;
+    }
+    
+    .theader__topMenuImg {
+        width: 240px;
+    }
+}
+
+@media (max-width: 992px) {
+    .theader-top-menu-content {
+        width: 100%;
+        max-width: 100vw;
+        left: 0;
+        transform: none;
+    }
+    
+    .theader__topMenuContent > ul {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .theader__topMenuImg {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        margin-top: 24px;
+    }
 }
 
 .theader-dropdown-content {
